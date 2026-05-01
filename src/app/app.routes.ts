@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { Demo } from './demo/demo';
+
 
 export const routes: Routes = [
   {
@@ -8,7 +8,7 @@ export const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: 'demo',
-    component: Demo,
+    path: 'home',
+    loadChildren: () => import('./demo/demo.route').then((mod) => mod.DEMO_ROUTES),
   },
 ];
