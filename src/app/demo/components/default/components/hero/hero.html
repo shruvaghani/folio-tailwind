@@ -14,16 +14,16 @@
                     <p class="text-xl">Let your brand shine with our innovative and visually stunning websites.</p>
 
                     <ul class="flex flex-wrap gap-2 lg:gap-4 mt-4 mb-4 lg:mt-7.5">
-                        <li class="font-medium text-default-900 flex items-center"> <i data-lucide="circle-check" class="size-4 text-success me-1"></i>Flexible solutions</li>
-                        <li class="font-medium text-default-900 flex items-center"> <i data-lucide="circle-check" class="size-4 text-success me-1"></i>System integration</li>
-                        <li class="font-medium text-default-900 flex items-center"> <i data-lucide="circle-check" class="size-4 text-success me-1"></i>Complimentary updates</li>
+                        <li class="font-medium text-default-900 flex items-center"> <lucide-icon name="circle-check" class="size-4 text-success me-1"></lucide-icon>Flexible solutions</li>
+                        <li class="font-medium text-default-900 flex items-center"> <lucide-icon name="circle-check" class="size-4 text-success me-1"></lucide-icon>System integration</li>
+                        <li class="font-medium text-default-900 flex items-center"> <lucide-icon name="circle-check" class="size-4 text-success me-1"></lucide-icon>Complimentary updates</li>
                     </ul>
 
                     <div class="flex flex-wrap items-center gap-4 mt-4 lg:mt-7.5">
-                        <a href="#" class="rounded-md font-medium bg-white border border-white text-dark shadow-[0_0.18rem_0.25rem_rgba(127,57,248,0.2)] py-3.5 px-7.5 hover:bg-white hover:border-white hover:text-dark hover:shadow-[0_0.3rem_0.25rem_rgba(127,57,248,0.3)] hover:-translate-y-0.75 transition-all duration-300">Get started</a>
-                        <a href="portfolio-modern.html" class="group flex items-center gap-1.5">
+                        <a [routerLink]="[]" class="rounded-md font-medium bg-white border border-white text-dark shadow-[0_0.18rem_0.25rem_rgba(127,57,248,0.2)] py-3.5 px-7.5 hover:bg-white hover:border-white hover:text-dark hover:shadow-[0_0.3rem_0.25rem_rgba(127,57,248,0.3)] hover:-translate-y-0.75 transition-all duration-300">Get started</a>
+                        <a routerLink="/portfolio/modern" class="group flex items-center gap-1.5">
                             <span class="text-primary-grad">Explore our projects</span>
-                            <i data-lucide="arrow-right" class="group-hover:translate-x-0.5 size-4 text-primary transition-all duration-300"></i>
+                            <lucide-icon name="arrow-right" class="group-hover:translate-x-0.5 size-4 text-primary transition-all duration-300"></lucide-icon>
                         </a>
                     </div>
                 </div>
@@ -62,7 +62,7 @@
 
                             <!-- Rating -->
                             <p class="font-bold text-default-900 flex items-center">
-                                <i class="iconify tabler--star-filled text-warning size-5.5 me-2"></i>
+                                <iconify-icon icon="tabler:star-filled" class="text-warning me-2" width="22" height="22"></iconify-icon>
                                 <span class="text-2.5xl">4.8</span>/5.0
                             </p>
                         </div>

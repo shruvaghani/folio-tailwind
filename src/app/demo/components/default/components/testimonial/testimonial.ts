@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { LucideAngularModule } from "lucide-angular";
+import { testimonialsData } from '../../data';
+import { register } from 'swiper/element/bundle';
+
+register();
 
 @Component({
   selector: 'default-testimonial',
-  imports: [],
+  imports: [LucideAngularModule],
   templateUrl: './testimonial.html',
   styles: ``,
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
   
-export class Testimonial {}
+export class Testimonial {
+  testimonialsData = testimonialsData;
+}

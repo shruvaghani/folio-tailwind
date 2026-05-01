@@ -9,83 +9,29 @@
                 </div>
 
                 <div class="col-span-3">
-                    <div class="swiper" data-swiper-options='{
-                        "slidesPerView": 2, 
-                        "spaceBetween": 50,
-                        "breakpoints": { 
-                            "576": {"slidesPerView": 3}, 
-                            "768": {"slidesPerView": 4}, 
-                            "1200": {"slidesPerView": 5}
-                        }}'>
-
+                    <div class="swiper" >
                         <!-- Slider items -->
-                        <div class="swiper-wrapper flex items-center">
-                            <!-- Image -->
-                            <div class="swiper-slide">
+                        <swiper-container 
+                        space-between="50" 
+                        loop="true" autoplay="true"
+                        breakpoints='{
+                        "576": { "slidesPerView": 3 },
+                        "768": { "slidesPerView": 4 },
+                        "1200": { "slidesPerView": 5 }
+                         }'
+                        class="swiper-wrapper flex items-center">
+                             @for (item of clientData; track $index) {
+                            <swiper-slide>
                                 <div class="relative">
-                                    <img src="assets/images/client/logo-gray/01.svg" class="lg:p-4 p-2" alt="client-img">
+                                    <img [src]="item.grayLogo" class="lg:p-4 p-2" alt="client-img">
                                     <div class="absolute top-0 start-0 opacity-0 hover:opacity-100 transition-all duration-300 ease-in-out">
-                                        <img src="assets/images/client/logo-light/01.svg" class="dark:block hidden lg:p-4 p-2" alt="client logo">
-                                        <img src="assets/images/client/logo-dark/01.svg" class="dark:hidden lg:p-4 p-2" alt="client logo">
+                                        <img [src]="item.lightLogo" class="dark:block hidden lg:p-4 p-2" alt="client logo">
+                                        <img [src]="item.darkLogo" class="dark:hidden lg:p-4 p-2" alt="client logo">
                                     </div>
                                 </div>
-                            </div>
-
-                            <!-- Image -->
-                            <div class="swiper-slide">
-                                <div class="relative">
-                                    <img src="assets/images/client/logo-gray/02.svg" class="lg:p-4 p-2" alt="client-img">
-                                    <div class="absolute top-0 start-0 opacity-0 hover:opacity-100 transition-all duration-300 ease-in-out">
-                                        <img src="assets/images/client/logo-light/02.svg" class="dark:block hidden lg:p-4 p-2" alt="client logo">
-                                        <img src="assets/images/client/logo-dark/02.svg" class="dark:hidden lg:p-4 p-2" alt="client logo">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Image -->
-                            <div class="swiper-slide">
-                                <div class="relative">
-                                    <img src="assets/images/client/logo-gray/03.svg" class="lg:p-4 p-2" alt="client-img">
-                                    <div class="absolute top-0 start-0 opacity-0 hover:opacity-100 transition-all duration-300 ease-in-out">
-                                        <img src="assets/images/client/logo-light/03.svg" class="dark:block hidden lg:p-4 p-2" alt="client logo">
-                                        <img src="assets/images/client/logo-dark/03.svg" class="dark:hidden lg:p-4 p-2" alt="client logo">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Image -->
-                            <div class="swiper-slide">
-                                <div class="relative">
-                                    <img src="assets/images/client/logo-gray/04.svg" class="lg:p-4 p-2" alt="client-img">
-                                    <div class="absolute top-0 start-0 opacity-0 hover:opacity-100 transition-all duration-300 ease-in-out">
-                                        <img src="assets/images/client/logo-light/04.svg" class="dark:block hidden lg:p-4 p-2" alt="client logo">
-                                        <img src="assets/images/client/logo-dark/04.svg" class="dark:hidden lg:p-4 p-2" alt="client logo">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Image -->
-                            <div class="swiper-slide">
-                                <div class="relative">
-                                    <img src="assets/images/client/logo-gray/05.svg" class="lg:p-4 p-2" alt="client-img">
-                                    <div class="absolute top-0 start-0 opacity-0 hover:opacity-100 transition-all duration-300 ease-in-out">
-                                        <img src="assets/images/client/logo-light/05.svg" class="dark:block hidden lg:p-4 p-2" alt="client logo">
-                                        <img src="assets/images/client/logo-dark/05.svg" class="dark:hidden lg:p-4 p-2" alt="client logo">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Image -->
-                            <div class="swiper-slide">
-                                <div class="relative">
-                                    <img src="assets/images/client/logo-gray/06.svg" class="lg:p-4 p-2" alt="client-img">
-                                    <div class="absolute top-0 start-0 opacity-0 hover:opacity-100 transition-all duration-300 ease-in-out">
-                                        <img src="assets/images/client/logo-light/06.svg" class="dark:block hidden lg:p-4 p-2" alt="client logo">
-                                        <img src="assets/images/client/logo-dark/06.svg" class="dark:hidden lg:p-4 p-2" alt="client logo">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            </swiper-slide>
+                        }
+                        </swiper-container>
                     </div>
                 </div>
             </div>
