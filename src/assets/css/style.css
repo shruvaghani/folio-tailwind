@@ -1,0 +1,123 @@
+/*
+Template Name: folio - Technology and Corporate Tailwind CSS Template
+Version: 1.0.0
+Author: StackBros
+File: Style CSS File
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Swiper CSS */
+/* @import "swiper/swiper-bundle.css";
+@import "glightbox/dist/css/glightbox.min.css"; */
+
+/* TailwindCSS */
+@import "tailwindcss";
+
+/* Plugin */
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms"; 
+
+/* Preline UI */
+@import "preline/variants.css";
+@source "preline/dist/*.js";
+
+
+/* Iconify Icons */
+/* @plugin "@iconify/tailwind4" {
+    prefixes: tabler, lucide;
+} */
+
+/* Themes Config */
+@theme {
+
+    --font-body: "Inter", serif;
+    --font-heading: "Poppins", sans-serif;
+
+    --color-body-bg: #fff;
+    --color-body-color: #606261;
+
+     --color-primary: #5F41FB;
+     --color-primary-hover: #4826fa;
+    --color-secondary: #EBEEFF;
+    --color-success: #28B446;
+    --color-info: #17a2b8;
+    --color-warning: #EBAF41;
+    --color-danger: #d6293e;
+    --color-pink: #FF6399;
+    --color-purple: #893EFB;
+    --color-light: #f0f2fd;
+    --color-dark: #141727;
+
+    --color-default-50: var(--color-neutral-50);
+    --color-default-100: var(--color-neutral-100);
+    --color-default-200: var(--color-neutral-200);
+    --color-default-300: var(--color-neutral-300);
+    --color-default-400: var(--color-neutral-400);
+    --color-default-500: var(--color-neutral-500);
+    --color-default-600: var(--color-neutral-600);
+    --color-default-700: var(--color-neutral-700);
+    --color-default-800: var(--color-neutral-800);
+    --color-default-900: var(--color-neutral-900);
+    --color-default-950: var(--color-neutral-950);
+
+    --text-md:10px;
+    --text-2xs:13px;
+    --text-2.2xl:22px;
+    --text-2.5xl:28px;
+    --text-4.5xl:44px;
+    --text-3.5xl:32px;
+    --text-5.5xl:56px;
+
+}
+.light{
+    --color-body-bg: #fff;
+    --color-body-color: #606261;
+
+    --color-default-50: var(--color-neutral-50);
+    --color-default-100: var(--color-neutral-100);
+    --color-default-200: var(--color-neutral-200);
+    --color-default-300: var(--color-neutral-300);
+    --color-default-400: var(--color-neutral-400);
+    --color-default-500: var(--color-neutral-500);
+    --color-default-600: var(--color-neutral-600);
+    --color-default-700: var(--color-neutral-700);
+    --color-default-800: var(--color-neutral-800);
+    --color-default-900: var(--color-neutral-900);
+    --color-default-950: var(--color-neutral-950);
+}
+.dark {
+    color-scheme: dark;
+
+    --color-body-bg: #101521;
+    --color-body-color: rgba(255, 255, 255, 0.7);
+    --color-secondary: #1f2434;
+
+    --color-light: #202124;
+    --color-light-hover: #2c2e33;
+
+    --color-default-50: var(--color-zinc-950);
+    --color-default-100: #292a2d;
+    --color-default-200: var(--color-zinc-800);
+    --color-default-300: var(--color-zinc-700);
+    --color-default-400: var(--color-zinc-600);
+    --color-default-500: var(--color-zinc-500);
+    --color-default-600: var(--color-zinc-400);
+    --color-default-700: var(--color-zinc-300);
+    --color-default-800: var(--color-zinc-200);
+    --color-default-900: var(--color-zinc-100);
+    --color-default-950: var(--color-zinc-50);
+}
+
+#navbar .active {
+    @apply text-primary;
+}
+
+@custom-variant light (&:where(.light, .light *));
+@custom-variant dark (&:where(.dark, .dark *));
+
+@import "./_general.css";
+@import "./_swiper.css";
+@import "./_plyr.css";
+@import "./_mockup.css";
+
+
+
