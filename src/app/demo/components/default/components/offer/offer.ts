@@ -10,6 +10,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
   templateUrl: './offer.html',
   styles: ``,
 })
+  
 export class Offer {
   serviceData: (ServiceType & { safeIcon: SafeHtml })[] = [];
 

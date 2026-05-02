@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
+import { RouterLink } from "@angular/router";
+import { LucideAngularModule } from "lucide-angular";
+import { blogData } from '../../data';
 
 @Component({
   selector: 'default-blog',
-  imports: [],
+  imports: [RouterLink, LucideAngularModule],
   templateUrl: './blog.html',
   styles: ``,
 })
   
 export class Blog {
-
+  blogData = blogData;
 }

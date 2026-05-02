@@ -1,0 +1,115 @@
+<footer class="bg-dark relative lg:pt-32 pt-18">
+  <div class="absolute top-0 end-0 -mt-32 z-20 hidden md:block">
+    <img src="assets/images/elements/grad-shape/06.png" class="w-250px" alt="Shape" />
+  </div>
+  <div class="container">
+    <div class="grid lg:grid-cols-4 grid-cols-1 gap-7.5 lg:mb-24 mb-8">
+      <div class="col-span-1">
+        <a class="me-0" routerLink="/">
+          <img class="h-10" src="assets/images/logo-light.svg" alt="logo" />
+        </a>
+      </div>
+
+      <div class="lg:col-span-3">
+        <div
+          class="bg-secondary dark md:flex justify-between items-center rounded-2xl p-7.5 lg:w-182 ms-auto"
+          style="--bs-bg-opacity: 0.05"
+        >
+          <h5 class="mb-4 md:mb-0 lg:text-2.5xl text-2xl">
+            <span class="hand-wave-animate">🖐️</span> Let's innovate together
+          </h5>
+          <a
+            routerLink="/contact-us/v1"
+            class="py-2.5 px-5 text-2xs bg-primary-grad text-nowrap rounded"
+            >Start innovating</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="grid lg:grid-cols-3 grid-cols-1 gap-7.5">
+      <div class="col-span-2">
+        <div class="grid md:grid-cols-3 grid-cols-1 gap-7.5">
+          @for (section of footerData; track $index) {
+            <div>
+              <h6 class="md:text-2.2xl text-xl text-white">
+                {{ section.title }}
+              </h6>
+
+              <hr class="md:my-7.5 my-4 border-t border-white/10" />
+
+              <ul class="flex flex-col gap-2.5 text-white/90 text-base">
+                @for (item of section.links; track $index) {
+                  <li class="hover:text-primary">
+                    <a class="flex items-center gap-1.5" [routerLink]="item.link ? item.link : []">
+                      @if (item.icon) {
+                        <lucide-icon [name]="item.icon" class="size-4"> </lucide-icon>
+                      }
+
+                      {{ item.label }}
+
+                      @if (item.badge) {
+                        <span class="py-1 px-2 text-xs rounded ms-2" [ngClass]="item.badge.class">
+                          {{ item.badge.text }}
+                        </span>
+                      }
+
+                      @if (
+                        section.title === 'Resources' && item.label === 'Services'
+                      ) {
+                        <lucide-icon name="square-arrow-out-up-right" class="size-4"></lucide-icon>
+                      }
+                    </a>
+                  </li>
+                }
+              </ul>
+            </div>
+          }
+        </div>
+      </div>
+
+      <div class="col-span-1">
+        <div>
+          <h6 class="md:text-2.2xl text-xl text-white">Download our app</h6>
+          <hr class="my-7.5 border-t border-white/10" />
+          <p class="mb-4 text-white/90">Get instant access to exclusive features for FREE!</p>
+
+          <div class="flex gap-1.5">
+            <img src="assets/images/elements/google-play.svg" alt="" class="h-10" />
+            <img src="assets/images/elements/app-store.svg" alt="app-store" class="h-10" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-12 border-t border-white/10" />
+
+    <div class="py-7.5 md:flex justify-between items-center md:text-start text-center">
+      <div class="text-white/90 text-sm mb-4 md:mb-0">
+        Copyrights © 2026 Folio. Build by
+        <a
+          routerLink="https://stackbros.in/"
+          target="_blank"
+          class="font-semibold hover-underline text-white hover:text-primary"
+          >StackBros</a
+        >.
+      </div>
+
+      <div class="flex gap-3 md:justify-end justify-center">
+        @for (item of socialLinkData; track $index) {
+          <a
+            [routerLink]="item.link ? item.link : []"
+            class="size-8 flex justify-center items-center rounded-md bg-white/5 hover:bg-white/10 text-white transition-all duration-300"
+          >
+            @if (item.icon) {
+              <lucide-icon [name]="item.icon" class="size-3.5"> </lucide-icon>
+            }
+
+            @if (item.iconify) {
+              <iconify-icon [icon]="item.iconify" width="14" height="14"> </iconify-icon>
+            } 
+          </a>
+        }
+      </div>
+    </div>
+  </div>
+</footer>

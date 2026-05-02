@@ -1,3 +1,40 @@
+// Client Logos
+const logoGray01 = 'assets/images/client/logo-gray/01.svg';
+const logoGray02 = 'assets/images/client/logo-gray/02.svg';
+const logoGray03 = 'assets/images/client/logo-gray/03.svg';
+const logoGray04 = 'assets/images/client/logo-gray/04.svg';
+const logoGray05 = 'assets/images/client/logo-gray/05.svg';
+const logoGray06 = 'assets/images/client/logo-gray/06.svg';
+
+const logoLight01 = 'assets/images/client/logo-light/01.svg';
+const logoLight02 = 'assets/images/client/logo-light/02.svg';
+const logoLight03 = 'assets/images/client/logo-light/03.svg';
+const logoLight04 = 'assets/images/client/logo-light/04.svg';
+const logoLight05 = 'assets/images/client/logo-light/05.svg';
+const logoLight06 = 'assets/images/client/logo-light/06.svg';
+
+const logoDark01 = 'assets/images/client/logo-dark/01.svg';
+const logoDark02 = 'assets/images/client/logo-dark/02.svg';
+const logoDark03 = 'assets/images/client/logo-dark/03.svg';
+const logoDark04 = 'assets/images/client/logo-dark/04.svg';
+const logoDark05 = 'assets/images/client/logo-dark/05.svg';
+const logoDark06 = 'assets/images/client/logo-dark/06.svg';
+
+// Portfolio Images
+const portfolio01 = 'assets/images/portfolio/01.jpg';
+const portfolio02 = 'assets/images/portfolio/02.jpg';
+const portfolio03 = 'assets/images/portfolio/03.jpg';
+const portfolio04 = 'assets/images/portfolio/04.jpg';
+
+// Blog Images
+const blog01 = 'assets/images/blog/01.jpg';
+const blog02 = 'assets/images/blog/02.jpg';
+
+// Avatar Images
+const avatar01 = 'assets/images/avatar/01.jpg';
+const avatar09 = 'assets/images/avatar/09.jpg';
+const avatar10 = 'assets/images/avatar/10.jpg';
+
 export type ClientType = {
   grayLogo: string;
   lightLogo: string;
@@ -5,37 +42,14 @@ export type ClientType = {
 };
 
 export const clientData: ClientType[] = [
-  {
-    grayLogo: 'assets/images/client/logo-gray/01.svg',
-    lightLogo: 'assets/images/client/logo-light/01.svg',
-    darkLogo: 'assets/images/client/logo-dark/01.svg',
-  },
-  {
-    grayLogo: 'assets/images/client/logo-gray/02.svg',
-    lightLogo: 'assets/images/client/logo-light/02.svg',
-    darkLogo: 'assets/images/client/logo-dark/02.svg',
-  },
-  {
-    grayLogo: 'assets/images/client/logo-gray/03.svg',
-    lightLogo: 'assets/images/client/logo-light/03.svg',
-    darkLogo: 'assets/images/client/logo-dark/03.svg',
-  },
-  {
-    grayLogo: 'assets/images/client/logo-gray/04.svg',
-    lightLogo: 'assets/images/client/logo-light/04.svg',
-    darkLogo: 'assets/images/client/logo-dark/04.svg',
-  },
-  {
-    grayLogo: 'assets/images/client/logo-gray/05.svg',
-    lightLogo: 'assets/images/client/logo-light/05.svg',
-    darkLogo: 'assets/images/client/logo-dark/05.svg',
-  },
-  {
-    grayLogo: 'assets/images/client/logo-gray/06.svg',
-    lightLogo: 'assets/images/client/logo-light/06.svg',
-    darkLogo: 'assets/images/client/logo-dark/06.svg',
-  },
+  { grayLogo: logoGray01, lightLogo: logoLight01, darkLogo: logoDark01 },
+  { grayLogo: logoGray02, lightLogo: logoLight02, darkLogo: logoDark02 },
+  { grayLogo: logoGray03, lightLogo: logoLight03, darkLogo: logoDark03 },
+  { grayLogo: logoGray04, lightLogo: logoLight04, darkLogo: logoDark04 },
+  { grayLogo: logoGray05, lightLogo: logoLight05, darkLogo: logoDark05 },
+  { grayLogo: logoGray06, lightLogo: logoLight06, darkLogo: logoDark06 },
 ];
+
 
 export type ServiceType = {
   icon: string;
@@ -205,28 +219,28 @@ export type PortfolioType = {
 export const portfolioData: PortfolioType[] = [
   {
     col: 'md:col-span-7',
-    img: 'assets/images/portfolio/01.jpg',
+    img: portfolio01,
     category: 'Technology',
     title: 'Brand Identity Development',
     link: '/portfolio/case-study/v1',
   },
   {
     col: 'md:col-span-5',
-    img: 'assets/images/portfolio/02.jpg',
+    img: portfolio02,
     category: 'Technology',
     title: 'E-commerce platform launch',
     link: '/portfolio/case-study/v1',
   },
   {
     col: 'md:col-span-5',
-    img: 'assets/images/portfolio/03.jpg',
+    img: portfolio03,
     category: 'Technology',
     title: 'Mobile app development',
     link: '/portfolio/case-study/v1',
   },
   {
     col: 'md:col-span-7',
-    img: 'assets/images/portfolio/04.jpg',
+    img: portfolio04,
     category: 'Technology',
     title: 'Digital marketing overhaul',
     link: '/portfolio/case-study/v1',
@@ -243,24 +257,60 @@ export type TestimonialType = {
 
 export const testimonialsData: TestimonialType[] = [
   {
-    img: 'assets/images/avatar/09.jpg',
-    text: `Our passion for customer excellence is just one reason why we are the market leader. We've always worked very hard to give our customers the best experience. Was out laughter raptures returned outweigh. Luckily cheered colonel I do we attack highest enabled.`,
+    img: avatar09,
+    text: `Our passion for customer excellence is just one reason why we are the market leader...`,
     rating: 4.5,
     name: 'Jacqueline Miller',
     role: 'Product designer',
   },
   {
-    img: 'assets/images/avatar/10.jpg',
-    text: `Their team went above and beyond to understand our needs and deliver a solution that exceeded our expectations. They demonstrated throughout the process was truly impressive.`,
+    img: avatar10,
+    text: `Their team went above and beyond to understand our needs...`,
     rating: 5,
     name: 'Louis Ferguson',
     role: 'Web Developer',
   },
   {
-    img: 'assets/images/avatar/01.jpg',
-    text: `Was out laughter raptures returned outweigh. Luckily cheered colonel I do we attack highest enabled. Tried law yet style child. The bore of true of no be deal.`,
+    img: avatar01,
+    text: `Was out laughter raptures returned outweigh...`,
     rating: 4.5,
     name: 'Emma Watson',
     role: 'UI/UX designer',
   },
 ];
+
+export type BlogType = {
+  type: string;
+  link: string;
+  image?: string;
+  category: string;
+  title: string;
+  buttonText: string;
+};
+
+export const blogData: BlogType[] = [
+  {
+    type: 'image-card',
+    link: '/blog/single',
+    image: blog01,
+    category: 'Lifestyle',
+    title: 'Techniques to captivate your audience',
+    buttonText: 'Read more',
+  },
+  {
+    type: 'gradient-card',
+    link: '/blog/single',
+    category: 'Research',
+    title: 'Building a strong identity for your business',
+    buttonText: 'Read more',
+  },
+  {
+    type: 'image-card',
+    link: '/blog/single',
+    image: blog02,
+    category: 'Lifestyle',
+    title: "Tips for improving your website's visibility",
+    buttonText: 'Read more',
+  },
+];
+
