@@ -22,7 +22,7 @@ export const DEMO_ROUTES: Route[] = [
     data: { title: 'Software Company' },
   },
   {
-    path: 'finance',
+    path: 'finance-consulting',
     component: Finance,
     data: { title: 'Finance Consulting' },
   },

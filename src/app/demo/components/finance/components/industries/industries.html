@@ -1,0 +1,90 @@
+<section class="lg:py-36 py-20 bg-secondary overflow-x-hidden">
+  <div class="lg:flex items-start lg:gap-6">
+    <div class="flex flex-col h-full lg:ms-80 md:ms-10 ms-6">
+      <div>
+        <h2 class="mb-4 lg:text-4.5xl md:text-4xl text-3xl">Industries we serve</h2>
+        <p class="text-xl text-default-800 mb-4">
+          Providing expert financial services across diverse industries
+        </p>
+        <div>
+          <a
+            routerLink="/contact-us/v2"
+            class="text-white inline-flex py-3.5 px-7.5 rounded-md font-medium bg-primary mb-7.5 lg:mb-0 hover:bg-primary-hover"
+            >Contact us now</a
+          >
+        </div>
+      </div>
+
+      <div class="flex gap-4 relative lg:mt-34">
+        <a
+          [routerLink]="[]"
+          class="shadow-[0_0.18rem_0.25rem_rgba(127,57,248,0.2)] bg-body-bg size-12 rounded-full flex justify-center items-center hover:-mt-1 transition-all duration-300 swiper-button-prev-industry"
+          tabindex="0"
+          role="button"
+          aria-label="Previous slide"
+          aria-controls="swiper-wrapper-a7865644b1031da410"
+          ><lucide-icon name="arrow-left" class="size-5.5"></lucide-icon
+        ></a>
+        <a
+          [routerLink]="[]"
+          class="shadow-[0_0.18rem_0.25rem_rgba(127,57,248,0.2)] bg-body-bg size-12 rounded-full flex justify-center items-center hover:-mt-1 transition-all duration-300 swiper-button-next-industry"
+          tabindex="0"
+          role="button"
+          aria-label="Next slide"
+          aria-controls="swiper-wrapper-a7865644b1031da410"
+          ><lucide-icon name="arrow-right" class="size-5.5"></lucide-icon
+        ></a>
+      </div>
+    </div>
+
+    <div class="lg:mt-0 mt-8">
+      <div
+        class="swiper lg:max-w-300 lg:ms-auto overflow-x-hidden">
+        <swiper-container
+          space-between="30"
+          loop="true"
+          autoplay-pause-on-mouse-enter="true"
+          navigation="true"
+          navigation-next-el=".swiper-button-next-industry"
+          navigation-prev-el=".swiper-button-prev-industry"
+          [breakpoints]="{
+            '576': { slidesPerView: 2 },
+            '1200': { slidesPerView: 3 },
+          }"
+          class="swiper-wrapper"
+        >
+          @for (item of financeServicesData; track item.title) {
+            <swiper-slide>
+              <div class="bg-body-bg rounded-2xl p-4 pb-0">
+                
+                <img [src]="item.image" class="rounded-xl" alt="service image" />
+
+                <div class="py-5 px-2">
+                  <h6 class="mb-2 md:text-2.2xl text-xl">
+                    {{ item.title }}
+                  </h6>
+
+                  <p class="mb-4 text-default-800">
+                    {{ item.description }}
+                  </p>
+
+                  <a
+                    [routerLink]="item.link ? item.link : []"
+                    class="group flex items-center gap-1.5"
+                  >
+                    <span class="text-primary-grad">Read more</span>
+
+                    <lucide-icon
+                      name="arrow-right"
+                      class="group-hover:translate-x-0.5 size-4 text-primary transition-all duration-300"
+                    ></lucide-icon>
+                  </a>
+                </div>
+              </div>
+            </swiper-slide>
+          }
+        </swiper-container>
+      </div>
+    </div>
+  </div>
+</section>
