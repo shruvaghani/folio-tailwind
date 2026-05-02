@@ -10,86 +10,56 @@
                     <h2 class="mb-4 lg:mb-7.5 lg:text-4.5xl md:text-4xl text-3xl"> Find the perfect plan for your business</h2>
                     <p class="mb-7.5">Our flexible pricing plans are designed to scale with your business, offering the features you need to thrive.</p>
 
-                    <a href="pricing-v1.html" class="group inline-flex items-center gap-1.5 py-3.5 px-7.5 rounded-md bg-primary-grad">
+                    <a routerLink="/pricing/v1" class="group inline-flex items-center gap-1.5 py-3.5 px-7.5 rounded-md bg-primary-grad">
                         <span>Explore our projects</span>
-                        <i data-lucide="arrow-right" class="group-hover:translate-x-0.5 size-4 text-white transition-all duration-300"></i>
+                        <lucide-icon name="arrow-right" class="group-hover:translate-x-0.5 size-4 text-white transition-all duration-300"></lucide-icon>
                     </a>
                 </div>
 
                 <div class="col-span-2 lg:ps-18">
                     <div class="grid md:grid-cols-2 grid-cols-1 items-center md:gap-0 gap-7.5">
-                        <div class="p-7.5 bg-body-bg md:rounded-s-2xl md:rounded-e-none rounded-2xl text-center">
+                        @for (plan of pricingPlanData; track $index) {
+                        <div class="text-center relative" [class]="plan.highlight 
+          ? 'pb-7.5 px-7.5 pt-12 bg-primary rounded-2xl' 
+          : 'p-7.5 bg-body-bg md:rounded-s-2xl md:rounded-e-none rounded-2xl'">
+
+                            @if (plan.highlight) {
+                            <div class="text-white bg-dark rounded absolute top-0 start-1/2 -translate-x-1/2 -translate-y-1/2 px-4 py-1">
+                                {{ plan.badge }}
+                            </div>
+                            }
+
                             <div class="size-18 bg-secondary mb-4 mx-auto rounded-full flex justify-center items-center">
-                                <img src="/images/elements/rocket.png" class="h-10" alt="rocket">
+                                <img [src]="plan.icon" class="h-10" alt="icon">
                             </div>
 
-                            <h6 class="mb-4 md:text-2.2xl text-xl">Basic plan</h6>
-                            <span class="text-primary"> <span class="lg:text-6xl md:text-4.5xl text-4xl font-bold">$25</span> /month</span>
+
+                            <h6 class="mb-4 md:text-2.2xl text-xl" [class]="plan.highlight ? 'text-white' : ''">
+                                {{ plan.title }}
+                            </h6>
+
+                            <span [class]="plan.highlight ? 'text-white' : 'text-primary'">
+                                <span class="lg:text-6xl md:text-4.5xl text-4xl font-bold">
+                                    ${{ plan.price }}</span> /{{ plan.duration }}
+                            </span>
+
 
                             <div class="mt-4">
-                                <ul class="mb-7.5 space-y-3 text-default-800 text-center">
+                                <ul class="mb-7.5 space-y-3 text-center" [class]="plan.highlight ? 'text-white/90' : 'text-default-800'">
+                                    @for (feature of plan.features; track $index) {
                                     <li class="flex justify-center items-center">
-                                        <i data-lucide="check" class="text-success me-1 size-4"></i>
-                                        Customizable features
+                                        <lucide-icon name="check" class="me-1 size-4" [class]="!plan.highlight ? 'text-success' : ''">
+                                        </lucide-icon>
+                                        {{ feature }}
                                     </li>
-
-                                    <li class="flex justify-center items-center">
-                                        <i data-lucide="check" class="text-success me-1 size-4"></i>
-                                        Basic support
-                                    </li>
-
-                                    <li class="flex justify-center items-center">
-                                        <i data-lucide="check" class="text-success me-1 size-4"></i>
-                                        Monthly updates
-                                    </li>
-
-                                    <li class="flex justify-center items-center">
-                                        <i data-lucide="check" class="text-success me-1 size-4"></i>
-                                        Up to 50 Users
-                                    </li>
+                                    }
                                 </ul>
-                                <a href="contact-us-v2.html" class="text-white bg-dark w-full rounded-md py-3.5 px-7.5 inline-flex justify-center font-medium">Get started</a>
+                                <a routerLink="/contact-us/v2" class="w-full rounded-md py-3.5 px-7.5 inline-flex justify-center font-medium" [class]="plan.buttonClass">
+                                    Get started
+                                </a>
                             </div>
                         </div>
-
-                        <div class="pb-7.5 px-7.5 pt-12 bg-primary rounded-2xl text-center relative">
-                            <div class="text-white bg-dark rounded absolute top-0 start-1/2 -translate-x-1/2 -translate-y-1/2 px-4 py-1">Most popular</div>
-                            <div class="size-18 bg-secondary mb-4 mx-auto rounded-full flex justify-center items-center">
-                                <img src="/images/elements/thunder.png" class="h-10" alt="rocket">
-                            </div>
-                            <h6 class="mb-4 md:text-2.2xl text-xl text-white">Standard plan</h6>
-                            <span class="text-white"> <span class="lg:text-6xl md:text-4.5xl text-4xl font-bold">$120</span> /month</span>
-
-                            <div class="mt-4">
-                                <ul class="mb-7.5 space-y-3 text-white/90 text-center">
-                                    <li class="flex justify-center items-center">
-                                        <i data-lucide="check" class="me-1 size-4"></i>
-                                        All basic plan features
-                                    </li>
-
-                                    <li class="flex justify-center items-center">
-                                        <i data-lucide="check" class="me-1 size-4"></i>
-                                        Priority support
-                                    </li>
-
-                                    <li class="flex justify-center items-center">
-                                        <i data-lucide="check" class="me-1 size-4"></i>
-                                        Access to advanced features
-                                    </li>
-
-                                    <li class="flex justify-center items-center">
-                                        <i data-lucide="check" class="me-1 size-4"></i>
-                                        Up to 100 Users
-                                    </li>
-
-                                    <li class="flex justify-center items-center">
-                                        <i data-lucide="check" class="me-1 size-4"></i>
-                                        Dedicated account manager
-                                    </li>
-                                </ul>
-                                <a href="contact-us-v2.html" class="text-dark bg-white w-full rounded-md py-3.5 px-7.5 inline-flex justify-center font-medium">Get started</a>
-                            </div>
-                        </div>
+                        }
                     </div>
                 </div>
             </div>

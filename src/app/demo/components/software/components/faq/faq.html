@@ -1,7 +1,7 @@
 <!-- FAQ -->
 <section class="lg:pb-36 pb-20 bg-secondary relative">
     <div class="absolute end-0 bottom-0 hidden md:block">
-        <img src="/images/elements/grad-shape/12.png" class="blur-xs" alt="Decoration shape">
+        <img src="assets/images/elements/grad-shape/12.png" class="blur-xs" alt="Decoration shape">
     </div>
 
     <div class="container relative z-20">
@@ -9,76 +9,39 @@
             <h2 class="md:mb-12 mb-12 lg:text-4.5xl md:text-4xl text-3xl text-center">Got questions? (FAQs)</h2>
 
             <div class="hs-accordion-group">
-                <div class="hs-accordion bg-body-bg/60 rounded-xl p-3.75 active mb-7.5" id="heading-1">
-                    <button class="hs-accordion-toggle text-default-900 py-4 px-5 inline-flex items-center text-xl w-full font-semibold text-start focus:outline-hidden disabled:opacity-50 disabled:pointer-events-none" aria-expanded="true" aria-controls="collapse-1">
-                        How do I get started with your service?
+
+                @for (faq of faqData; track faq.id) {
+
+                <div class="hs-accordion bg-body-bg/60 rounded-xl p-3.75 mb-7.5"  [class.active]="faq.active" [attr.id]="'heading-' + faq.id">
+
+                    <!-- Button -->
+                    <button class="hs-accordion-toggle text-default-900 py-4 px-5 inline-flex items-center text-xl w-full font-semibold text-start focus:outline-hidden disabled:opacity-50 disabled:pointer-events-none" [attr.aria-expanded]="faq.active" [attr.aria-controls]="'collapse-' + faq.id">
+
+                        {{ faq.question }}
+
                         <div class="ms-auto">
                             <div class="hs-accordion-active:bg-primary bg-default-900 size-7 flex justify-center items-center rounded-full">
-                                <i data-lucide="chevron-down" class="hs-accordion-active:rotate-180 text-body-bg size-4"></i>
+                                <lucide-icon name="chevron-down" class="text-body-bg size-4 transition-transform duration-300 hs-accordion-active:rotate-180">
+                                </lucide-icon>
                             </div>
                         </div>
                     </button>
 
-                    <div id="collapse-1" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="heading-1">
+                    <!-- Content -->
+                    <div class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" [class]="faq.active ? '' : 'hidden'" role="region" [attr.id]="'collapse-' + faq.id" [attr.aria-labelledby]="'heading-' + faq.id">
+
                         <p class="px-5 pb-4 text-default-700">
-                            The first step is to sign up for our service. You can do this by visiting our website and locating the sign-up or registration button. Click on it and follow the prompts to create your account.
+                            {{ faq.answer }}
                         </p>
+
                     </div>
+
                 </div>
+                }
 
-                <div class="hs-accordion bg-body-bg/60 rounded-xl p-3.75 mb-7.5" id="heading-2">
-                    <button class="hs-accordion-toggle text-default-900 py-4 px-5 inline-flex items-center text-xl w-full font-semibold text-start focus:outline-hidden disabled:opacity-50 disabled:pointer-events-none" aria-expanded="true" aria-controls="collapse-2">
-                        What payment methods do you accept?
-                        <div class="ms-auto">
-                            <div class="hs-accordion-active:bg-primary bg-default-900 size-7 flex justify-center items-center rounded-full">
-                                <i data-lucide="chevron-down" class="hs-accordion-active:rotate-180 text-body-bg size-4"></i>
-                            </div>
-                        </div>
-                    </button>
-
-                    <div id="collapse-2" class="hs-accordion-content w-full overflow-hidden hidden transition-[height] duration-300" role="region" aria-labelledby="heading-2">
-                        <p class="px-5 pb-4 text-default-700">
-                            September how men saw tolerably two behavior arranging. She offices for highest and replied one venture pasture. Applauded no discovery in newspaper allowance am northward. Frequently partiality possession resolution at or appearance unaffected me. Engaged its was the evident pleased husband. Ye goodness felicity do disposal dwelling no. First am plate jokes to began to cause a scale.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="hs-accordion bg-body-bg/60 rounded-xl p-3.75 mb-7.5" id="heading-3">
-                    <button class="hs-accordion-toggle text-default-900 py-4 px-5 inline-flex items-center text-xl w-full font-semibold text-start focus:outline-hidden disabled:opacity-50 disabled:pointer-events-none" aria-expanded="true" aria-controls="collapse-3">
-                        How can I contact your customer support team?
-                        <div class="ms-auto">
-                            <div class="hs-accordion-active:bg-primary bg-default-900 size-7 flex justify-center items-center rounded-full">
-                                <i data-lucide="chevron-down" class="hs-accordion-active:rotate-180 text-body-bg size-4"></i>
-                            </div>
-                        </div>
-                    </button>
-
-                    <div id="collapse-3" class="hs-accordion-content w-full overflow-hidden hidden transition-[height] duration-300" role="region" aria-labelledby="heading-3">
-                        <p class="px-5 pb-4 text-default-700">
-                            Agencies provide a wide range of services depending on their specialization. Some common services include advertising campaigns, digital marketing, branding, creative design, media planning and buying, public relations, talent management, event planning, and market research.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="hs-accordion bg-body-bg/60 rounded-xl p-3.75 mb-7.5" id="heading-4">
-                    <button class="hs-accordion-toggle text-default-900 py-4 px-5 inline-flex items-center text-xl w-full font-semibold text-start focus:outline-hidden disabled:opacity-50 disabled:pointer-events-none" aria-expanded="true" aria-controls="collapse-4">
-                        Do you offer custom solutions for businesses?
-                        <div class="ms-auto">
-                            <div class="hs-accordion-active:bg-primary bg-default-900 size-7 flex justify-center items-center rounded-full">
-                                <i data-lucide="chevron-down" class="hs-accordion-active:rotate-180 text-body-bg size-4"></i>
-                            </div>
-                        </div>
-                    </button>
-
-                    <div id="collapse-4" class="hs-accordion-content w-full overflow-hidden hidden transition-[height] duration-300" role="region" aria-labelledby="heading-4">
-                        <p class="px-5 pb-4 text-default-700">
-                            When selecting an agency, consider your specific requirements, budget, and the agency's expertise and track record in your industry. Research their portfolio, client testimonials, and case studies to gauge their capabilities. It's also important to meet with the agency to assess their communication style and ensure they align with your goals.
-                        </p>
-                    </div>
-                </div>
             </div>
             <!-- End Accordion Group -->
-            <p class="text-default-700 font-medium text-center">Confused? Our team is ready to assist you! Start a chat for quick support. <a href="#" class="hover-underline text-primary font-semibold">Talk to Us</a></p>
+            <p class="text-default-700 font-medium text-center">Confused? Our team is ready to assist you! Start a chat for quick support. <a routerLink="[]" class="hover-underline text-primary font-semibold">Talk to Us</a></p>
         </div>
     </div>
 </section>

@@ -1,0 +1,1 @@
+home/software --- Got questions? (FAQs) --- icon rotate issue

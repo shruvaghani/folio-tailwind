@@ -8,10 +8,11 @@ import { Cta } from "./components/cta/cta";
 import { Faq } from "./components/faq/faq";
 import { Method } from "./components/method/method";
 import { Subscribe } from "./components/subscribe/subscribe";
+import { Footer2 } from '@app/components/footer/footer2/footer2';
 
 @Component({
   selector: 'app-software',
-  imports: [Hero, Features, Client, Services, Testimonials, Cta, Faq, Method, Subscribe],
+  imports: [Hero, Features, Client, Services, Testimonials, Cta, Faq, Method, Subscribe, Footer2],
   templateUrl: './software.html',
   styles: ``,
 })

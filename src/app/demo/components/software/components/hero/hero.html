@@ -12,33 +12,25 @@
             </p>
 
             <h1 class="lg:text-[68px] md:text-[52px] text-4xl font-semibold mb-7.5 leading-normal">Creating software solutions for your
-                <span class="text-primary">
-                    <span class="typed" data-type-text="business&amp;&amp;agency&amp;&amp;startup"></span>
+                <span class="text-primary inline-flex">
+                    <ngx-typed-js [strings]="['business', 'agency', 'startup']" [typeSpeed]="50" [backSpeed]="30" [loop]="true">
+                        <span class="typing"></span>
+                    </ngx-typed-js>
                 </span>
             </h1>
 
             <div class="flex gap-4 md:gap-7.5 flex-wrap">
                 <!-- Button -->
-                <a href="portfolio-modern.html" class="py-3.5 px-7.5 rounded-md font-medium bg-primary-grad mb-1.5">Explore our work</a>
+                <a routerLink="/portfolio/modern" class="py-3.5 px-7.5 rounded-md font-medium bg-primary-grad mb-1.5">Explore our work</a>
 
                 <!-- Info -->
                 <div class="flex gap-2 items-center">
                     <ul class="flex mb-0 items-center">
-                        <li>
-                            <img class="size-12 rounded-full" src="assets/images/avatar/02.jpg" alt="avatar">
+                        @for (item of avatarData; track $index) {
+                        <li [class]="'-ms-3'" [class.-ms-3]="!$first">
+                            <img class="size-12 rounded-full" [src]="item.src" [alt]="item.alt">
                         </li>
-
-                        <li class="-ms-3">
-                            <img class="size-12 rounded-full" src="assets/images/avatar/05.jpg" alt="avatar">
-                        </li>
-
-                        <li class="-ms-3">
-                            <img class="size-12 rounded-full" src="assets/images/avatar/10.jpg" alt="avatar">
-                        </li>
-
-                        <li class="-ms-3">
-                            <img class="size-12 rounded-full" src="assets/images/avatar/09.jpg" alt="avatar">
-                        </li>
+                        }
                     </ul>
                     <p class="text-default-900 font-medium">15K+ happy clients</p>
                 </div>
