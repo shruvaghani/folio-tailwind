@@ -1,7 +1,7 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { LucideAngularModule } from "lucide-angular";
-import { footerData, socialLinkData } from '../data';
+import { footer1Data, socialLinkData } from '../data';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -13,6 +13,6 @@ import { CommonModule } from '@angular/common';
 })
   
 export class Footer1 {
-  footerData = footerData;
+  footer1Data = footer1Data;
   socialLinkData = socialLinkData;
 }

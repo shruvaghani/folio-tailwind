@@ -8,12 +8,12 @@ export type FooterLink = {
   };
 };
 
-export type FooterType = {
+export type Footer1Type = {
   title: string;
   links: FooterLink[];
 };
 
-export const footerData: FooterType[] = [
+export const footer1Data: Footer1Type[] = [
   {
     title: 'Company',
     links: [
