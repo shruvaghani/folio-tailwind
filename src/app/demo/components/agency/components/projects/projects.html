@@ -1,0 +1,46 @@
+<section class="lg:py-36 py-20">
+    <div class="container">
+        <div class="mb-12 flex md:flex-nowrap flex-wrap justify-between items-center">
+            <h2 class="text-center md:text-start lg:w-2/5 ms:w-2/3 lg:text-4.5xl md:text-4xl text-3xl">Success stories and projects</h2>
+
+            <div class="flex justify-center w-full md:justify-end gap-4 relative mt-4">
+                <a [routerLink]="[]" class="bg-secondary flex justify-center items-center hover:bg-primary/20 text-default-800 size-12 rounded-full swiper-button-prev-project transition-all duration-300"><lucide-icon name="arrow-left" class="size-6"></lucide-icon></a>
+                <a [routerLink]="[]" class="bg-secondary flex justify-center items-center hover:bg-primary/20 text-default-800 size-12 rounded-full swiper-button-next-project transition-all duration-300"><lucide-icon name="arrow-right" class="size-6"></lucide-icon></a>
+            </div>
+        </div>
+    </div>
+    <swiper-container class="swiper swiper-outside-n5 px-4 md:px-12" space-between="50" loop="true" navigation="true" autoplay="false" breakpoints='{
+                 "576": {"slidesPerView": 1},
+                "768": {"slidesPerView": 3},
+                "992": {"slidesPerView": 3},
+                "1200": {"slidesPerView": 4}
+            }' navigation-next-el=".swiper-button-next-project" navigation-prev-el=".swiper-button-prev-project">
+
+        @for (item of portfolioData; track $index) {
+        <swiper-slide>
+            <div class="group rounded-2xl relative overflow-hidden">
+                <!-- Card Image -->
+                <img [src]="item.image" class="rounded-2xl group-hover:scale-104 transition-all duration-500" alt="portfolio-img">
+
+                <div class="absolute inset-0 rounded-2xl bg-linear-to-b from-black/20 via-black/50 to-black/90 opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+
+                <!-- Card elements -->
+                <div class="absolute top-0 group-hover:opacity-100 opacity-0 flex flex-col items-start justify-between h-full p-12 transition-all duration-900">
+                    <!-- Client logo -->
+                    <img [src]="item.logo" class="h-7.5" alt="client logo">
+                    <!-- Title -->
+                    <div class="card-text mt-auto">
+                        <h6 class="text-xl md:text-2.2xl text-white"> <a [routerLink]="item.link">{{ item.title }}</a></h6>
+                    </div>
+                </div>
+            </div>
+        </swiper-slide>
+        }
+    </swiper-container>
+
+    <div class="max-w-150 bg-primary-grad rounded-xl text-center py-4 mt-18 md:mx-auto mx-4">
+        <p class="text-white px-2 sm:px-7.5 md:px-0">🔥 Kickstart your project! collaborate with us for success!
+            <a routerLink="/contact-us/v1" class="font-semibold hover-underline text-white">Start today</a>
+        </p>
+    </div>
+</section>

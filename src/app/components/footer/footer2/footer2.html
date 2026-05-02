@@ -28,12 +28,12 @@
 
             <div class="col-span-2">
                 <div class="lg:w-1/2 ms-auto grid grid-cols-2 gap-7.5">
-                    @for (section of footerData; track $index) {
+                    @for (section of footer2Data; track $index) {
                     <div>
                         <h6 class="md:text-2.2xl text-xl mb-7.5 text-white"> {{ section.title }}</h6>
                         <ul class="flex flex-col gap-2.5 text-white/90 text-base">
                             @for (item of section.links; track $index) {
-                            <li class="hover:text-primary"><a [href]="item.url" [class]="item.external ? 'flex items-center' : ''"> {{ item.label }}
+                            <li class="hover:text-primary"><a [routerLink]="item.url" [class]="item.external ? 'flex items-center' : ''"> {{ item.label }}
                                     @if (item.badge) {
                                     <span class="py-1 px-2 text-xs rounded text-white" [class]="item.badgeClass">
                                         {{ item.badge }}

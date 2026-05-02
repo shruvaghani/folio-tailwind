@@ -1,0 +1,56 @@
+<section class="lg:pb-32 relative">
+    <div class="container lg:px-24!">
+        <div class="grid lg:grid-cols-2 grid-cols-1 gap-7.5 items-center">
+            <div class="relative lg:pe-18">
+                <img src="assets/images/about/07.jpg" class="rounded-2xl z-20 relative" alt="about image">
+            </div>
+            <div>
+                <div class="flex items-center lg:max-w-120">
+                    <h2 class="font-bold text-primary-grad lg:text-[84px] md:text-6xl tex-[44px] mb-0">14+</h2>
+                    <h6 class="mb-0 ms-4 md:text-2.2xl text-xl">Products successfully launched</h6>
+                </div>
+                <hr class="border-secondary mt-7.5 mb-12">
+                <!-- Tab Nav -->
+                <div>
+                    <nav class="flex gap-4 flex-wrap">
+                        @for (tab of tabsData; track tab.id) {
+
+                        <button type="button" (click)="setActive(tab.id)" class="relative py-2 px-4 inline-flex items-center gap-x-2 text-base whitespace-nowrap rounded-md after:absolute after:-bottom-px after:inset-x-0 after:w-full after:h-0.5 font-medium transition-all duration-300" [ngClass]="tab.active 
+                        ? 'bg-default-900 text-body-bg after:bg-primary-active' 
+                        : 'bg-secondary text-default-900 hover:bg-default-900 hover:text-secondary'">
+                            <lucide-icon [name]="tab.icon" class="size-4"></lucide-icon>
+                            {{ tab.title }}
+
+                        </button>
+
+                        }
+                    </nav>
+                </div>
+                <!-- End Tab Nav -->
+
+                <!-- Tab Content -->
+                <div class="mt-7.5">
+                    @for (tab of tabsData; track tab.id) {
+                    <div [class.hidden]="!tab.active">
+                        <p class="mb-2 text-default-700"> {{ tab.content.description }}</p>
+
+                        <ul class="mb-4 space-y-2 pt-2">
+                            @for (point of tab.content.points; track point) {
+                            <li class="flex items-center text-default-900 font-medium">
+                                <lucide-icon name="badge-check" class="size-4 text-success me-2"></lucide-icon>
+                                <span>{{ point }}</span>
+                            </li>
+                            }
+                        </ul>
+                    </div>
+                    }
+                </div>
+                <!-- End Tab Content -->
+            </div>
+        </div>
+    </div>
+
+    <div class="absolute -bottom-60 start-0 -translate-x-1/2 ms-44 mt-7.5 z-20 hidden xl:block">
+        <img src="assets/images/elements/ai-hand.png" class="ms-44 ps-18">
+    </div>
+</section>

@@ -1,0 +1,15 @@
+<section class="lg:pt-36 md:pt-20 pt-7.5 pb-18">
+    <div class="container">
+        <div class="grid md:grid-cols-3 grid-cols-1 gap-7.5 lg:gap-12">
+            @for (item of featuresData; track $index) {
+            <div class="text-center">
+                <div class="size-18 mx-auto rounded-md flex justify-center items-center mb-7.5" [class]="item.bgClass">
+                    <div [innerHTML]="item.icon" [class]="item.iconClass"></div>
+                </div>
+                <h6 class="mb-4 md:text-2.2xl text-xl">{{ item.title }}</h6>
+                <p class="text-default-700">{{ item.description }}</p>
+            </div>
+            }
+         </div>
+    </div>
+</section>

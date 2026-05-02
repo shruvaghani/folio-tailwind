@@ -7,7 +7,7 @@ import { Project } from "./components/project/project";
 import { Testimonial } from "./components/testimonial/testimonial";
 import { Subscribe } from "./components/subscribe/subscribe";
 import { Blog } from "./components/blog/blog";
-import { Footer1 } from "../../../components/footer/footer1/footer1";
+import { Footer1 } from '@app/components/footer/footer1/footer1';
 
 @Component({
   selector: 'app-default',

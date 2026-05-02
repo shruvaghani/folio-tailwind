@@ -19,44 +19,48 @@
 
         <!-- Testimonials START -->
         <div class="swiper">
-            <swiper-container init="false" [config]="swiperConfig" class="swiper-wrapper">
+            <swiper-container space-between="30" loop="true" autoplay="true" [breakpoints]='{
+    "576": { "slidesPerView": 1 },
+    "768": { "slidesPerView": 2 },
+    "992": { "slidesPerView": 3 },
+  }' navigation-next-el="#swiper-button-next" navigation-prev-el="#swiper-button-prev">
                 @for (testimonial of testimonialsData; track testimonial.author) {
-                    <swiper-slide>
-                        <div class="bg-secondary/50 backdrop-blur-[5px] rounded-2xl p-7.5 h-full">
-                            <!-- Card body -->
-                            <div class="mb-7.5">
-                                <!-- Rating star -->
-                                <ul class="flex mb-4 gap-1">
-                                    @for (star of getStars(testimonial.rating); track $index) {
-                                        @if (star === 1) {
-                                            <li><lucide-icon name="star" class="size-4 fill-warning text-warning"></lucide-icon></li>
-                                        } @else if (star === 0.5) {
-                                            <li><lucide-icon name="star-half" class="size-4 fill-warning text-warning"></lucide-icon></li>
-                                        } @else {
-                                            <li><lucide-icon name="star" class="size-4 text-warning"></lucide-icon></li>
-                                        }
-                                    }
-                                </ul>
-                                <!-- Testimonials text -->
-                                <blockquote>
-                                    <p class="text-default-900 font-medium">{{ testimonial.text }}</p>
-                                </blockquote>
-                            </div>
-                            <!-- Card footer -->
-                            <div>
-                                <!-- Testimonials info -->
-                                <div class="flex items-center">
-                                    <div>
-                                        <img class="size-12 rounded-full" [src]="testimonial.avatar" [alt]="testimonial.author">
-                                    </div>
-                                    <div class="ms-4">
-                                        <p class="text-default-900 text-xl font-semibold">{{ testimonial.author }}</p>
-                                        <small>{{ testimonial.position }}</small>
-                                    </div>
+                <swiper-slide>
+                    <div class="bg-secondary/50 backdrop-blur-[5px] rounded-2xl p-7.5 h-full">
+                        <!-- Card body -->
+                        <div class="mb-7.5">
+                            <!-- Rating star -->
+                            <ul class="flex mb-4 gap-1">
+                                @for (star of getStars(testimonial.rating); track $index) {
+                                @if (star === 1) {
+                                <li><lucide-icon name="star" class="size-4 fill-warning text-warning"></lucide-icon></li>
+                                } @else if (star === 0.5) {
+                                <li><lucide-icon name="star-half" class="size-4 fill-warning text-warning"></lucide-icon></li>
+                                } @else {
+                                <li><lucide-icon name="star" class="size-4 text-warning"></lucide-icon></li>
+                                }
+                                }
+                            </ul>
+                            <!-- Testimonials text -->
+                            <blockquote>
+                                <p class="text-default-900 font-medium">{{ testimonial.text }}</p>
+                            </blockquote>
+                        </div>
+                        <!-- Card footer -->
+                        <div>
+                            <!-- Testimonials info -->
+                            <div class="flex items-center">
+                                <div>
+                                    <img class="size-12 rounded-full" [src]="testimonial.avatar" [alt]="testimonial.author">
+                                </div>
+                                <div class="ms-4">
+                                    <p class="text-default-900 text-xl font-semibold">{{ testimonial.author }}</p>
+                                    <small>{{ testimonial.position }}</small>
                                 </div>
                             </div>
                         </div>
-                    </swiper-slide>
+                    </div>
+                </swiper-slide>
                 }
             </swiper-container>
         </div>

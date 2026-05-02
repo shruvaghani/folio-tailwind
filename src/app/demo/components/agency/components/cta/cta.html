@@ -1,0 +1,63 @@
+<section class="relative">
+    <div class="absolute top-full start-0 -translate-x-1/2 -translate-y-1/2 ms-44 -mt-32 z-20 hidden lg:block">
+        <img src="assets/images/elements/ai-robot-3.png" alt="ai robot">
+    </div>
+
+    <div class="bg-[linear-gradient(90deg,rgba(240,150,255,0.15)_0%,rgba(191,200,252,0.15)_51%,rgba(187,148,255,0.15)_100%)] md:py-32 py-18 relative overflow-hidden">
+        <span class="absolute top-0 start-0 -mt-12">
+            <svg class="fill-body-bg" width="1930" height="137" viewBox="0 0 1930 137" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M464.909 117.12C228.685 132.607 108.971 82.5335 0 51.0476V1.5L1930 0V26.649V132.607C1873.32 98.4636 1645.24 119.618 1488.21 132.607C1319.34 146.576 1149.46 119.696 1051.95 103.318C837.339 67.2694 668.231 103.79 464.909 117.12Z"></path>
+            </svg>
+        </span>
+
+        <div class="container pt-18! lg:ps-18!">
+            <div class="grid lg:grid-cols-3 grid-cols-1 gap-7.5 items-center">
+                <div>
+                    <h2 class="text-center sm:text-start lg:text-4.5xl md:text-4xl text-3xl">Our prestigious awards</h2>
+                </div>
+
+                <div class="col-span-2">
+                    <div class="grid md:grid-cols-3 grid-cols-1">
+                        @for (item of awardsData; track $index) {
+
+                        <div class="p-5 md:mx-3 mx-12">
+
+                            <div class="flex items-center mb-4">
+
+                                <!-- Left Wing -->
+                                <img [src]="item.wingLeft" alt="award wing">
+
+                                <!-- Content -->
+                                <ul class="flex flex-col justify-center items-center">
+                                    <li class="font-semibold text-default-900 text-center">
+                                        {{ item.title }}
+                                    </li>
+                                    <li class="font-semibold text-primary pt-1.5">
+                                        {{ item.year }}
+                                    </li>
+                                </ul>
+
+                                <!-- Right Wing -->
+                                <img [src]="item.wingRight" alt="award wing">
+
+                            </div>
+
+                            <!-- Bottom Text -->
+                            <span class="font-semibold text-default-400 text-center block">
+                                Accordion to
+                            </span>
+
+                            <!-- Logo -->
+                            <img [src]="item.logo" class="h-7.5 mt-2 mx-auto" alt="logo">
+
+                        </div>
+
+                        }
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

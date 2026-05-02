@@ -67,11 +67,10 @@ export const footer1Data: Footer1Type[] = [
 ];
 
 export type SocialLinkType = {
-  icon?: string; 
+  icon?: string;
   iconify?: string;
   link: string;
 };
-
 
 export const socialLinkData: SocialLinkType[] = [
   {
@@ -89,5 +88,43 @@ export const socialLinkData: SocialLinkType[] = [
   {
     icon: 'linkedin',
     link: '',
+  },
+];
+
+export type Footer2Link = {
+  label: string;
+  url: string;
+  badge?: string;
+  badgeClass?: string;
+  external?: boolean;
+};
+
+export type Footer2Type = {
+  title: string;
+  links: Footer2Link[];
+};
+
+export const footer2Data: Footer2Type[] = [
+  {
+    title: 'Company',
+    links: [
+      { label: 'About us', url: '/about/v1' },
+      { label: 'Contact us', url: '/contact-us' },
+      { label: 'Career', url: '/career', badge: '2 job', badgeClass: 'bg-primary ms-2' },
+      { label: 'Career detail', url: '/career/single' },
+      { label: 'Become a partner', url: '/contact-us/v2' },
+      { label: 'Services', url: '/service/v1' },
+    ],
+  },
+  {
+    title: 'Resources',
+    links: [
+      { label: 'Case studies', url: '/portfolio/case-study/v1' },
+      { label: 'Pricing', url: '/pricing/v1', badge: 'New', badgeClass: 'bg-success ms-1' },
+      { label: 'Blogs', url: '/blog/minimal' },
+      { label: 'Blog detail', url: '/blog/single' },
+      { label: 'Success stories', url: '/contact-us/v2' },
+      { label: 'Services', url: '/service/v1', external: true },
+    ],
   },
 ];

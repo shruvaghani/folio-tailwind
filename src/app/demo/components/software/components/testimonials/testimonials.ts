@@ -15,24 +15,6 @@ import { testimonialsData } from '../../data';
 export class Testimonials {
   testimonialsData = testimonialsData;
 
-  swiperConfig: SwiperOptions = {
-    spaceBetween: 30,
-    loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-    breakpoints: {
-      '576': { slidesPerView: 1 },
-      '768': { slidesPerView: 2 },
-      '992': { slidesPerView: 3 },
-    },
-    navigation: {
-      nextEl: '#swiper-button-next',
-      prevEl: '#swiper-button-prev',
-    },
-  };
-
   getStars(rating: number): number[] {
     const stars = [];
     for (let i = 1; i <= 5; i++) {

@@ -1,0 +1,30 @@
+<section class="pb-18">
+    <div class="container">
+        <div class="grid lg:grid-cols-3 grid-cols-1 gap-7.5">
+            <div>
+                <h2 class="mb-4 lg:mb-7.5 lg:text-4.5xl md:text-4xl text-3xl">Solutions we've built for...</h2>
+                <p class="mb-4 lg:mb-7.5">Our AI solutions have driven innovation, streamlined operations, and fueled exceptional business growth.</p>
+                <a class="bg-primary text-white hover:bg-primary-hover py-3.5 px-7.5 inline-flex rounded-md font-medium gap-1" [routerLink]="[]">Become a client<iconify-icon icon="bi:arrow-right" class="flex"></iconify-icon> </a>
+            </div>
+
+            <div class="col-span-2">
+                <div class="grid grid-cols-3">
+                    <!-- Client item -->
+                    @for (item of clientLogosData; track $index; let i = $index) {
+                    <div class="border-primary/10" [class]="{
+        'border-e': (i % 3) !== 2,  
+        'border-b': i < 3          
+      }">
+                        <div class="text-center p-4 md:p-12">
+                            <img [src]="item.light" class="hidden dark:block h-10" alt="client logo">
+
+                            <!-- Light mode -->
+                            <img [src]="item.dark" class="block dark:hidden h-10" alt="client logo">
+                        </div>
+                    </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

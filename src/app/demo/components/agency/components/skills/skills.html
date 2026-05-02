@@ -1,0 +1,81 @@
+<section class="lg:pb-36 pb-20">
+    <div class="container">
+       <div class="grid md:grid-cols-3 grid-cols-1 gap-7.5">
+
+  @for (item of counterData; track $index) {
+    @if (!item.hasLeftDivider && !item.hasRightDivider) {
+
+      <div class="text-center">
+
+        <div class="flex items-center justify-center">
+          <h4 class="lg:text-9xl md:text-7xl text-5xl font-bold counter"
+              [countUp]="item.value"></h4>
+
+          <span class="lg:text-9xl md:text-7xl text-5xl font-bold"
+                [class]="item.color">
+            {{ item.suffix }}
+          </span>
+        </div>
+
+        <p class="px-4 py-2 bg-body-bg -mt-4 md:-mt-7.5 relative">
+          {{ item.label }}
+        </p>
+
+      </div>
+    }
+    @else {
+
+      <div>
+        <div class="flex justify-between">
+
+          <!-- Left Divider -->
+          @if (item.hasLeftDivider) {
+            <div class="inline-block w-0.5 min-h-4 bg-primary-grad opacity-10 my-4"></div>
+          }
+
+          <div class="text-center">
+
+            <div class="flex items-center justify-center">
+
+              <!-- Prefix -->
+              @if (item.prefix) {
+                <span class="lg:text-9xl md:text-7xl text-5xl font-semibold text-default-900">
+                  {{ item.prefix }}
+                </span>
+              }
+
+              <!-- Counter -->
+              <h4 class="lg:text-9xl md:text-7xl text-5xl font-bold counter"
+                  [countUp]="item.value"></h4>
+
+              <!-- Suffix -->
+              @if (item.suffix) {
+                <span class="lg:text-9xl md:text-7xl text-5xl font-bold"
+                      [class]="item.color">
+                  {{ item.suffix }}
+                </span>
+              }
+
+            </div>
+
+            <p class="px-4 py-2 bg-body-bg -mt-4 md:-mt-7.5 relative">
+              {{ item.label }}
+            </p>
+
+          </div>
+
+          <!-- Right Divider -->
+          @if (item.hasRightDivider) {
+            <div class="inline-block w-0.5 min-h-4 bg-primary-grad opacity-10 my-4"></div>
+          }
+
+        </div>
+      </div>
+
+    }
+
+  }
+
+</div>
+    </div>
+</section>
