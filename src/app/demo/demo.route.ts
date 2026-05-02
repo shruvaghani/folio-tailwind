@@ -17,16 +17,6 @@ export const DEMO_ROUTES: Route[] = [
     data: { title: 'Claasic Default' },
   },
   {
-    path: 'agency',
-    component: Agency,
-    data: { title: 'AI Agency' },
-  },
-  {
-    path: 'application',
-    component: Application,
-    data: { title: 'Application showcase' },
-  },
-  {
     path: 'software',
     component: Software,
     data: { title: 'Software Company' },
@@ -35,6 +25,11 @@ export const DEMO_ROUTES: Route[] = [
     path: 'finance',
     component: Finance,
     data: { title: 'Finance Consulting' },
+  },
+  {
+    path: 'agency',
+    component: Agency,
+    data: { title: 'AI Agency' },
   },
   {
     path: 'product',
@@ -50,6 +45,11 @@ export const DEMO_ROUTES: Route[] = [
     path: 'chatbox',
     component: Chatbox,
     data: { title: 'Saas AI Chatbox' },
+  },
+  {
+    path: 'application',
+    component: Application,
+    data: { title: 'Application showcase' },
   },
   {
     path: 'portfolio',

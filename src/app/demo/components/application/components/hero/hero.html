@@ -1,0 +1,58 @@
+<section class="lg:pt-44 md:pt-32 pt-20 relative overflow-hidden">
+        <span>
+            <svg class="absolute bottom-0 start-0 -mb-1 lg:-mb-7.5" viewBox="0 0 1920 149" style="enable-background:new 0 0 1920 149; z-index: 4" xml:space="preserve">
+                <path class="text-secondary" d="M873.3,37.9C775,19.2,603.7-11.5,433.5,4.4C275.1,19.3,45.1,43.4-12,4.4v121V149l1946-2.6V97.6 c-109.9-35.9-230.6-93.1-468.8-75.4C1260.2,37.3,1089.7,79,873.3,37.9z" fill="currentColor"></path>
+            </svg>
+
+            <div class="absolute end-0 top-0">
+                <img src="assets/images/elements/grad-shape/blur-decoration-2.svg" class="opacity-20 blur-[144px] h-75 rotate-335" alt="Grad shape">
+            </div>
+
+            <div class="container">
+                <div class="xl:pb-44 pb-32 sm:pt-0 pt-7.5">
+                    <div class="grid lg:grid-cols-2 grid-cols-1 gap-7.5 pt-12">
+                        <div>
+                            <h1 class="font-bold mb-4 md:mb-7.5 lg:text-6xl md:text-4.5xl text-4xl">Smart, Secure, and Simple Banking</h1>
+                            <p class="lead mb-4 md:mb-7.5 text-default-700 text-xl">Experience seamless money transfers, hassle-free bill payments, and secure account management—all in one app.</p>
+
+                            <div class="sm:flex mb-7.5 lg:mb-24">
+                                <a [routerLink]="[]">
+                                    <img src="assets/images/elements/google-play.svg" class="me-7.5 mb-2 sm:mb-0 hover:-translate-y-1 transition-all duration-300" width="180" alt="play store">
+                                </a>
+
+                                <a [routerLink]="[]">
+                                    <img src="assets/images/elements/app-store.svg" class="hover:-translate-y-1 transition-all duration-300" width="180" alt="app-store">
+                                </a>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <ul class="flex items-center -space-x-3">
+                                    @for (item of avatarListData; track $index) {
+                                        <li>
+                                        <img
+                                            class="size-10 rounded-full"
+                                            [src]="item"
+                                            alt="avatar"
+                                        />
+                                        </li>
+                                    }
+                                </ul>
+                                <p class="text-default-900 font-medium mb-0"><span class="text-primary">5000+</span> users have downloaded our app</p>
+                            </div>
+                        </div>
+
+                        <div class="md:w-104 mx-auto relative">
+                            <div class="absolute start-0 top-0 mt-18 xl:-ms-24 z-20 hidden sm:block">
+                                <img src="assets/images/mobile-app/deocration-2.jpg" class="rounded-xl shadow-[0_10px_20px_rgba(127,57,248,0.15)]" style="height: 80px;" alt="deocration">
+                            </div>
+
+                            <div class="absolute top-1/2 -translate-y-1/2 end-0 -me-18 xl:-me-32 xl:-mt-12 hidden sm:block">
+                                <img src="assets/images/mobile-app/deocration-3.jpg" class="aos rounded-2xl shadow-[0_10px_20px_rgba(127,57,248,0.15)]">
+                            </div>
+                            <img src="assets/images/mobile-app/hero.png" class="-mb-32 md:-mb-44" alt="mobile image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </span>
+    </section>

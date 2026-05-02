@@ -1,0 +1,64 @@
+ <section class="lg:py-36 py-20">
+        <div class="container">
+            <div class="grid lg:grid-cols-12 md:grid-cols-2 grid-cols-1 gap-7.5 lg:items-center">
+                <!-- Images -->
+                <div class="lg:col-span-5 col-span-1 order-2 md:order-1">
+                    <div class="swiper">
+                        <swiper-container 
+                        space-between="30"
+                        loop="true"
+                        effect="fade"
+                        autoplay="false"
+                        simulate-touch="false"
+                        navigation="true" 
+                        navigation-next-el=".swiper-button-next-steps" 
+                        navigation-prev-el=".swiper-button-prev-steps"
+                        class="swiper-wrapper">
+                            <!-- Testimonials item -->
+                             @for (item of stepSlidesData; track $index) {
+                                <!-- Testimonials item -->
+                                <swiper-slide class="bg-body-bg">
+                                    <div class="bg-[linear-gradient(90deg,rgba(240,150,255,0.15)_0%,rgba(191,200,252,0.15)_51%,rgba(187,148,255,0.15)_100%)] rounded-2xl overflow-hidden p-12 h-full">  
+                                    <img
+                                        [src]="item"
+                                        class="-mb-32 rounded-2xl shadow-primary"
+                                        alt="step image">
+                                    </div>
+                                </swiper-slide>
+                                }
+
+                        </swiper-container>
+                    </div>
+                </div>
+
+                <!-- Steps Content START -->
+                <div class="lg:col-span-7 col-span-1 lg:w-155 w-82.5 order-1 lg:ms-auto">
+                    <!-- Slider START -->
+                    <div class="swiper">
+                        <swiper-container 
+                        space-between="30"
+                        loop="true"
+                        autoplay="false"
+                        simulate-touch="false"
+                        navigation="true" 
+                        navigation-next-el=".swiper-button-next-steps" 
+                        navigation-prev-el=".swiper-button-prev-steps"
+                        class="swiper-wrapper lg:mb-12">
+                           @for (item of phaseSlidesData; track item.phase) {
+                            <swiper-slide>
+                                <span class="font-semibold text-primary">{{ item.phase }}</span>
+                                <h2 class="my-4 lg:text-4.5xl md:text-4xl text-3xl">{{ item.title }}</h2>
+                                <p class="text-default-700 font-medium leading-normal">{{ item.description }}</p>
+                            </swiper-slide>
+                        }
+                        </swiper-container>
+                    </div>
+                   
+                    <div class="flex gap-4 relative mt-4">
+                        <a [routerLink]="[]" class="size-12 flex justify-center items-center rounded-full bg-secondary hover:bg-primary/15 swiper-button-prev-steps"><lucide-icon name="arrow-left"></lucide-icon></a>
+                        <a [routerLink]="[]" class="size-12 flex justify-center items-center rounded-full bg-secondary hover:bg-primary/15 swiper-button-next-steps"><lucide-icon name="arrow-right"></lucide-icon></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

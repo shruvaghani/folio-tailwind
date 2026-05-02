@@ -1,0 +1,39 @@
+ <section class="relative">
+        <div class="lg:w-387.5 mx-auto bg-dark rounded-2xl relative lg:py-32 py-18">
+            <div class="absolute top-0 end-0 -mt-18 lg:block hidden">
+                <img src="assets/images/elements/grad-shape/blur-decoration.svg" class="rotate-270 blur-[80px] opacity-20" alt="Grad shape">
+            </div>
+            <div class="md:w-150 mx-auto text-center mb-24">
+                <h2 class="mb-7.5 lg:text-4.5xl md:text-4xl text-3xl text-white">Get a closer look at how our app works</h2>
+                <p class="mb-7.5 text-white/80"> Browse through our gallery to get a glimpse of the intuitive design and powerful features that make managing your finances effortless.</p>
+
+                <div class="sm:flex justify-center">
+                    <a [routerLink]="[]"> <img src="assets/images/elements/google-play.svg" class="md:me-7.5 mb-2 sm:mb-0 hover:-translate-y-1 transition-all duration-300 md:mx-0 mx-auto" width="180" alt="play store"> </a>
+                    <a [routerLink]="[]"> <img src="assets/images/elements/app-store.svg" class="hover:-translate-y-1 transition-all duration-300 md:mx-0 mx-auto" width="180" alt="app-store"> </a>
+                </div>
+            </div>
+
+            <div class="swiper swiper-outside-n5 pb-6" >
+                <swiper-container 
+                loop="true"
+                slides-per-view="1" space-between="50" 
+                pagination="true" pagination-el=".swiper-pagination" pagination-clickable="true" 
+                autoplay="true" autoplay-delay="2000" autoplay-disable-on-interaction="false" autoplay-pause-on-mouse-enter="true"
+                breakpoints='{
+                        "576": { "slidesPerView": 3 },
+                        "992": { "slidesPerView": 5 },
+                        "1300": { "slidesPerView": 7 }
+                    }'
+                class="swiper-wrapper flex items-center mb-20">
+                    @for (item of screenData; track $index) {
+                    <swiper-slide>
+                        <img [src]="item" class="rounded-2xl border-secondary border-3" alt="mobile screen">
+                    </swiper-slide>
+                   }                    
+                </swiper-container>
+                
+                <div class="swiper-pagination swiper-pagination-primary swiper-pagination-horizontal absolute bottom-0 mb-7.5"></div>
+            </div>
+            
+        </div>
+    </section>

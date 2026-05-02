@@ -1,0 +1,71 @@
+<section class="lg:pb-36 pb-20">
+  <div class="container">
+    <div class="grid md:grid-cols-2 grid-cols-1 gap-7.5">
+      <div>
+        <h2 class="lg:mb-4 mb-2 lg:text-4.5xl md:text-4xl text-3xl">
+          Experience the future of banking today
+        </h2>
+        <ul class="flex flex-col gap-1 font-medium text-default-700">
+          <li class="flex items-center">
+            <lucide-icon name="circle-check" class="size-4.25 text-primary me-2"></lucide-icon
+            >Convenience at your fingertips
+          </li>
+          <li class="flex items-center">
+            <lucide-icon name="circle-check" class="size-4.25 text-primary me-2"></lucide-icon
+            >Enhanced security
+          </li>
+          <li class="flex items-center">
+            <lucide-icon name="circle-check" class="size-4.25 text-primary me-2"></lucide-icon
+            >Comprehensive financial tools
+          </li>
+        </ul>
+
+        <hr class="my-7.5 border-default-200 border-t dark:border-white/14" />
+
+        <div class="grid lg:grid-cols-12 grid-cols-1 md:gap-7.5">
+          @for (item of statsData; track item.text) {
+            <div class="lg:col-span-5">
+              <div class="flex items-center mb-7.5">
+                <div class="w-10 h-full me-7.5 sm:me-12 shrink-0">
+                  <div class="flex">
+                    <h4
+                      class="counter lg:text-3.5xl md:text-2.5xl text-2xl font-semibold flex items-center"
+                      [countUp]="item.value"
+                    >
+                    </h4>
+
+                    <span
+                      class="h4 lg:text-3.5xl md:text-2.5xl text-2xl font-semibold"
+                      [ngClass]="item.color"
+                    >
+                      {{ item.suffix }}
+                    </span>
+                  </div>
+                </div>
+
+                <p class="text-default-600 font-medium">
+                  {{ item.text }}
+                </p>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+
+      <div class="lg:w-127.25 lg:ms-auto relative">
+        <img src="assets/images/mobile-app/01.jpg" class="rounded-2xl" alt="feature image" />
+        <div class="absolute start-0 top-0 -ms-18 hidden lg:block">
+          <img src="assets/images/elements/rocket-03.png" class="h-37.5" alt="rocket image" />
+        </div>
+
+        <div class="absolute bottom-0 end-0 lg:-me-12 lg:mb-4">
+          <img
+            src="assets/images/mobile-app/deocration.jpg"
+            class="shadow rounded-2xl lg:h-17.5"
+            alt="decoration image"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
