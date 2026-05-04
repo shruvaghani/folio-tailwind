@@ -1,0 +1,42 @@
+  <section class="lg:pb-36 pb-20">
+        <div class="container">
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-12 gap-7.5">
+                @for (service of servicesData; track $index) {
+                    <div class="group relative">
+                        <div class="opacity-100 group-hover:opacity-0 bg-secondary/75 h-full md:p-12 p-7.5 rounded-md transition-all duration-500">
+                            @if (service.isNew) {
+                                <div class="text-white py-1 px-2 text-xs rounded-md bg-dark absolute top-0 end-0 m-7.5">New</div>
+                            }
+                            <div class="bg-transparent pb-12">
+                                <!-- Icon -->
+                                <img [src]="service.icon" class="h-17.5" alt="icon">
+                            </div>
+
+                            <div class="mt-auto bg-transparent">
+                                <h6 class="mb-4 text-xl md:text-2.2xl font-semibold">
+                                    {{ service.title }}
+                                </h6>
+
+                                <!-- List -->
+                                <ul class="ps-4 list-disc text-default-700">
+                                    @for (feature of service.features; track $index) {
+                                        <li class="mb-2">{{ feature }}</li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="opacity-0 group-hover:opacity-100 absolute inset-0 rounded-md bg-linear-to-b from-[#543DE7] to-[#7F39F8] transition-all duration-500">
+                            <div class="flex justify-center items-center absolute top-1/2 start-1/2 -translate-x-1/2 -translate-y-1/2">
+                                <a class="bg-white text-dark py-3.5 px-7.5 rounded-md font-medium inline-flex gap-0.5 group/service items-center" routerLink="/service/single">Explore service<lucide-icon name="arrow-right" class="size-4 group-hover/service:translate-x-1 transition-all duration-300"></lucide-icon> </a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <p class="mt-12 text-center text-default-800">🔥 Let’s create something great work together.
+                <a routerLink="/contact-us" class="font-bold hover-underline text-default-900">Got a project in mind?</a>
+            </p>
+        </div>
+    </section>
