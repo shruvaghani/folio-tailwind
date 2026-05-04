@@ -11,6 +11,10 @@ const watch4 = 'assets/images/product/watches/04.png';
 
 const discountLabel = 'assets/images/elements/discount-label.svg';
 
+const avatar1 = 'assets/images/avatar/01.jpg';
+const avatar2 = 'assets/images/avatar/02.jpg';
+const avatar6 = 'assets/images/avatar/06.jpg';
+
 export type FeatureType = {
   title: string;
   description: string;
@@ -187,21 +191,21 @@ export const testimonialsData: TestimonialType[] = [
   {
     name: 'Jacqueline Miller',
     role: 'Product designer',
-    image: 'assets/images/avatar/01.jpg',
+    image: avatar1,
     rating: 4.5,
     text: `Our passion for customer excellence is just one reason why we are the market leader. We've always worked very hard to give our customers the best experience. Was out laughter raptures returned outweigh.`,
   },
   {
     name: 'Louis Ferguson',
     role: 'Web Developer',
-    image: 'assets/images/avatar/02.jpg',
+    image: avatar2,
     rating: 4.5,
     text: `Their team went above and beyond to understand our needs and deliver a solution that exceeded our expectations. They demonstrated throughout the process was truly impressive.`,
   },
   {
     name: 'Samuel Bishop',
     role: 'UI/UX designer',
-    image: 'assets/images/avatar/06.jpg',
+    image: avatar6,
     rating: 4.5,
     text: `Was out laughter raptures returned outweigh. Luckily cheered colonel I do we attack highest enabled. Tried law yet style child.`,
   },

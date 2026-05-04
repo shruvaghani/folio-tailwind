@@ -223,25 +223,25 @@ export const socialData: SocialType[] = [
     iconType: 'lucide',
     icon: 'facebook',
     bgClass: 'bg-[#5d82d1]',
-    link: '/',
+    link: '',
   },
   {
     iconType: 'lucide',
     icon: 'instagram',
     bgClass: 'bg-pink',
-    link: '/',
+    link: '',
   },
   {
     iconType: 'iconify',
     icon: 'tabler:brand-x',
     bgClass: 'bg-black',
-    link: '/',
+    link: '',
   },
   {
     iconType: 'lucide',
     icon: 'linkedin',
     bgClass: 'bg-info',
-    link: '/',
+    link: '',
   },
 ];
 
