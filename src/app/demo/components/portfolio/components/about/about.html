@@ -1,0 +1,50 @@
+<section class="relative z-20">
+    <div class="lg:w-387.5 relative mx-auto bg-secondary/50 rounded-2xl outline-hidden px-4 py-7.5 sm:py-18 lg:py-32">
+        <div class="absolute top-0 end-0 -mt-18 lg:block hidden">
+            <img src="assets/images/elements/grad-shape/blur-decoration.svg" class="rotate-270 blur-[80px] opacity-20" alt="Grad shape">
+        </div>
+
+        <div class="container">
+            <div class="grid lg:grid-cols-12 grid-cols-1 gap-7.5">
+                <div class="lg:col-span-7">
+                    <span class="text-primary-grad font-semibold">About me</span>
+                    <h2 class="my-4 lg:text-4.5xl md:text-4xl text-3xl">I’ve been developing websites since 2009</h2>
+                    <p class="mb-7.5">I’m passionate about web development and UI design, specializing in creating visually stunning and highly functional digital experiences. My journey since 2009 has equipped me with a diverse skill set to deliver tailored solutions for my clients.</p>
+
+                    <div class="flex flex-wrap gap-4 items-center">
+                        <div class="me-4 font-semibold text-default-900">Follow me on:</div>
+                        <a class="py-2.5 px-5 bg-[#5d82d1] rounded text-2xs text-white hover:bg-[#5475bc] inline-flex gap-1 items-center" [routerLink]="[]"><lucide-icon name="facebook" class="size-4"></lucide-icon> Facebook</a>
+                        
+                        <a class="py-2.5 px-5 bg-[radial-gradient(circle_at_20%_130%,#fdf497_0%,#fdf497_5%,#fd5949_45%,#d6249f_60%,#285AEB_90%)] bg-size-[120%_120%] bg-bottom-right transition-all duration-300 ease-in-out border-0 rounded text-2xs text-white inline-flex gap-1 items-center" [routerLink]="[]"><lucide-icon name="instagram" class="size-4"></lucide-icon> Instagram</a>
+
+                        <a class="py-2.5 px-5 bg-dark rounded text-2xs text-white inline-flex gap-1 items-center" [routerLink]="[]"><iconify-icon icon="tabler:brand-x" height="16" width="16"></iconify-icon> Twitter</a>
+
+                        <a class="py-2.5 px-5 bg-[#238cc8] rounded text-2xs text-white hover:bg-[#207eb4] inline-flex gap-1 items-center" [routerLink]="[]"><lucide-icon name="facebook" class="size-4"></lucide-icon> Linkedin</a>
+                    </div>
+                </div>
+
+                <div class="lg:w-108.25 lg:ms-auto lg:col-span-5">
+                    <div class="border-b border-primary/25 mb-4">
+                        <div class="flex mb-2">
+                            <h4 class="counter flex items-center font-bold lg:text-[84px] md:text-6xl text-4.5xl" [countUp]="14">0</h4>
+                            <span class="lg:text-[84px] md:text-6xl text-4.5xl font-bold text-primary mb-0">+</span>
+                        </div>
+                        <p class="text-xl pb-4 mb-4 text-default-900">Years of experience</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 grid-cols-1 gap-7.5">
+                        @for (item of counterData; track $index) {
+                        <div>
+                            <div class="flex mb-2">
+                                <h4 class="counter lg:text-4.5xl md:text-4xl text-3xl text-default-900" [countUp]="item.value">0</h4>
+                                <span class="lg:text-4.5xl md:text-4xl text-3xl text-default-900">+</span>
+                            </div>
+                            <p class="text-default-900 mb-4">{{ item.label }}</p>
+                        </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

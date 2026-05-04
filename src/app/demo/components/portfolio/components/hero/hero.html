@@ -1,0 +1,40 @@
+<section class="lg:pt-32 pt-20 relative overflow-hidden">
+    <div class="container">
+        <div class="grid lg:grid-cols-2 grid-cols-1 gap-7.5">
+            <div>
+                <div class="pt-12 lg:pb-24">
+                    <h5 class="lg:mb-7.5 lg:text-2.5xl md:text-2xl text-2xl"><span class="hand-wave-animate">🖐️</span> Hello, I’m</h5>
+                    <h1 class="lg:text-[120px] md:text-[87px] text-6xl font-bold relative mb-18 sm:mb-12">
+                        Emily Johnson
+                        <span class="lg:text-2.5xl md:text-2xl text-2xl bg-primary text-white rounded-2xl rotate-350 absolute bottom-0 end-0 -mb-12 sm:-mb-4 lg:-mb-1 px-7.5 py-4">Web developer</span>
+                    </h1>
+                    <p class="text-xl text-default-700 mb-7.5">I am a self-taught web Developer from the USA. Currently, I am a freelancer and collaborating with small companies and agencies. I deal with UI design / Front-end development and Bootstrap Development.</p>
+                    <a [routerLink]="[]" class="text-default-900 bg-secondary group py-3.5 px-7.5 rounded-md inline-flex justify-center items-center gap-1 hover:bg-primary/20 transition-all duration-300">Work with me! <lucide-icon name="arrow-right" class="size-4 group-hover:translate-x-1 transition-all duration-300"></lucide-icon></a>
+                </div>
+
+                <div>
+                    <h2 class="mb-7.5 lg:text-4.5xl md:text-4xl text-3xl lg:mb-12">My expertise</h2>
+
+                    <div class="grid md:grid-cols-2 grid-cols-1 gap-7.5">
+                        @for (service of serviceData; track $index) {
+                        <div class="p-7.5 rounded-2xl" [class]="service.bgClass">
+                            <div class="size-14 text-white rounded-full flex justify-center items-center mb-7.5" [class]="service.className">
+                                <lucide-icon [name]="service.icon" class="size-5"></lucide-icon>
+                            </div>
+                            <h6 class="md:text-2.2xl text-xl mb-2">{{ service.title }}</h6>
+                            <p class="mb-4 text-default-700">{{ service.description }}</p>
+                            <a [routerLink]="[]" class="text-primary inline-flex items-center gap-1 group">View projects <lucide-icon name="arrow-right" class="size-4 group-hover:translate-x-1 transition-all duration-300"></lucide-icon></a>
+                        </div>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <div class="sticky top-0 self-start">
+                <div class="relative h-125 md:h-188 lg:min-w-240 ms-28">
+                    <div class="w-full h-125 md:h-187.5 rounded-2xl bg-[url('assets/images/bg/05.jpg')] bg-cover bg-top"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

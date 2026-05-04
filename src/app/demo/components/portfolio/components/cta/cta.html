@@ -1,0 +1,69 @@
+<section class="lg:pb-36 pb-20">
+    <div class="container">
+        <div class="grid lg:grid-cols-2 grid-cols-1 gap-7.5">
+            <div class="lg:pe-12">
+                <img src="assets/images/about/16.jpg" class="rounded-2xl" alt="portfolio-img">
+            </div>
+
+            <div>
+                <h2 class="mb-7.5 lg:text-4.5xl md:text-4xl text-3xl">Say hi by filling out the form below</h2>
+                <div class="relative mb-4">
+                    <input type="text" placeholder="What's Your good name?" class="w-full border border-default-300 border-t-0 border-l-0 border-r-0 bg-white pe-7.5 py-3.5 text-base dark:placeholder:text-default-600! placeholder:text-default-400! outline-none focus:border-primary! focus:ring-0" />
+                    <!-- icon -->
+                    <span class="pointer-events-none absolute top-1/2 end-0 me-3 -translate-y-1/2 text-default-400  dark:text-default-600">
+                        <lucide-icon name="smile" class="size-4"></lucide-icon>
+                    </span>
+                </div>
+
+                <div class="relative mb-4">
+                    <input type="text" placeholder="Enter your email address" class="w-full border border-default-300 border-t-0 border-l-0 border-r-0 bg-white pe-7.5 py-3.5 text-base dark:placeholder:text-default-600! placeholder:text-default-400! outline-none focus:border-primary! focus:ring-0" />
+                    <!-- icon -->
+                    <span class="pointer-events-none absolute top-1/2 end-0 me-3 -translate-y-1/2 text-default-400  dark:text-default-600">
+                        <lucide-icon name="mail" class="size-4"></lucide-icon>
+                    </span>
+                </div>
+
+                <div class="relative">
+                    <textarea placeholder="Describe about your project" class="w-full h-25 border border-default-300 border-t-0 border-l-0 border-r-0 bg-white pe-7.5 py-3.5 text-base dark:placeholder:text-default-600! placeholder:text-default-400! outline-none focus:border-primary! focus:ring-0"></textarea>
+                    <!-- icon -->
+                    <span class="pointer-events-none absolute top-1/2 end-0 me-3 -translate-y-1/2 text-default-400  dark:text-default-600">
+                        <lucide-icon name="message-square-more" class="size-4"></lucide-icon>
+                    </span>
+                </div>
+
+                <div class="mt-7.5">
+                    <button class="text-white rounded-md font-medium py-3.5 px-7.5 bg-primary-grad mb-0">Send a message</button>
+                </div>
+
+                <div class="sm:flex gap-12 mt-12">
+                    <!-- Phone -->
+                    <div class="flex gap-2 mb-7.5">
+                        <!-- Icon -->
+                        <div class="text-default-900"><lucide-icon name="phone" class="size-5"></lucide-icon></div>
+                        <!-- Content -->
+                        <div>
+                            <p class="font-semibold text-default-900">Call me:</p>
+                            <ul class="flex flex-col">
+                                <li class="py-1"> <a [routerLink]="[]" class="hover:text-primary font-medium text-default-600">+(251) 854-6308</a></li>
+                                <li class="py-1"> <a [routerLink]="[]" class="hover:text-primary font-medium text-default-600">+(469) 537-2410</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="flex gap-2 mb-7.5">
+                        <!-- Icon -->
+                        <div class="text-default-900"><lucide-icon name="mail" class="size-5"></lucide-icon></div>
+                        <!-- Content -->
+                        <div>
+                            <p class="font-semibold text-default-900">E-mail:</p>
+                            <ul class="flex flex-col">
+                                <li class="py-1"> <a [routerLink]="[]" class="hover:text-primary font-medium text-default-600">example@gmail.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
