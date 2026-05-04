@@ -17,7 +17,7 @@ export const DEMO_ROUTES: Route[] = [
     data: { title: 'Claasic Default' },
   },
   {
-    path: 'software',
+    path: 'software-company',
     component: Software,
     data: { title: 'Software Company' },
   },
@@ -27,12 +27,12 @@ export const DEMO_ROUTES: Route[] = [
     data: { title: 'Finance Consulting' },
   },
   {
-    path: 'agency',
+    path: 'ai-agency',
     component: Agency,
     data: { title: 'AI Agency' },
   },
   {
-    path: 'product',
+    path: 'product-landing',
     component: Product,
     data: { title: 'Product Landing' },
   },
@@ -47,12 +47,12 @@ export const DEMO_ROUTES: Route[] = [
     data: { title: 'Saas AI Chatbox' },
   },
   {
-    path: 'application',
+    path: 'application-showcase',
     component: Application,
     data: { title: 'Application showcase' },
   },
   {
-    path: 'portfolio',
+    path: 'personal-portfolio',
     component: Portfolio,
     data: { title: 'Portfolio' },
   },

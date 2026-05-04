@@ -1,0 +1,49 @@
+<section class="relative z-20 -mb-32">
+    <div class="md:max-w-387.5 bg-dark relative rounded-2xl overflow-hidden py-18 xl:py-32 md:mx-auto mx-4">
+        <div class="absolute top-full start-1/2 -translate-y-1/2">
+            <img src="assets/images/elements/grad-shape/blur-decoration-2.svg" class="opacity-20 blur-[144px]" alt="Grad shape">
+        </div>
+
+        <div class="container">
+            <div class="grid lg:grid-cols-12 grid-cols-1 items-center">
+                <div class="lg:col-span-5 mb-12 lg:mb-0">
+                    <blockquote class="text-xl md:text-2.2xl font-semibold text-white sm:mb-7.5">
+                        “Our dedicated team works tirelessly to turn your vision into a digital reality, using innovative strategies and cutting-edge solutions.”
+                    </blockquote>
+                    <span class="text-white text-base font-medium">Jacqueline Miller, CEO at Folio</span>
+                </div>
+
+                <div class="lg:col-span-7 lg:w-155 lg:ms-auto">
+                    <h5 class="mb-7.5 text-center md:text-start text-white lg:text-2.5xl md:text-2xl text-2xl">Top Author</h5>
+
+                    <div class="grid md:grid-cols-3 grid-cols-1 gap-7.5">
+                        @for (member of teamData; track $index) {
+                        <div class="text-center">
+                            <div class="size-20.5 mx-auto shrink-0 mb-4">
+                                <img class="rounded-full" [src]="member.image" alt="avatar">
+                            </div>
+
+                            <h6 class="mb-1 md:text-2.2xl text-xl text-white hover:text-primary"><a [routerLink]="[]">{{ member.name }}</a></h6>
+                            <small class="text-sm text-white/80">{{ member.blogs }}</small>
+                            <div class="mt-4 flex justify-center gap-3">
+                                @for (social of member.socials; track social.icon) {
+                                <a class="text-white" [routerLink]="social.link">
+                                    @if (social.type === 'lucide') {
+                                    <lucide-icon [name]="social.icon" class="size-4" [ngClass]="{'fill-white': social.icon === 'facebook'}">
+                                    </lucide-icon>
+                                    }
+                                    @if (social.type === 'iconify') {
+                                    <iconify-icon [icon]="social.icon" class="size-4">
+                                    </iconify-icon>
+                                    }
+                                </a>
+                                }
+                            </div>
+                        </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
