@@ -1,1 +1,33 @@
-<p>effort works!</p>
+<section class="lg:pb-36 pb-20">
+  <div class="container">
+    <div class="grid lg:grid-cols-2 grid-cols-1 gap-7.5 items-center">
+      <div>
+        <h2 class="md:mb-7.5 lg:text-4.5xl md:text-4xl text-3xl">
+          Generate content effortlessly in minutes
+        </h2>
+        <p class="md:mb-7.5 text-default-700">
+          Share your latest product updates directly in-app with visual notifications and
+          interactive widgets for enhanced communication.
+        </p>
+
+        <ul class="flex flex-col gap-2">
+          @for (item of featureListData; track item.text) {
+            <li class="flex gap-1 items-center text-default-800 font-semibold">
+              <lucide-icon [name]="item.icon" class="size-6 text-primary"></lucide-icon>
+
+              {{ item.text }}
+            </li>
+          }
+        </ul>
+      </div>
+
+      <div class="lg:ps-12 relative">
+        <img
+          src="assets/images/elements/saas-decoration/chatbot-02.png"
+          class="relative z-20"
+          alt="chatbot feature image"
+        />
+      </div>
+    </div>
+  </div>
+</section>

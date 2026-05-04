@@ -1,1 +1,56 @@
-<p>productivity works!</p>
+<section class="lg:pb-36 pb-20">
+  <div class="container">
+    <div class="grid lg:grid-cols-12 grid-cols-1 gap-7.5">
+      <div class="lg:col-span-5 lg:order-1 order-2">
+        <div
+          class="bg-[linear-gradient(90deg,rgba(240,150,255,0.15)_0%,rgba(191,200,252,0.15)_51%,rgba(187,148,255,0.15)_100%)] rounded-2xl relative p-7.5"
+        >
+          <!-- Saas image -->
+          <img src="assets/images/elements/saas-decoration/chatbot-03.png" alt="Saas image" />
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 lg:w-155 ms-auto lg:order-2 order-1">
+        <h2 class="mb-7.5 lg:mb-12 lg:text-4.5xl md:text-4xl text-3xl">
+          Boost productivity with intelligent automation
+        </h2>
+        <div class="hs-accordion-group mb-12">
+          @for (item of accordionData; track item.id) {
+            <div
+              class="hs-accordion bg-secondary rounded-xl hs-accordion-active:border-s-2 hs-accordion-active:border-primary mb-7.5"
+              [class.active]="item.isActive"
+              [id]="'heading-' + item.id"
+            >
+             
+              <button
+                class="hs-accordion-toggle hs-accordion-active:text-primary-active py-4 px-5 inline-flex items-center gap-3.5 w-full font-semibold text-start text-default-900 text-xl"
+                [attr.aria-expanded]="item.isActive ? 'true' : 'false'"
+                [attr.aria-controls]="'collapse-' + item.id"
+              >
+                <div
+                  class="flex justify-center items-center size-10.5 rounded-md bg-body-bg text-default-900 hs-accordion-active:bg-default-900 hs-accordion-active:text-body-bg"
+                >
+                  <lucide-icon [name]="item.icon" class="size-5"></lucide-icon>
+                </div>
+
+                {{ item.title }}
+              </button>
+
+              <div
+                [id]="'collapse-' + item.id"
+                class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 ps-20 pe-5 pb-4"
+                [class.hidden]="!item.isActive"
+                role="region"
+                [attr.aria-labelledby]="'heading-' + item.id"
+              >
+                <p class="text-default-700">
+                  {{ item.content }}
+                </p>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

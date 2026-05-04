@@ -1,1 +1,38 @@
-<p>companies works!</p>
+<section class="lg:pb-36 pb-20">
+  <div class="container">
+    <h6 class="text-center mb-12 md:text-2.2xl text-xl">
+      Trusted by 10,000+ marketers at leading companies
+    </h6>
+    <div class="swiper">
+      <!-- Slider items -->
+      <swiper-container 
+      loop="true"
+      autoplay="true"
+      space-between="50"
+      slides-per-view="2"
+      breakpoints='{
+        "576": {"slidesPerView": 3},
+        "768": {"slidesPerView": 4},
+        "1200": {"slidesPerView": 6},
+        "1400": {"slidesPerView": 7}
+      }'
+      class="swiper-wrapper flex items-center">
+        @for (item of clientLogoData; track item.gray) {
+          <swiper-slide>
+            <div class="relative">
+              <img [src]="item.gray" alt="client-img" />
+
+              <div
+                class="absolute top-0 start-0 opacity-0 hover:opacity-100 transition-all duration-300 ease-in-out"
+              >              
+                <img [src]="item.light" class="dark:block hidden" alt="client logo" />
+
+                <img [src]="item.dark" class="dark:hidden block" alt="client logo" />
+              </div>
+            </div>
+          </swiper-slide>
+        }
+      </swiper-container>
+    </div>
+  </div>
+</section>

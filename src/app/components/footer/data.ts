@@ -159,7 +159,7 @@ export const footer3Data: FooterType[] = [
       {
         label: 'Career',
         link: '/career',
-        badge: { text: '2 job', class: 'bg-primary' },
+        badge: { text: '2 job', class: 'bg-primary ms-3' },
       },
       { label: 'Career detail', link: '/career/single' },
       { label: 'Become a partner', link: '/contact-us/v2' },
@@ -173,7 +173,7 @@ export const footer3Data: FooterType[] = [
       {
         label: 'Pricing',
         link: '/pricing/v1',
-        badge: { text: 'New', class: 'bg-success' },
+        badge: { text: 'New', class: 'bg-success ms-2' },
       },
       { label: 'Blogs', link: '/blog/minimal' },
       { label: 'Blog detail', link: '/blog/single' },
@@ -291,7 +291,7 @@ export const footer7Data: FooterType[] = [
       {
         label: 'Career',
         link: '/career',
-        badge: { text: '2 job', class: 'bg-primary' },
+        badge: { text: '2 job', class: 'bg-primary ms-3' },
       },
       { label: 'Career detail', link: '/career/single' },
       { label: 'Become a partner', link: '/contact-us/v2' },
@@ -305,7 +305,7 @@ export const footer7Data: FooterType[] = [
       {
         label: 'Pricing',
         link: '/pricing/v1',
-        badge: { text: 'New', class: 'bg-success' },
+        badge: { text: 'New', class: 'bg-success ms-2' },
       },
       { label: 'Blogs', link: '/blog/minimal' },
       { label: 'Blog detail', link: '/blog/single' },

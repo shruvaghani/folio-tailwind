@@ -1,0 +1,136 @@
+<footer class="lg:pt-32 pt-18 bg-dark">
+  <div class="container">
+    <div class="grid lg:grid-cols-6 md:grid-cols-12 grid-cols-1 gap-7.5">
+      <div class="lg:col-span-2 md:col-span-12">
+        <!-- logo -->
+        <a routerLink="/">
+          <img class="h-10" src="assets/images/logo-light.svg" alt="logo" />
+        </a>
+        <p class="my-4 text-white/80 lg:my-7.5">
+          A Bootstrap theme that's both stylish and functional, perfect for any type of technology
+          or corporate website.
+        </p>
+
+        <li class="flex mb-2">
+          <a [routerLink]="[]" class="hover:text-primary flex text-white/80 items-center gap-1"
+            ><lucide-icon name="headset" class="me-2 text-primary size-4"></lucide-icon> (251)
+            854-6308
+          </a>
+        </li>
+
+        <li class="flex mb-2">
+          <a [routerLink]="[]" class="hover:text-primary flex text-white/80 items-center gap-1"
+            ><lucide-icon name="mail" class="me-2 text-primary size-4"></lucide-icon>
+            example@gmail.com
+          </a>
+        </li>
+      </div>
+
+      @for (section of footer7Data; track section.title) {
+        <div class="lg:col-span-1 md:col-span-3">
+          <h6 class="md:text-2.2xl text-xl mb-7.5 text-white">
+            {{ section.title }}
+          </h6>
+
+          <ul class="flex flex-col gap-2.5 text-white/90 text-base">
+            @for (item of section.links; track item.label) {
+              <li class="hover:text-primary pe-3">
+                <a [href]="item.link" class="flex items-center">
+                  {{ item.label }}
+
+                  <!-- Badge -->
+                  @if (item.badge) {
+                    <span
+                      class="py-1 px-2 text-xs rounded text-white ms-2"
+                      [ngClass]="item.badge.class"
+                    >
+                      {{ item.badge.text }}
+                    </span>
+                  }
+
+                  @if (item.externalIcon) {
+                    <lucide-icon name="square-arrow-out-up-right" class="ms-1 size-4"></lucide-icon>
+                  }
+                </a>
+              </li>
+            }
+          </ul>
+        </div>
+      }
+
+      <div class="lg:col-span-2 md:col-span-6">
+        <div>
+          <h6 class="md:text-2.2xl text-xl text-white mb-7.5">Stay connected with us</h6>
+
+          <form class="flex items-center p-2 rounded-md mb-2 bg-black">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="flex-1 text-sm bg-black! rounded-md border-0 focus:outline-none focus:ring-0 pe-4 py-2.5 px-5 text-white"
+            />
+
+            <button
+              type="button"
+              class="shrink-0 text-sm size-10 flex justify-center items-center rounded-md bg-primary text-white"
+            >
+              <lucide-icon name="send" class="size-4"></lucide-icon>
+            </button>
+          </form>
+
+          <p class="text-white/80 text-sm mb-0">✌️ No Spam — We Promise!</p>
+
+          <div class="mt-7.5 flex items-center gap-3">
+            <span class="text-white font-semibold">Follow on:</span>
+
+                  <div class="flex gap-3">
+              @for (item of socialData; track item.icon) {
+                <a
+                  [routerLink]="item.link"
+                  class="size-8 rounded flex justify-center items-center"
+                  [ngClass]="item.bgClass"
+                >
+                 
+                  @if (item.iconType === 'lucide') {
+                    <lucide-icon [name]="item.icon" class="text-white size-4"></lucide-icon>
+                  }
+
+                  @if (item.iconType === 'iconify') {
+                    <iconify-icon [icon]="item.icon" class="text-white size-4"></iconify-icon>
+                  }
+                </a>
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="mt-12 border-t border-white/10" />
+
+    <div class="py-7.5 md:flex justify-between items-center md:text-start text-center">
+      <div class="text-white/90 text-sm mb-4 md:mb-0">
+        Copyrights © 2026 Folio. Build by
+        <a
+          href="https://stackbros.in/"
+          target="_blank"
+          class="font-medium hover-underline text-white/90 hover:text-primary"
+          >StackBros</a
+        >.
+      </div>
+
+      <ul class="flex justify-center gap-1 text-white/80">
+        <li>
+          <a [routerLink]="[]" class="text-sm px-2 hover:text-primary transition">
+            Privacy policy
+          </a>
+        </li>
+
+        <li>
+          <a [routerLink]="[]" class="text-sm ps-2 pe-0 hover:text-primary transition">
+            Terms &amp; conditions
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
