@@ -8,6 +8,46 @@ const team02 = 'assets/images/team/02.jpg';
 const team03 = 'assets/images/team/03.jpg';
 const team04 = 'assets/images/team/04.jpg';
 
+const avatar01 = 'assets/images/avatar/01.jpg';
+const avatar02 = 'assets/images/avatar/02.jpg';
+const avatar03 = 'assets/images/avatar/03.jpg';
+const avatar08 = 'assets/images/avatar/08.jpg';
+const avatar09 = 'assets/images/avatar/09.jpg';
+
+const clientDark01 = 'assets/images/client/logo-dark/01.svg';
+const clientLight01 = 'assets/images/client/logo-light/01.svg';
+
+const clientDark02 = 'assets/images/client/logo-dark/02.svg';
+const clientLight02 = 'assets/images/client/logo-light/02.svg';
+
+const clientDark03 = 'assets/images/client/logo-dark/03.svg';
+const clientLight03 = 'assets/images/client/logo-light/03.svg';
+
+const clientDark04 = 'assets/images/client/logo-dark/04.svg';
+const clientLight04 = 'assets/images/client/logo-light/04.svg';
+
+const clientDark05 = 'assets/images/client/logo-dark/05.svg';
+const clientLight05 = 'assets/images/client/logo-light/05.svg';
+
+const clientDark06 = 'assets/images/client/logo-dark/06.svg';
+const clientLight06 = 'assets/images/client/logo-light/06.svg';
+
+const clientDark07 = 'assets/images/client/logo-dark/07.svg';
+const clientLight07 = 'assets/images/client/logo-light/07.svg';
+
+const clientDark08 = 'assets/images/client/logo-dark/08.svg';
+const clientLight08 = 'assets/images/client/logo-light/08.svg';
+
+const clientDark09 = 'assets/images/client/logo-dark/09.svg';
+const clientLight09 = 'assets/images/client/logo-light/09.svg';
+
+const clientDark10 = 'assets/images/client/logo-dark/10.svg';
+const clientLight10 = 'assets/images/client/logo-light/10.svg';
+
+const clientDark11 = 'assets/images/client/logo-dark/11.svg';
+const clientLight11 = 'assets/images/client/logo-light/11.svg';
+
+
 
 export type ServiceLinkType = {
   label: string;
@@ -158,4 +198,31 @@ export const teamData: TeamMemberType[] = [
       { type: 'lucide', icon: 'instagram' },
     ],
   },
+];
+
+export const avatarsData: string[] = [
+  avatar01,
+  avatar02,
+  avatar03,
+  avatar08,
+  avatar09,
+];
+
+export type ClientLogoType = {
+  dark: string;
+  light: string;
+};
+
+export const clientLogoData: ClientLogoType[] = [
+  { dark: clientDark01, light: clientLight01 },
+  { dark: clientDark07, light: clientLight07 },
+  { dark: clientDark08, light: clientLight08 },
+  { dark: clientDark02, light: clientLight02 },
+  { dark: clientDark03, light: clientLight03 },
+  { dark: clientDark04, light: clientLight04 },
+  { dark: clientDark05, light: clientLight05 },
+  { dark: clientDark11, light: clientLight11 },
+  { dark: clientDark10, light: clientLight10 },
+  { dark: clientDark06, light: clientLight06 },
+  { dark: clientDark09, light: clientLight09 },
 ];

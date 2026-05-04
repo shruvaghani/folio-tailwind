@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { avatarsData, clientLogoData } from '../../data';
 
 @Component({
   selector: 'finance-clients',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
   styles: ``,
 })
   
-export class Clients {}
+export class Clients {
+  avatarsData = avatarsData;
+  clientLogoData = clientLogoData;
+}

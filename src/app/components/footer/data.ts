@@ -128,3 +128,85 @@ export const footer2Data: Footer2Type[] = [
     ],
   },
 ];
+
+export type FooterLinkType = {
+  label: string;
+  link: string;
+  badge?: {
+    text: string;
+    class: string;
+  };
+  externalIcon?: boolean;
+};
+
+export type FooterSectionType = {
+  title: string;
+  links: FooterLinkType[];
+};
+
+
+export const footer3Data: FooterSectionType[] = [
+  {
+    title: 'Company',
+    links: [
+      { label: 'About us', link: '/about/v1' },
+      { label: 'Contact us', link: '/contact-us' },
+      {
+        label: 'Career',
+        link: '/career',
+        badge: { text: '2 job', class: 'bg-primary' },
+      },
+      { label: 'Career detail', link: '/career/single' },
+      { label: 'Become a partner', link: '/contact-us/v2' },
+      { label: 'Services', link: '/service/v1' },
+    ],
+  },
+  {
+    title: 'Resources',
+    links: [
+      { label: 'Case studies', link: '/portfolio/case-study/v1' },
+      {
+        label: 'Pricing',
+        link: '/pricing/v1',
+        badge: { text: 'New', class: 'bg-success' },
+      },
+      { label: 'Blogs', link: '/blog/minimal' },
+      { label: 'Blog detail', link: '/blog/single' },
+      { label: 'Success stories', link: '/contact-us/v2' },
+      {
+        label: 'Services',
+        link: '/service/v1',
+        externalIcon: true,
+      },
+    ],
+  },
+];
+
+export type SocialType = {
+  icon: string;
+  type: 'lucide' | 'iconify';
+  bg: string;
+};
+
+export const social3Data: SocialType[] = [
+  {
+    icon: 'facebook',
+    type: 'lucide',
+    bg: '#5d82d1',
+  },
+  {
+    icon: 'instagram',
+    type: 'lucide',
+    bg: 'bg-pink',
+  },
+  {
+    icon: 'tabler:brand-x',
+    type: 'iconify',
+    bg: 'bg-black',
+  },
+  { 
+    icon: 'linkedin',
+    type: 'lucide',
+    bg: 'bg-info',
+  },
+];
