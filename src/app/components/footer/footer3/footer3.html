@@ -61,22 +61,24 @@
 
               <span class="text-white font-semibold">Follow on:</span>
 
-              <div class="flex gap-3 mt-4">
-                @for (item of social3Data; track item.icon) {
-                  <a
-                    [routerLink]="[]"
-                    class="size-8 rounded flex justify-center items-center"
-                    [ngClass]="item.bg"
-                    [style.background]="item.bg.startsWith('#') ? item.bg : null"
-                  >
-                    @if (item.type === 'lucide') {
-                      <lucide-icon [name]="item.icon" class="text-white size-4"></lucide-icon>
-                    } @else {
-                      <iconify-icon [icon]="item.icon" class="text-white size-4"></iconify-icon>
-                    }
-                  </a>
-                }
-              </div>
+               <div class="flex gap-3 mt-4">
+              @for (item of socialData; track item.icon) {
+                <a
+                  [routerLink]="item.link"
+                  class="size-8 rounded flex justify-center items-center"
+                  [ngClass]="item.bgClass"
+                >
+                 
+                  @if (item.iconType === 'lucide') {
+                    <lucide-icon [name]="item.icon" class="text-white size-4"></lucide-icon>
+                  }
+
+                  @if (item.iconType === 'iconify') {
+                    <iconify-icon [icon]="item.icon" class="text-white size-4"></iconify-icon>
+                  }
+                </a>
+              }
+            </div>
             </div>
           </div>
         </div>

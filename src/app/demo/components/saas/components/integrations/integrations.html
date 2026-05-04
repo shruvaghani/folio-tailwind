@@ -1,0 +1,132 @@
+<section class="lg:py-36 py-20 relative">
+  <div class="container">
+    <div class="absolute bottom-0 start-1/2 -translate-x-1/2 mb-32">
+      <img
+        src="assets/images/elements/grad-shape/blur-decoration-2.svg"
+        class="opacity-20 blur-[144px]"
+        alt="Grad shape"
+      />
+    </div>
+
+    <div class="lg:w-209 md:w-md mx-auto text-center">
+      <h2 class="mb-7.5 lg:text-4.5xl md:text-4xl text-3xl">
+        Maximize efficiency with seamless <span class="text-primary">Integrations</span>
+      </h2>
+      <p class="mb-7.5">
+        Our robust integration capabilities ensure your data flows smoothly across systems,
+        empowering you to streamline operations and boost productivity
+      </p>
+      <a
+        routerLink="/integrations"
+        class="text-white bg-primary-grad rounded-md py-3.5 px-7.5 inline-flex gap-1 items-center group"
+        >Explore all integrations<lucide-icon
+          name="arrow-right"
+          class="size-4 group-hover:translate-x-1 transition-transform duration-300"
+        ></lucide-icon>
+      </a>
+    </div>
+
+    <div class="flex gap-4 justify-between relative z-20 mt-7.5 sm:mt-24">
+      <!-- Item -->
+      <div class="hidden lg:flex justify-start -mt-32">
+        <div
+          class="size-10.5 bg-body-bg rounded-full flex items-center shadow-[0_0.3rem_0.25rem_rgba(127,57,248,0.3)] justify-center"
+        >
+          <img src="assets/images/client/icons/07.svg" class="h-5" alt="client icon" />
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="hidden md:flex justify-start -mt-18">
+        <div
+          class="size-14 bg-body-bg rounded-full flex items-center shadow-[0_0.3rem_0.25rem_rgba(127,57,248,0.3)] justify-center"
+        >
+          <img src="assets/images/client/icons/01.svg" class="h-7.5" alt="client icon" />
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="hidden sm:flex justify-start -mt-7.5">
+        <div
+          class="size-14 bg-body-bg rounded-full flex items-center shadow-[0_0.3rem_0.25rem_rgba(127,57,248,0.3)] justify-center"
+        >
+          <img src="assets/images/client/icons/04.svg" class="h-7.5" alt="client icon" />
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="flex justify-start">
+        <div
+          class="size-18 bg-body-bg rounded-full flex items-center shadow-[0_0.3rem_0.25rem_rgba(127,57,248,0.3)] justify-center"
+        >
+          <img src="assets/images/client/icons/10.svg" class="h-10" alt="client icon" />
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="flex">
+        <div
+          class="size-28 bg-body-bg rounded-full flex items-center shadow-[0_0.3rem_0.25rem_rgba(127,57,248,0.3)] justify-center"
+        >
+          <img src="assets/images/logo-icon.svg" class="h-12.5" alt="client icon" />
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="flex justify-end">
+        <div
+          class="size-18 bg-body-bg rounded-full flex items-center shadow-[0_0.3rem_0.25rem_rgba(127,57,248,0.3)] justify-center"
+        >
+          <img src="assets/images/client/icons/12.svg" class="h-10" alt="client icon" />
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="hidden sm:flex justify-end -mt-7.5">
+        <div
+          class="size-14 bg-body-bg rounded-full flex items-center shadow-[0_0.3rem_0.25rem_rgba(127,57,248,0.3)] justify-center"
+        >
+          <img src="assets/images/client/icons/09.svg" class="h-7.5" alt="client icon" />
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="hidden md:flex justify-end -mt-18">
+        <div
+          class="size-14 bg-body-bg rounded-full flex items-center shadow-[0_0.3rem_0.25rem_rgba(127,57,248,0.3)] justify-center"
+        >
+          <img src="assets/images/client/icons/11.svg" class="h-7.5" alt="client icon" />
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="hidden lg:flex justify-end -mt-32">
+        <div
+          class="size-10.5 bg-body-bg rounded-full flex items-center shadow-[0_0.3rem_0.25rem_rgba(127,57,248,0.3)] justify-center"
+        >
+          <img src="assets/images/client/icons/05.svg" class="h-5" alt="client icon" />
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="bg-secondary rounded-2xl xl:flex items-center text-center relative z-20 p-7.5 mt-24"
+    >
+      <ul class="flex items-center -space-x-3 justify-center">
+        @for (item of avatarsData; track $index) {
+          <li>
+            <img class="size-12 rounded-full" [src]="item" alt="avatar" />
+          </li>
+        }
+      </ul>
+
+      <p class="text-default-900 text-xl mb-2 xl:mb-0 xl:ms-4">
+        Join over 15M+ users transforming ideas
+      </p>
+      <p class="text-default-900 text-xl mb-2 xl:mb-0 ms-auto">
+        <a routerLink="/sign-up" class="hover-underline text-primary">Create an account</a> and
+        kickstart your business
+      </p>
+    </div>
+  </div>
+</section>

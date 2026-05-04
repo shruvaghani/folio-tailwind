@@ -1,0 +1,160 @@
+<section class="lg:pb-36 pb-20">
+  <div class="container">
+    <div class="grid lg:grid-cols-3 grid-cols-1 gap-7.5">
+      <div class="lg:col-span-2 relative">
+        <div class="absolute end-0 top-0 lg:-me-10 z-20 hidden sm:block">
+          <img src="assets/images/elements/money-hand.png" alt="decoration" />
+        </div>
+        <div class="lg:w-150 mb-7.5 lg:mb-18">
+          <h2 class="sm:mb-7.5 lg:text-4.5xl md:text-4xl text-3xl">
+            Affordable solutions for every budget
+          </h2>
+          <p>
+            Need guidance?
+            <a [routerLink]="[]" class="hover-underline text-primary">Reserve a 20-minute call</a>
+          </p>
+        </div>
+
+        <form action="" class="mb-7.5 inline-flex items-center">
+          <span class="font-semibold text-default-900">Monthly</span>
+          <div
+            class="flex justify-center items-center mx-2 border border-default-300 dark:border-white/14 rounded-full"
+          >
+            <label for="toggle-count" class="relative inline-block w-14 h-7 cursor-pointer">
+              <input type="checkbox" id="toggle-count" class="peer sr-only" />
+              <span
+                class="absolute inset-0 rounded-full transition-colors duration-200 ease-in-out peer-checked:bg-primary-checked peer-disabled:opacity-50 peer-disabled:pointer-events-none"
+              ></span>
+              <span
+                class="absolute top-1/2 start-1 -translate-y-1/2 size-5.5 bg-default-300 rounded-full shadow-sm transition-transform duration-200 ease-in-out peer-checked:translate-x-full"
+              ></span>
+            </label>
+          </div>
+          <span class="font-semibold text-default-900">Yearly</span>
+          <span class="rounded py-1 px-2 text-xs bg-success text-white ms-2">10% save</span>
+        </form>
+
+        <nav
+          id="myTab"
+          class="md:grid flex grid-cols-3 gap-7.5 overflow-x-auto w-full whitespace-nowrap"
+          aria-label="Tabs"
+          role="tablist"
+          aria-orientation="horizontal"
+        >
+          <button
+            type="button"
+            class="hs-tab-active:bg-secondary p-7.5 rounded-2xl whitespace-nowrap border border-secondary hover:bg-secondary focus:outline-hidden focus:text-primary-focus disabled:opacity-50 disabled:pointer-events-none active"
+            id="tabs-with-underline-item-1"
+            aria-selected="true"
+            data-hs-tab="#tabs-with-underline-1"
+            aria-controls="tabs-with-underline-1"
+            role="tab"
+          >
+            <div
+              class="size-14 flex justify-center items-center bg-body-bg shadow-[0_0.18rem_0.25rem_rgba(127,57,248,0.2)] rounded-full mb-4"
+            >
+              <img src="assets/images/elements/rocket.png" class="h-10" alt="rocket image" />
+            </div>
+            <p class="text-default-900 font-semibold mb-4 text-start">Starter plan</p>
+
+            <p class="text-primary text-start">
+              <span
+                class="text-3xl md:text-4xl lg:text-4.5xl font-bold text-primary"
+                data-hs-toggle-count='{"target": "#toggle-count","min": 25,"max": 20}'
+                >$25</span
+              >
+              /month
+            </p>
+          </button>
+
+          <button
+            type="button"
+            class="hs-tab-active:bg-secondary p-7.5 rounded-2xl whitespace-nowrap border border-secondary hover:bg-secondary focus:outline-hidden focus:text-primary-focus disabled:opacity-50 disabled:pointer-events-none"
+            id="tabs-with-underline-item-2"
+            aria-selected="false"
+            data-hs-tab="#tabs-with-underline-2"
+            aria-controls="tabs-with-underline-2"
+            role="tab"
+          >
+            <div
+              class="size-14 flex justify-center items-center bg-body-bg shadow-[0_0.18rem_0.25rem_rgba(127,57,248,0.2)] rounded-full mb-4"
+            >
+              <img src="assets/images/elements/thunder.png" class="h-10" alt="rocket image" />
+            </div>
+            <p class="text-default-900 font-semibold mb-4 text-start">Starter plan</p>
+
+            <p class="text-primary text-start">
+              <span
+                class="text-3xl md:text-4xl lg:text-4.5xl font-bold text-primary"
+                data-hs-toggle-count='{"target": "#toggle-count","min": 49,"max": 39}'
+                >$49</span
+              >
+              /month
+            </p>
+          </button>
+
+          <button
+            type="button"
+            class="hs-tab-active:bg-secondary p-7.5 rounded-2xl whitespace-nowrap border border-secondary hover:bg-secondary focus:outline-hidden focus:text-primary-focus disabled:opacity-50 disabled:pointer-events-none"
+            id="tabs-with-underline-item-3"
+            aria-selected="false"
+            data-hs-tab="#tabs-with-underline-3"
+            aria-controls="tabs-with-underline-3"
+            role="tab"
+          >
+            <div
+              class="size-14 flex justify-center items-center bg-body-bg shadow-[0_0.18rem_0.25rem_rgba(127,57,248,0.2)] rounded-full mb-4"
+            >
+              <img src="assets/images/elements/fire.png" class="h-10" alt="rocket image" />
+            </div>
+            <p class="text-default-900 font-semibold mb-4 text-start">Enterprise plan</p>
+
+            <p class="text-primary text-start">
+              <span
+                class="text-3xl md:text-4xl lg:text-4.5xl font-bold text-primary"
+                data-hs-toggle-count='{"target": "#toggle-count","min": 89,"max": 69}'
+                >$89</span
+              >
+              /month
+            </p>
+          </button>
+        </nav>
+      </div>
+
+      <div class="col-span-1 h-full">
+        @for (tab of pricingContentData; track tab.id) {
+          <div
+            [attr.id]="tab.id"
+            role="tabpanel"
+            [attr.aria-labelledby]="tab.ariaLabelledby"
+            [class.hidden]="!tab.active"
+          >
+            <div class="bg-dark rounded-xl md:p-12 p-7.5 h-full">
+              <h5 class="mb-4 lg:text-2.5xl md:text-2xl text-3xl text-white">Included features</h5>
+
+              <ul class="pb-7.5 space-y-3">
+                @for (feature of tab.features; track feature) {
+                  <li class="flex items-center text-white">
+                    <lucide-icon name="check" class="size-4 me-1 text-success"></lucide-icon>
+                    {{ feature }}
+                  </li>
+                }
+              </ul>
+
+              <div class="text-center mt-0 xl:mt-18">
+                <a
+                  [routerLink]="[]"
+                  class="py-3.5 px-7.5 bg-primary text-white hover:bg-primary-hover inline-block font-medium rounded transition-all duration-500 w-full mb-2"
+                >
+                  Get started
+                </a>
+
+                <a [routerLink]="[]" class="text-white hover-underline"> View comparison table </a>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

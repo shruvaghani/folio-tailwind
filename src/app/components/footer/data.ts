@@ -1,3 +1,8 @@
+const appleIcon = 'assets/images/elements/apple.svg';
+const microsoftIcon = 'assets/images/elements/microsoft.svg';
+const androidIcon = 'assets/images/elements/android.svg';
+const linuxIcon = 'assets/images/elements/linux.svg';
+
 export type FooterLink = {
   label: string;
   link: string;
@@ -139,13 +144,12 @@ export type FooterLinkType = {
   externalIcon?: boolean;
 };
 
-export type FooterSectionType = {
+export type Footer3Type = {
   title: string;
   links: FooterLinkType[];
 };
 
-
-export const footer3Data: FooterSectionType[] = [
+export const footer3Data: Footer3Type[] = [
   {
     title: 'Company',
     links: [
@@ -182,31 +186,92 @@ export const footer3Data: FooterSectionType[] = [
   },
 ];
 
-export type SocialType = {
+export type PlatformType = {
+  name: string;
   icon: string;
-  type: 'lucide' | 'iconify';
-  bg: string;
 };
 
-export const social3Data: SocialType[] = [
+export const platformData: PlatformType[] = [
   {
+    name: 'IOS',
+    icon: appleIcon,
+  },
+  {
+    name: 'Microsoft',
+    icon: microsoftIcon,
+  },
+  {
+    name: 'Android',
+    icon: androidIcon,
+  },
+  {
+    name: 'Linux',
+    icon: linuxIcon,
+  },
+];
+
+export type SocialItem = {
+  iconType: 'lucide' | 'iconify';
+  icon: string;
+  bgClass: string;
+  link: string;
+};
+
+export const socialData: SocialItem[] = [
+  {
+    iconType: 'lucide',
     icon: 'facebook',
-    type: 'lucide',
-    bg: '#5d82d1',
+    bgClass: 'bg-[#5d82d1]',
+    link: '/',
   },
   {
+    iconType: 'lucide',
     icon: 'instagram',
-    type: 'lucide',
-    bg: 'bg-pink',
+    bgClass: 'bg-pink',
+    link: '/',
   },
   {
+    iconType: 'iconify',
     icon: 'tabler:brand-x',
-    type: 'iconify',
-    bg: 'bg-black',
+    bgClass: 'bg-black',
+    link: '/',
   },
-  { 
+  {
+    iconType: 'lucide',
     icon: 'linkedin',
-    type: 'lucide',
-    bg: 'bg-info',
+    bgClass: 'bg-info',
+    link: '/',
+  },
+];
+
+export const footer7Data: Footer3Type[] = [
+  {
+    title: 'Company',
+    links: [
+      { label: 'About us', link: '/about/v1' },
+      { label: 'Contact us', link: '/contact-us' },
+      {
+        label: 'Career',
+        link: '/career',
+        badge: { text: '2 job', class: 'bg-primary' },
+      },
+      { label: 'Career detail', link: '/career/single' },
+      { label: 'Become a partner', link: '/contact-us/v2' },
+      { label: 'Services', link: '/service/v1' },
+    ],
+  },
+  {
+    title: 'Resources',
+    links: [
+      { label: 'Case studies', link: '/portfolio/case-study/v1' },
+      {
+        label: 'Pricing',
+        link: '/pricing/v1',
+        badge: { text: 'New', class: 'bg-success' },
+      },
+      { label: 'Blogs', link: '/blog/minimal' },
+      { label: 'Blog detail', link: '/blog/single' },
+      { label: 'Success stories', link: '/contact-us/v2', externalIcon: true },
+    ],
   },
 ];

@@ -1,0 +1,60 @@
+<section class="lg:pb-36 pb-20">
+  <div class="container">
+    <div class="grid lg:grid-cols-2 grid-cols-1 gap-7.5">
+      <div>
+        <h2 class="mb-4 lg:mb-7.5 lg:text-4.5xl md:text-4xl text-3xl">
+          Easily streamline your user analytics
+        </h2>
+        <a
+          routerLink="/about/v1"
+          class="bg-primary text-white font-medium inline-flex py-3.5 px-7.5 rounded-md mb-0"
+          >Know more</a
+        >
+        <hr class="my-7.5 lg:my-12 border-primary/20 border-t" />
+
+        <div class="grid md:grid-cols-2 grid-cols-1 gap-7.5 mb-7.5">
+          @for (item of featuresData; track item.title) {
+            <div>
+              <img [src]="item.icon" class="w-10 mb-7.5" alt="feature icon" />
+
+              <h6 class="md:text-2.2xl text-xl mb-2">
+                {{ item.title }}
+              </h6>
+
+              <p class="text-default-700">
+                {{ item.description }}
+              </p>
+            </div>
+          }
+        </div>
+
+        <div
+          class="bg-body-bg shadow-[0_0.18rem_0.25rem_rgba(127,57,248,0.2)] rounded py-4 md:px-7.5 mt-7.5 inline-flex items-center font-medium"
+        >
+          <p class="text-default-900 mb-0 px-7.5 sm:px-12 md:px-0 flex items-center">
+            <lucide-icon name="info" class="size-4 me-2"></lucide-icon>Contact our team for more
+            information
+            <a
+              routerLink="/contact-us/v1"
+              class="font-semibold hover-underline text-primary ms-1 flex items-center gap-1 group"
+              >Let’s chat
+              <lucide-icon
+                name="arrow-right"
+                class="size-4 group-hover:translate-x-1 transition-all duration-300"
+              ></lucide-icon
+            ></a>
+          </p>
+        </div>
+      </div>
+
+      <div class="lg:w-127.25 ms-auto">
+        <div class="bg-secondary rounded-2xl relative p-12">
+          <!-- Saas image -->
+          <img src="assets/images/elements/saas-decoration/05.png" alt="Saas image" />
+          <!-- Image -->
+          <img src="assets/images/about/06.jpg" class="rounded-4" alt="image" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

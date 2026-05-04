@@ -1,0 +1,53 @@
+<section class="relative -mb-44 z-20">
+  <div class="lg:w-387.5 mx-auto relative">
+    <div class="lg:py-32 py-18 rounded-2xl bg-dark relative">
+      <div class="absolute top-full start-1/2 -translate-y-1/2">
+        <img
+          src="assets/images/elements/grad-shape/blur-decoration-2.svg"
+          class="opacity-20 blur-[144px]"
+          alt="Grad shape"
+        />
+      </div>
+      <div class="container">
+        <div class="grid lg:grid-cols-12 grid-cols-1 gap-7.5 mb-18 items-center">
+          <div class="lg:col-span-5">
+            <h2 class="text-white lg:text-4.5xl md:text-4xl text-3xl">
+              Simplify data <span class="text-primary">collection</span> with easy
+            </h2>
+          </div>
+
+          <div class="lg:col-span-7 lg:ms-auto lg:text-end">
+            <a
+              [routerLink]="[]"
+              class="py-3.5 px-7.5 rounded inline-flex font-medium bg-white text-dark items-center hover:bg-white/90"
+            >
+              <iconify-icon icon="tabler:brand-google" class="size-4 me-2"></iconify-icon>Sign up
+              with google</a
+            >
+          </div>
+        </div>
+
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-18 gap-7.5">
+          @for (item of stepsData; track item.title) {
+            <div>
+              <div [class]="item.wrapperClass" class="bg-white/10 rounded-2xl h-50 sm:h-75 overflow-hidden p-7.5 mb-2 sm:mb-4">
+                @for (img of item.images; track img.src) {
+                  <img [src]="img.src" [class]="img.class" alt="step image" />
+                }
+              </div>
+
+              <div class="py-5">
+                <h6 class="text-white md:text-2.2xl text-2xl mb-2">
+                  {{ item.title }}
+                </h6>
+                <p class="text-white/90">
+                  {{ item.description }}
+                </p>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
