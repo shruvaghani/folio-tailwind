@@ -16,7 +16,6 @@ const blog2 = 'assets/images/blog/4by3/02.jpg';
 const blog3 = 'assets/images/blog/4by3/03.jpg';
 const blog4 = 'assets/images/blog/4by3/04.jpg';
 
-
 export type FeatureType = {
   icon: string;
   title: string;

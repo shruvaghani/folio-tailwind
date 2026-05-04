@@ -6,7 +6,7 @@ import { Software } from "./components/software/software";
 import { Finance } from "./components/finance/finance";
 import { Product } from "./components/product/product";
 import { Saas } from "./components/saas/saas";
-import { Chatbox } from "./components/chatbox/chatbox";
+import { AiChatbot } from './components/ai-chatbot/ai-chatbot';
 import { Portfolio } from "./components/portfolio/portfolio";
 import { Blog } from "./components/blog/blog";
 
@@ -42,8 +42,8 @@ export const DEMO_ROUTES: Route[] = [
     data: { title: 'Saas' },
   },
   {
-    path: 'chatbox',
-    component: Chatbox,
+    path: 'ai-chatbot',
+    component: AiChatbot,
     data: { title: 'Saas AI Chatbox' },
   },
   {

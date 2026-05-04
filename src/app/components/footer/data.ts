@@ -144,13 +144,13 @@ export type FooterLinkType = {
   externalIcon?: boolean;
 };
 
-export type Footer3Type = {
+export type FooterType = {
   title: string;
   links: FooterLinkType[];
 };
 
 
-export const footer3Data: Footer3Type[] = [
+export const footer3Data: FooterType[] = [
   {
     title: 'Company',
     links: [
@@ -211,8 +211,41 @@ export const platformData: PlatformType[] = [
   },
 ];
 
+export type SocialType = {
+  iconType: 'lucide' | 'iconify';
+  icon: string;
+  bgClass: string;
+  link: string;
+};
 
-export const footer6Data: Footer3Type[] = [
+export const socialData: SocialType[] = [
+  {
+    iconType: 'lucide',
+    icon: 'facebook',
+    bgClass: 'bg-[#5d82d1]',
+    link: '/',
+  },
+  {
+    iconType: 'lucide',
+    icon: 'instagram',
+    bgClass: 'bg-pink',
+    link: '/',
+  },
+  {
+    iconType: 'iconify',
+    icon: 'tabler:brand-x',
+    bgClass: 'bg-black',
+    link: '/',
+  },
+  {
+    iconType: 'lucide',
+    icon: 'linkedin',
+    bgClass: 'bg-info',
+    link: '/',
+  },
+];
+
+export const footer6Data: FooterType[] = [
   {
     title: 'Company',
     links: [
@@ -249,41 +282,7 @@ export const footer6Data: Footer3Type[] = [
   },
 ];
 
-export type SocialItem = {
-  iconType: 'lucide' | 'iconify';
-  icon: string;
-  bgClass: string;
-  link: string;
-};
-
-export const socialData: SocialItem[] = [
-  {
-    iconType: 'lucide',
-    icon: 'facebook',
-    bgClass: 'bg-[#5d82d1]',
-    link: '/',
-  },
-  {
-    iconType: 'lucide',
-    icon: 'instagram',
-    bgClass: 'bg-pink',
-    link: '/',
-  },
-  {
-    iconType: 'iconify',
-    icon: 'tabler:brand-x',
-    bgClass: 'bg-black',
-    link: '/',
-  },
-  {
-    iconType: 'lucide',
-    icon: 'linkedin',
-    bgClass: 'bg-info',
-    link: '/',
-  },
-];
-
-export const footer7Data: Footer3Type[] = [
+export const footer7Data: FooterType[] = [
   {
     title: 'Company',
     links: [
