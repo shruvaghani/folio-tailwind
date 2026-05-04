@@ -1,0 +1,126 @@
+<footer class="bg-secondary/40 relative lg:pt-32 pt-18">
+    <div class="container">
+
+        <nav class="mb-4 pb-2 flex" aria-label="breadcrumb">
+            <ol class="flex items-center space-x-2 text-2xs text-default-600">
+                <li>
+                    <a routerLink="/" class="hover:text-primary font-medium">
+                        Home
+                    </a>
+                </li>
+
+                <li class="flex items-center">
+                    <span class="px-2 text-default-400">/</span>
+                    <span class="font-medium text-primary" aria-current="page">
+                        Product landing page
+                    </span>
+                </li>
+            </ol>
+        </nav>
+
+        <p class="mb-4 text-default-700">Representative example: Based on a 12-month tenure. ₹59900.00 total cost includes 12% p.a. and No Cost EMI savings of ₹2850.00, paid over 12 months as twelve monthly payments of ₹4991.67.</p>
+
+        <ul class="ps-4 text-default-700 list-disc">
+            <li>The Classic Fit Series 5 and Classic Fit SE have a water resistance rating of 50 meters under VIS standard 22810:2010. This means they are suitable for shallow-water activities such as swimming in a pool or ocean.</li>
+
+            <li>However, they are not recommended for scuba diving, waterskiing, or other activities involving high-velocity water or submersion beyond shallow depth.</li>
+
+            <li>Water resistance is not a permanent condition and can decrease over time. For additional information, see</li>
+
+            <li>Classic Fit Series 5 and Classic Fit Pro are rated IP6X dust resistant.</li>
+
+            <li>The ECG app is available on Classic Fit Series 3 and later (excluding Classic Fit SE) and can generate an ECG similar to a single-lead electrocardiogram. Intended for use by individuals 22 years old and over.</li>
+        </ul>
+
+        <hr class="my-7.5 xl:my-18 border-t border-default-300 dark:border-white/14">
+
+        <div class="grid lg:grid-cols-3 grid-cols-1 gap-7.5">
+            <div class="col-span-1">
+                <!-- logo -->
+                <a class="navbar-brand me-0" routerLink="/">
+                    <img class="block dark:hidden h-10" src="assets/images/logo.svg" alt="logo">
+                    <img class="hidden dark:block h-10" src="assets/images/logo-light.svg" alt="logo">
+                </a>
+                <p class="my-4 xl:my-7.5 text-default-700">A Bootstrap theme that's both stylish and functional, perfect for any type of technology or corporate website.</p>
+            </div>
+
+            <div class="col-span-2 lg:w-180 ms-auto">
+                <div class="grid md:grid-cols-4 grid-cols-2 gap-7.5">
+                    @for (section of footer6Data; track section.title) {
+                    <div class="col-span-1">
+                        <h6 class="md:text-2.2xl text-xl mb-7.5">{{ section.title }}</h6>
+                        <ul class="flex flex-col gap-2.5 text-base text-default-700">
+                            @for (item of section.links; track $index) {
+                            <li class="hover:text-primary pe-3">
+                                <a [routerLink]="item.link" class="flex items-center">
+                                    {{ item.label }}
+
+                                    <!-- Badge -->
+                                    @if (item.badge) {
+                                    <span class="py-1 px-2 text-xs rounded text-white" [ngClass]="item.badge.class">
+                                        {{ item.badge.text }}
+                                    </span>
+                                    }
+
+                                    @if (item.externalIcon) {
+                                    <lucide-icon name="square-arrow-out-up-right" class="ms-1 size-4"></lucide-icon>
+                                    }
+                                </a>
+                            </li>
+                            }
+                        </ul>
+                    </div>
+                    }
+                    <div class="col-span-2">
+                        <div>
+                            <h6 class="md:text-2.2xl text-xl mb-7.5">Download our app</h6>
+                            <p class="mb-4 text-default-700">Get instant access to exclusive features for FREE!</p>
+
+                            <div class="flex gap-1.5 mb-12">
+                                <img src="assets/images/elements/google-play.svg" alt="" class="h-10">
+                                <img src="assets/images/elements/app-store.svg" alt="app-store" class="h-10">
+                            </div>
+
+                            <span class="text-default-900 font-semibold">Follow on:</span>
+
+                            <div class="flex gap-3 mt-4">
+                                @for (item of socialData; track item.icon) {
+                                <a [routerLink]="item.link" class="size-8 rounded flex justify-center items-center" [ngClass]="item.bgClass">
+
+                                    @if (item.iconType === 'lucide') {
+                                    <lucide-icon [name]="item.icon" class="text-white size-4"></lucide-icon>
+                                    }
+
+                                    @if (item.iconType === 'iconify') {
+                                    <iconify-icon [icon]="item.icon" class="text-white size-4"></iconify-icon>
+                                    }
+                                </a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="mt-12 border-t border-default-300 dark:border-white/14">
+
+        <div class="py-7.5 md:flex justify-between items-center md:text-start text-center">
+            <div class="text-sm mb-4 md:mb-0"> Copyrights © 2026 Folio. Build by <a href="https://stackbros.in/" target="_blank" class="font-medium hover-underline hover:text-primary">StackBros</a>. </div>
+
+            <ul class="flex justify-center gap-1">
+                <li>
+                    <a [routerLink]="[]" class="text-sm px-2 hover:text-primary transition">
+                        Privacy policy
+                    </a>
+                </li>
+
+                <li>
+                    <a [routerLink]="[]" class="text-sm ps-2 pe-0 hover:text-primary transition">
+                        Terms &amp; conditions
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>

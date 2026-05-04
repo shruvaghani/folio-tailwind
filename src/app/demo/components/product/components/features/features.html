@@ -1,0 +1,40 @@
+<section class="bg-linear-to-e from-[rgba(240,150,255,0.15)] via-[rgba(191,200,252,0.15)] to-[rgba(187,148,255,0.15)] lg:pb-36 pb-20 relative">
+    <div class="absolute bottom-0 start-0 -ms-32 -mb-18">
+        <img src="assets/images/elements/geo-grad-pattern.svg" class="h-125 opacity-20" alt="pattern">
+    </div>
+
+    <div class="container">
+        <div class="grid lg:grid-cols-2 md:grid-cols-3 grid-cols-1 md:gap-7.5 gap-0 md:mb-12 mb-7.5">
+            <div class="lg:col-span-1 md:col-span-2">
+                <h2 class="mb-2 lg:text-4.5xl md:text-4xl text-3xl">Unmatched features for everyday excellence</h2>
+            </div>
+
+            <div class="flex md:justify-end gap-4 relative mt-4">
+                <a [routerLink]="[]" class="size-12 rounded-full bg-body-bg text-default-700 flex justify-center items-center swiper-button-prev-feature hover:bg-secondary transition-all duration-500"><lucide-icon name="arrow-left"></lucide-icon></a>
+                <a [routerLink]="[]" class="size-12 rounded-full bg-body-bg text-default-700 flex justify-center items-center swiper-button-next-feature hover:bg-secondary transition-all duration-500"><lucide-icon name="arrow-right"></lucide-icon></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-408 px-6 ms-auto">
+        <div class="swiper">
+            <swiper-container class="mb-12" slides-per-view="auto" space-between="50" loop="true" navigation="true" autoplay="true" autoplay-pause-on-mouse-enter="true" navigation-next-el=".swiper-button-next-feature" navigation-prev-el=".swiper-button-prev-feature">
+                @for (item of featureSlidesData; track $index) {
+                <swiper-slide class="max-w-82.5">
+                    <div class="max-w-82.5 rounded-2xl overflow-hidden relative group">
+                        <!-- Card Image -->
+                        <img [src]="item.image" class="group-hover:scale-104 transition-all duration-500" alt="portfolio-img">
+                        <!-- BG overlay -->
+                        <div class="absolute inset-0 z-10 bg-dark/40 rounded-2xl"></div>
+                        <!-- Card elements -->
+                        <div class="absolute inset-0 z-20 p-7.5 xl:p-12">
+                            <h5 class="text-white lg:text-2.5xl md:text-2xl text-2xl mb-2">{{ item.title }}</h5>
+                            <p class="text-white/75 mb-4">{{ item.description }}</p>
+                        </div>
+                    </div>
+                </swiper-slide>
+                }
+            </swiper-container>
+        </div>
+    </div>
+</section>

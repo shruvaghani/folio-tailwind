@@ -1,0 +1,55 @@
+<section>
+    <div class="container relative">
+        <div>
+            <div class="lg:w-5/6 mx-auto">
+                <!-- Slider START -->
+                <div class="swiper mt-2 md:mt-7.5">
+                    <swiper-container class="mb-12" space-between="30" loop="true" autoplay="true" autoplay-delay="4000" autoplay-disable-on-interaction="false" autoplay-pause-on-mouse-enter="true" navigation-next-el="#swiper-button-next" navigation-prev-el="#swiper-button-prev">
+
+                        @for (item of testimonialsData; track $index) {
+                        <div class="swiper-slide">
+                            <div class="grid lg:grid-cols-4 grid-cols-1 items-center">
+                                <!-- Author info -->
+                                <div class="lg:text-center mb-4 lg:mb-0">
+                                    <!-- Avatar -->
+                                    <div class="size-32 lg:mx-auto shrink-0 mb-4">
+                                        <img class="rounded-full" [src]="item.image" alt="avatar">
+                                    </div>
+                                    <h6 class="mb-1 md:text-2.2xl text-xl">{{ item.name }}</h6>
+                                    <span>{{ item.role }}</span>
+                                </div>
+
+                                <!-- Testimonial content -->
+                                <blockquote class="col-span-3">
+                                    <!-- Rating star -->
+                                    <ul class="flex gap-1 mb-2">
+                                        @for (star of [].constructor(getStars(item.rating).full); track $index) {
+                                        <li>
+                                            <lucide-icon name="star" class="fill-warning size-5 text-warning"></lucide-icon>
+                                        </li>
+                                        }
+
+                                        @if (getStars(item.rating).half) {
+                                        <li>
+                                            <lucide-icon name="star-half" class="fill-warning size-5 text-warning"></lucide-icon>
+                                        </li>
+                                        }
+                                    </ul>
+                                    <p class="lg:text-2.5xl md:text-2xl text-2xl text-default-900">{{ item.text }}</p>
+                                </blockquote>
+                            </div>
+                        </div>
+                        }
+                    </swiper-container>
+                </div>
+                <!-- Slider END -->
+            </div>
+        </div> <!-- Row END -->
+
+        <!-- Slider arrow -->
+        <div class="flex justify-between absolute top-1/2 start-0 w-full">
+            <a [routerLink]="[]" id="swiper-button-prev" class="rounded-full size-12 flex justify-center items-center bg-secondary text-primary hover:bg-primary/20 transition-all duration-300 ms-2"><lucide-icon name="arrow-left"></lucide-icon></a>
+            <a [routerLink]="[]" id="swiper-button-next" class="rounded-full size-12 flex justify-center items-center bg-secondary text-primary hover:bg-primary/20 transition-all duration-300 me-2"><lucide-icon name="arrow-right"></lucide-icon></a>
+        </div>
+    </div>
+</section>

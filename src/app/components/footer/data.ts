@@ -98,7 +98,7 @@ export const socialLinkData: SocialLinkType[] = [
 
 export type Footer2Link = {
   label: string;
-  url: string;
+  link: string;
   badge?: string;
   badgeClass?: string;
   external?: boolean;
@@ -113,23 +113,23 @@ export const footer2Data: Footer2Type[] = [
   {
     title: 'Company',
     links: [
-      { label: 'About us', url: '/about/v1' },
-      { label: 'Contact us', url: '/contact-us' },
-      { label: 'Career', url: '/career', badge: '2 job', badgeClass: 'bg-primary ms-2' },
-      { label: 'Career detail', url: '/career/single' },
-      { label: 'Become a partner', url: '/contact-us/v2' },
-      { label: 'Services', url: '/service/v1' },
+      { label: 'About us', link: '/about/v1' },
+      { label: 'Contact us', link: '/contact-us' },
+      { label: 'Career', link: '/career', badge: '2 job', badgeClass: 'bg-primary ms-2' },
+      { label: 'Career detail', link: '/career/single' },
+      { label: 'Become a partner', link: '/contact-us/v2' },
+      { label: 'Services', link: '/service/v1' },
     ],
   },
   {
     title: 'Resources',
     links: [
-      { label: 'Case studies', url: '/portfolio/case-study/v1' },
-      { label: 'Pricing', url: '/pricing/v1', badge: 'New', badgeClass: 'bg-success ms-1' },
-      { label: 'Blogs', url: '/blog/minimal' },
-      { label: 'Blog detail', url: '/blog/single' },
-      { label: 'Success stories', url: '/contact-us/v2' },
-      { label: 'Services', url: '/service/v1', external: true },
+      { label: 'Case studies', link: '/portfolio/case-study/v1' },
+      { label: 'Pricing', link: '/pricing/v1', badge: 'New', badgeClass: 'bg-success ms-1' },
+      { label: 'Blogs', link: '/blog/minimal' },
+      { label: 'Blog detail', link: '/blog/single' },
+      { label: 'Success stories', link: '/contact-us/v2' },
+      { label: 'Services', link: '/service/v1', external: true },
     ],
   },
 ];
@@ -148,6 +148,7 @@ export type Footer3Type = {
   title: string;
   links: FooterLinkType[];
 };
+
 
 export const footer3Data: Footer3Type[] = [
   {
@@ -207,6 +208,44 @@ export const platformData: PlatformType[] = [
   {
     name: 'Linux',
     icon: linuxIcon,
+  },
+];
+
+
+export const footer6Data: Footer3Type[] = [
+  {
+    title: 'Company',
+    links: [
+      { label: 'About us', link: '/about/v1' },
+      { label: 'Contact us', link: '/contact-us' },
+      {
+        label: 'Career',
+        link: '/career',
+        badge: { text: '2 job', class: 'bg-primary ms-3' },
+      },
+      { label: 'Career detail', link: '/career/single' },
+      { label: 'Become a partner', link: '/contact-us/v2' },
+      { label: 'Services', link: '/service/v1' },
+    ],
+  },
+  {
+    title: 'Resources',
+    links: [
+      { label: 'Case studies', link: '/portfolio/case-study/v1' },
+      {
+        label: 'Pricing',
+        link: '/pricing/v1',
+        badge: { text: 'New', class: 'bg-success ms-2' },
+      },
+      { label: 'Blogs', link: '/blog/minimal' },
+      { label: 'Blog detail', link: '/blog/single' },
+      { label: 'Success stories', link: '/contact-us/v2' },
+      {
+        label: 'Services',
+        link: '/service/v1',
+        externalIcon: true,
+      },
+    ],
   },
 ];
 

@@ -8,21 +8,19 @@
                 <p class="my-4 lg:my-7.5 text-white/80 font-medium">A Bootstrap theme that's both stylish and functional, perfect for any type of technology or corporate website.</p>
 
                 <div class="flex gap-3">
-                    <a [routerLink]="[]" class="size-8 flex justify-center items-center rounded-md bg-white/5 hover:bg-white/10 text-white transition-all duration-300">
-                        <lucide-icon name="facebook" class="size-3.5"></lucide-icon>
-                    </a>
 
-                    <a [routerLink]="[]" class="size-8 flex justify-center items-center rounded-md bg-white/5 hover:bg-white/10 text-white transition-all duration-300">
-                        <lucide-icon name="instagram" class="size-3.5"></lucide-icon>
-                    </a>
+                    @for (item of socialLinkData; track $index) {
+                    <a [routerLink]="item.link ? item.link : []" class="size-8 flex justify-center items-center rounded-md bg-white/5 hover:bg-white/10 text-white transition-all duration-300">
 
-                    <a [routerLink]="[]" class="size-8 flex justify-center items-center rounded-md bg-white/5 hover:bg-white/10 text-white transition-all duration-300">
-                        <iconify-icon icon="tabler:brand-x" height="14" width="14"></iconify-icon>
-                    </a>
+                        @if (item.icon) {
+                        <lucide-icon [name]="item.icon" class="size-3.5"> </lucide-icon>
+                        }
 
-                    <a [routerLink]="[]" class="size-8 flex justify-center items-center rounded-md bg-white/5 hover:bg-white/10 text-white transition-all duration-300">
-                        <lucide-icon name="linkedin" class="size-3.5"></lucide-icon>
+                        @if (item.iconify) {
+                        <iconify-icon [icon]="item.iconify" width="14" height="14"> </iconify-icon>
+                        }
                     </a>
+                    }
                 </div>
             </div>
 
@@ -33,7 +31,7 @@
                         <h6 class="md:text-2.2xl text-xl mb-7.5 text-white"> {{ section.title }}</h6>
                         <ul class="flex flex-col gap-2.5 text-white/90 text-base">
                             @for (item of section.links; track $index) {
-                            <li class="hover:text-primary"><a [routerLink]="item.url" [class]="item.external ? 'flex items-center' : ''"> {{ item.label }}
+                            <li class="hover:text-primary"><a [routerLink]="item.link" [class]="item.external ? 'flex items-center' : ''"> {{ item.label }}
                                     @if (item.badge) {
                                     <span class="py-1 px-2 text-xs rounded text-white" [class]="item.badgeClass">
                                         {{ item.badge }}

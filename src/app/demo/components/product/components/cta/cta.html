@@ -1,0 +1,32 @@
+<section class="lg:pb-36 pb-20">
+    <div class="container">
+        <div class="grid md:grid-cols-2 grid-cols-1 lg:gap-12 gap-7.5">
+            <div class="rounded-2xl overflow-hidden relative">
+                <!-- BG overlay -->
+                <div class="absolute inset-0 z-10 bg-dark/40"></div>
+                <!-- Image -->
+                <img src="assets/images/product/video-cta.jpg" class="rounded-2xl" alt="CTA image">
+
+                <!-- Title and button -->
+                <div class="flex flex-col items-start sm:p-12 absolute inset-0 z-20">
+                    <div class="mt-auto">
+                        <h4 class="text-white mb-4 lg:text-3.5xl md:text-2.5xl text-2xl">See our watches in action</h4>
+                        <a href="https://www.youtube.com/embed/tXHviS-4ygo" class="py-2.5 px-5 inline-flex items-center text-xs gap-1 rounded bg-primary text-white" data-glightbox="" data-gallery="office-tour" appGlightbox><lucide-icon name="play" class="fill-white me-1 size-2.5"></lucide-icon>Play video</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative rounded-2xl overflow-hidden">
+                <!-- Image -->
+                <img src="assets/images/product/arrival-cta.jpg" class="rounded-2xl" alt="CTA image">
+
+                <!-- Title and button -->
+                <div class="absolute inset-0 z-20 flex flex-col items-center text-center sm:p-12 mx-auto" style="max-width: 75%;">
+                    <span class="text-base font-bold mb-2 text-default-800">New arrival</span>
+                    <h4 class="text-white mb-4 lg:text-3.5xl md:text-2.5xl text-2xl">Hurricane smart watch pro at $89 USD</h4>
+                    <a [routerLink]="[]" class="bg-dark text-white py-2.5 px-5 rounded text-2xs">Explore now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

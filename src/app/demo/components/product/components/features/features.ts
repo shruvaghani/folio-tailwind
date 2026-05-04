@@ -1,16 +1,17 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { LucideAngularModule } from 'lucide-angular';
-import { footer2Data, socialLinkData } from '../data';
+import { register } from 'swiper/element';
+import { featureSlidesData } from '../../data';
+register();
 
 @Component({
-  selector: 'app-footer2',
+  selector: 'product-features',
   imports: [RouterLink, LucideAngularModule],
-  templateUrl: './footer2.html',
+  templateUrl: './features.html',
   styles: ``,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class Footer2 {
-  footer2Data = footer2Data;
-  socialLinkData = socialLinkData;
+export class Features {
+  featureSlidesData = featureSlidesData;
 }
