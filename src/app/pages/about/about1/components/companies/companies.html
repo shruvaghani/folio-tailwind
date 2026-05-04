@@ -1,1 +1,26 @@
-<p>companies works!</p>
+<section class="lg:py-36 py-20">
+  <div class="container">
+    <div class="grid md:grid-cols-4 grid-cols-1 gap-7.5">
+      <div class="col-span-1">
+        <h6 class="text-center md:text-start md:text-2.2xl text-xl">
+          Join the 1,000+ companies using Folio
+        </h6>
+      </div>
+
+      <div class="md:col-span-3 grid-cols-1">
+        <ul class="flex justify-center md:justify-end flex-wrap gap-4 lg:gap-12">
+          @for (logo of clientLogosData; track $index; let i = $index) {
+            <li class="group">
+              <a
+                [routerLink]="logo.link || []"
+                class="group-hover:-translate-y-1 flex transition-all duration-300"
+              >
+                <img [src]="logo.image" class="h-10" [alt]="logo.alt || 'icon'" />
+              </a>
+            </li>
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

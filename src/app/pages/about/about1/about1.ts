@@ -5,10 +5,11 @@ import { About } from "./components/about/about";
 import { Clients } from "./components/clients/clients";
 import { Companies } from "./components/companies/companies";
 import { Cta } from "./components/cta/cta";
+import { Footer3 } from "@app/components/footer/footer3/footer3";
 
 @Component({
   selector: 'app-about1',
-  imports: [Hero, Testimonial, About, Clients, Companies, Cta],
+  imports: [Hero, Testimonial, About, Clients, Companies, Cta, Footer3],
   templateUrl: './about1.html',
   styles: ``,
 })
