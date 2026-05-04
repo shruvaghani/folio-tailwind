@@ -1,1 +1,61 @@
-<p>hero works!</p>
+<section class="lg:pt-44 pt-20 relative overflow-hidden">
+  <div class="absolute top-0 end-0 z-20 mt-24 -me-44 hidden md:block">
+    <img src="assets/images/elements/grad-shape/05.png" class="rotate-180" alt="" />
+  </div>
+
+  <div class="absolute top-0 start-0 -ms-7.5 mt-24">
+    <img
+      src="assets/images/elements/grad-shape/blur-decoration.svg"
+      class="blur-[32px] opacity-10"
+      alt="Grad shape"
+    />
+  </div>
+
+  <div class="container">
+    <div class="pt-7.5 lg:pb-32 pb-12">
+      <nav class="mb-4 pb-2 flex" aria-label="breadcrumb">
+        <ol class="flex items-center space-x-2 text-2xs text-default-600">
+          <li>
+            <a routerLink="/" class="hover:text-primary font-medium"> Home </a>
+          </li>
+
+          <li class="flex items-center">
+            <span class="px-2 text-default-400">/</span>
+            <span class="font-medium text-primary" aria-current="page"> About us </span>
+          </li>
+        </ol>
+      </nav>
+
+      <h1 class="lg:text-6xl md:text-4.5xl text-4xl mb-2">Building a Better</h1>
+      <h6 class="lg:text-[120px] md:text-[87px] text-6xl font-bold mb-2">
+        <span class="text-primary">Future</span> Together
+      </h6>
+      <div class="lg:flex justify-end items-start gap-4 mt-7.5 md:mt-12">
+        <p class="lg:max-w-150 border-purple border-s-2 mx-0 ps-2 mb-4 text-default-700">
+          With a rich history of innovation and creativity, our team is dedicated to transforming
+          ideas into visual masterpieces. Join us on our journey as we continue to push the
+          boundaries of design and deliver excellence in every project we undertake.
+        </p>
+        <a
+          class="text-default-800 inline-flex items-center gap-1.5 py-3.5 px-7.5 rounded-md font-medium bg-light icon-link icon-link-hover my-2 group"
+          routerLink="/team"
+          >Meet our team
+          <lucide-icon name="arrow-right"
+            class="size-4 group-hover:translate-x-0.5 text-default-800 transition-all duration-300"
+          ></lucide-icon>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="bg-[linear-gradient(90deg,rgba(240,150,255,0.15)_0%,rgba(191,200,252,0.15)_51%,rgba(187,148,255,0.15)_100%)] relative pb-12 lg:pb-32 px-2 md:px-12"
+  >
+    <!-- Blur divider -->
+    <div class="bg-body-bg blur-5 h-75 w-full absolute top-0 start-0 -mt-12"></div>
+    <!-- Main image -->
+    <div
+      class="h-75 md:h-125 xl:h-175 z-20 relative rounded-2xl bg-[url('assets/images/bg/03.jpg')] bg-no-repeat bg-cover bg-top"
+    ></div>
+  </div>
+</section>
