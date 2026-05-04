@@ -150,7 +150,7 @@ export type FooterType = {
 };
 
 
-export const footer3Data: FooterType[] = [
+export const footerData: FooterType[] = [
   {
     title: 'Company',
     links: [
@@ -242,43 +242,6 @@ export const socialData: SocialType[] = [
     icon: 'linkedin',
     bgClass: 'bg-info',
     link: '',
-  },
-];
-
-export const footer6Data: FooterType[] = [
-  {
-    title: 'Company',
-    links: [
-      { label: 'About us', link: '/about/v1' },
-      { label: 'Contact us', link: '/contact-us' },
-      {
-        label: 'Career',
-        link: '/career',
-        badge: { text: '2 job', class: 'bg-primary ms-3' },
-      },
-      { label: 'Career detail', link: '/career/single' },
-      { label: 'Become a partner', link: '/contact-us/v2' },
-      { label: 'Services', link: '/service/v1' },
-    ],
-  },
-  {
-    title: 'Resources',
-    links: [
-      { label: 'Case studies', link: '/portfolio/case-study/v1' },
-      {
-        label: 'Pricing',
-        link: '/pricing/v1',
-        badge: { text: 'New', class: 'bg-success ms-2' },
-      },
-      { label: 'Blogs', link: '/blog/minimal' },
-      { label: 'Blog detail', link: '/blog/single' },
-      { label: 'Success stories', link: '/contact-us/v2' },
-      {
-        label: 'Services',
-        link: '/service/v1',
-        externalIcon: true,
-      },
-    ],
   },
 ];
 
