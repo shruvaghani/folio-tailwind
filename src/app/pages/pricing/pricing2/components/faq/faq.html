@@ -1,0 +1,33 @@
+<section class="lg:py-36 py-20 relative overflow-hidden">
+    <div class="absolute start-0 bottom-0 -mb-24 -ms-24 hidden md:block">
+        <img src="assets/images/elements/grad-shape/05.png" class="md:h-75 xl:h-125" alt="grad shape">
+    </div>
+    <div class="container">
+        <div class="grid md:grid-cols-3 grid-cols-1 gap-7.5">
+            <div class="col-span-1">
+                <h2 class="mb-4 lg:text-4.5xl md:text-4xl text-3xl">Frequently Asked Questions</h2>
+                <p>Our team is ready to assist you! Start a chat for quick support. <a [routerLink]="[]" class="font-semibold hover-underline text-primary">Talk to Us</a></p>
+            </div>
+
+            <div class="md:col-span-2 ms-auto lg:w-180 md:w-100">
+                <div class="hs-accordion-group">
+                    @for (faq of faqsData; track $index) {
+                    <div class="hs-accordion mb-4 pb-4 border-b border-default-200 dark:border-white/14" [class]="faq.active ? 'active' : ''" [attr.id]="'heading-' + faq.id">
+                        <button class="hs-accordion-toggle w-full font-semibold text-start text-xl text-default-700 focus:outline-hidden focus:text-muted-foreground-1 rounded-lg flex items-center disabled:opacity-50 disabled:pointer-events-none"  [attr.aria-expanded]="faq.active" [attr.aria-controls]="'collapse-' + faq.id">
+                            {{ faq.question }}
+                            <lucide-icon name="minus" class="hs-accordion-active:block hidden size-4 ms-auto"></lucide-icon>
+
+                            <lucide-icon name="plus" class="hs-accordion-active:hidden block size-4 ms-auto"></lucide-icon>
+                        </button>
+                        <div [attr.id]="'collapse-' + faq.id" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" [class]="faq.active ? '' : 'hidden'" role="region" [attr.aria-labelledby]="'heading-' + faq.id">
+                            <p class="pt-2 font-medium">
+                                {{ faq.answer }}
+                            </p>
+                        </div>
+                    </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

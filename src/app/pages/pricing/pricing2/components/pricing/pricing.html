@@ -1,0 +1,49 @@
+<section class="lg:py-36 py-20 bg-dark overflow-hidden relative">
+    <div class="absolute bottom-0 end-0 -mb-32">
+        <img src="assets/images/elements/grad-shape/blur-decoration-2.svg" class="opacity-20 blur-[144px]" alt="Grad shape">
+    </div>
+    <div class="container">
+        <div class="grid lg:grid-cols-3 grid-cols-1 gap-7.5">
+            <div class="col-span-1">
+                <p class="mb-6 text-white font-medium">Key benefits</p>
+                <ul class="mb-4 flex flex-col gap-4 text-white">
+                    @for (item of featuresData; track $index) {
+                    <li class="flex items-start text-xl font-normal text-heading">
+                        <lucide-icon [name]="item.icon" class="me-2 size-5" [class]="item.color"></lucide-icon>
+                        {{ item.text }}
+                    </li>
+                    }
+                </ul>
+            </div>
+
+            <div class="col-span-2 lg:w-162.5 ms-auto">
+                <div class="grid md:grid-cols-2 grid-cols-1 gap-7.5 lg:gap-18 mb-12">
+                    <div>
+                        <h3 class="lg:text-4xl md:text-3.5xl text-2.5xl text-white border-primary border-s-2 ps-7.5 mb-4">2,000+</h3>
+                        <p class="text-white/70">Customers have used our awesome templates since 2019</p>
+                    </div>
+
+                    <div>
+                        <h3 class="lg:text-4xl md:text-3.5xl text-2.5xl text-white border-primary border-s-2 ps-7.5 mb-4">85+</h3>
+                        <p class="text-white/70">Client's projects complete all over the world</p>
+                    </div>
+                </div>
+
+                <blockquote class="flex">
+                    <!-- Avatar -->
+                    <div class="size-20.5 shrink-0">
+                        <img class="rounded-full" src="assets/images/avatar/06.jpg" alt="avatar">
+                    </div>
+
+                    <div class="ms-7.5">
+                        <!-- Content -->
+                        <p class="md:text-2.2xl text-xl font-normal text-white mb-7.5">"We believe that it takes great people to deliver a great product"</p>
+                        <div class="-mt-4 text-white/40 text-sm mb-0">
+                            By Albert Schweitzer
+                        </div>
+                    </div>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</section>
