@@ -1,0 +1,147 @@
+<section class="lg:pt-36 pt-20">
+  <div class="container">
+    <div class="grid lg:grid-cols-2 grid-cols-1 gap-12">
+      <div>
+        <h5 class="mb-2 lg:text-2.5xl md:text-2xl text-2xl">How can we help you?</h5>
+        <p class="text-xl font-medium mb-7.5">
+          Get in touch with us to see how we can help you with your project
+        </p>
+
+        <div class="grid grid-cols-2 gap-7.5">
+          <div>
+            <div class="relative">
+              <input
+                type="text"
+                placeholder="What's Your good name?"
+                class="w-full border border-default-300 border-t-0 border-l-0 border-r-0 bg-white pe-7.5 py-3.5 text-base placeholder:text-default-400! dark:placeholder:text-default-600! outline-none focus:border-primary! focus:ring-0"
+              />
+              <!-- icon -->
+              <span
+                class="pointer-events-none absolute top-1/2 end-0 me-3 -translate-y-1/2 text-default-400 dark:text-default-600"
+              >
+                <lucide-icon name="smile" class="size-4"></lucide-icon>
+              </span>
+            </div>
+          </div>
+
+          <div>
+            <div class="relative">
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                class="w-full border border-default-300 border-t-0 border-l-0 border-r-0 bg-white pe-7.5 py-3.5 text-base placeholder:text-default-400! dark:placeholder:text-default-600! outline-none focus:border-primary! focus:ring-0"
+              />
+              <!-- icon -->
+              <span
+                class="pointer-events-none absolute top-1/2 end-0 me-3 -translate-y-1/2 text-default-400 dark:text-default-600"
+              >
+                <lucide-icon name="mail" class="size-4"></lucide-icon>
+              </span>
+            </div>
+          </div>
+
+          <div class="col-span-2">
+            <div class="relative">
+              <input
+                type="text"
+                placeholder="How can we help you?"
+                class="w-full border border-default-300 border-t-0 border-l-0 border-r-0 bg-white pe-7.5 py-3.5 text-base placeholder:text-default-400! dark:placeholder:text-default-600! outline-none focus:border-primary! focus:ring-0"
+              />
+              <!-- icon -->
+              <span
+                class="pointer-events-none absolute top-1/2 end-0 me-3 -translate-y-1/2 text-default-400 dark:text-default-600"
+              >
+                <lucide-icon name="notebook" class="size-4"></lucide-icon>
+              </span>
+            </div>
+          </div>
+
+          <div class="col-span-2">
+            <div class="relative">
+              <textarea
+                type="text"
+                placeholder="Describe about your project"
+                class="w-full h-25 border border-default-300 border-t-0 border-l-0 border-r-0 bg-white pe-7.5 py-3.5 text-base placeholder:text-default-400! outline-none focus:border-primary! focus:ring-0 dark:placeholder:text-default-600!"
+              ></textarea>
+              <!-- icon -->
+              <span
+                class="pointer-events-none absolute top-1/2 end-0 me-3 -translate-y-1/2 text-default-400 dark:text-default-600"
+              >
+                <lucide-icon name="message-square-more" class="size-4"></lucide-icon>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-7.5">
+          <button class="py-3.5 px-7.5 font-medium bg-primary-grad rounded-md">
+            Send a message
+          </button>
+        </div>
+      </div>
+
+      <div class="lg:w-125.5 lg:ms-auto">
+        <div class="bg-secondary/50 rounded-2xl md:p-12 p-7.5 mb-7.5">
+          <h5 class="mb-7.5 lg:text-2.5xl md:text-2xl text-2xl">Get in touch</h5>
+
+          @for (item of contactInfoData; track $index; let last = $last) {
+            <div class="md:flex gap-4" [class]="!last ? 'mb-7.5' : ''">
+              
+              <div
+                class="size-14.5 bg-body-bg shadow-[0_0.18rem_0.25rem_rgba(127,57,248,0.2)] flex justify-center items-center text-default-900 rounded-full shrink-0"
+              >
+                <lucide-icon [name]="item.icon" class="size-5"></lucide-icon>
+              </div>
+
+              
+              <div class="mt-4 md:mt-0">
+                <p class="mb-1">{{ item.text }}</p>
+
+               
+                @if (item.isList) {
+                  <ul class="flex flex-wrap md:gap-4">
+                    @for (val of item.values; track $index) {
+                      <li>
+                        <a
+                          [routerLink]="[]"
+                          class="font-semibold text-default-900 hover:text-primary"
+                        >
+                          {{ val }}
+                        </a>
+                      </li>
+                    }
+                  </ul>
+                }
+                
+                @else {
+                  <a
+                    [routerLink]="[]"
+                    class="font-semibold text-default-900 hover:text-primary"
+                  >
+                    {{ item.values[0] }}
+                  </a>
+                }
+              </div>
+            </div>
+          }
+        </div>
+
+        <div class="mt-7.5 flex items-center justify-center gap-3">
+          <span class="text-default-900 font-semibold">Connect with:</span>
+
+          <div class="flex gap-3">
+            @for (item of socialData; track $index) {
+              <a
+                [routerLink]="[]"
+                class="size-8 rounded flex justify-center items-center"
+                [ngClass]="item.bgClass"
+              >
+                <iconify-icon [icon]="item.icon" class="text-white size-4"></iconify-icon>
+              </a>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

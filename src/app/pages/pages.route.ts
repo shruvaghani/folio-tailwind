@@ -28,7 +28,6 @@ export const PAGES_ROUTES: Route[] = [
     component: ServiceGrid,
     data: { title: 'Service Grid' },
   },
-
   {
     path: 'service/list',
     component: ServiceList,
