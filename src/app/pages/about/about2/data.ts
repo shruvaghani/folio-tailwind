@@ -29,11 +29,15 @@ const fwaLight = 'assets/images/elements/fwa-light.svg';
 const clutchLight = 'assets/images/elements/clutch-light.svg';
 const webby = 'assets/images/elements/webby.svg';
 
+const avatar01 = 'assets/images/avatar/01.jpg';
 const avatar02 = 'assets/images/avatar/02.jpg';
+const avatar04 = 'assets/images/avatar/04.jpg';
 const avatar05 = 'assets/images/avatar/05.jpg';
-const avatar10 = 'assets/images/avatar/10.jpg';
-const avatar09 = 'assets/images/avatar/09.jpg';
 const avatar06 = 'assets/images/avatar/06.jpg';
+const avatar08 = 'assets/images/avatar/08.jpg';
+const avatar09 = 'assets/images/avatar/09.jpg';
+const avatar10 = 'assets/images/avatar/10.jpg';
+
 
 export type ClientLogoType = {
   gray: string;
@@ -123,7 +127,7 @@ export const testimonialsData: TestimonialColumnType[] = [
   {
     items: [
       {
-        image: 'assets/images/avatar/09.jpg',
+        image: avatar09,
         name: 'Jacqueline Miller',
         username: '@jaqmilr56',
         message:
@@ -131,7 +135,7 @@ export const testimonialsData: TestimonialColumnType[] = [
         date: 'Feb 22, 2024',
       },
       {
-        image: 'assets/images/avatar/08.jpg',
+        image: avatar08,
         name: 'Michael Davis',
         username: '@Davischhotu',
         message:
@@ -139,7 +143,7 @@ export const testimonialsData: TestimonialColumnType[] = [
         date: 'Jan 21, 2024',
       },
       {
-        image: 'assets/images/avatar/05.jpg',
+        image: avatar05,
         name: 'Allen Smith',
         username: '@smith4u',
         message:
@@ -151,7 +155,7 @@ export const testimonialsData: TestimonialColumnType[] = [
   {
     items: [
       {
-        image: 'assets/images/avatar/02.jpg',
+        image: avatar02,
         name: 'Louis Ferguson',
         username: '@fregulois2589',
         message:
@@ -159,7 +163,7 @@ export const testimonialsData: TestimonialColumnType[] = [
         date: 'Jan 28, 2024',
       },
       {
-        image: 'assets/images/avatar/04.jpg',
+        image: avatar04,
         name: 'Emma Watson',
         username: '@Emson589',
         message:
@@ -167,7 +171,7 @@ export const testimonialsData: TestimonialColumnType[] = [
         date: 'Jan 21, 2024',
       },
       {
-        image: 'assets/images/avatar/01.jpg',
+        image: avatar01,
         name: 'Allen Smith',
         username: '@Brownmunde',
         message:
@@ -179,7 +183,7 @@ export const testimonialsData: TestimonialColumnType[] = [
   {
     items: [
       {
-        image: 'assets/images/avatar/06.jpg',
+        image: avatar06,
         name: 'Samuel Bishop',
         username: '@samshop',
         message:
@@ -187,7 +191,7 @@ export const testimonialsData: TestimonialColumnType[] = [
         date: 'Jan 28, 2024',
       },
       {
-        image: 'assets/images/avatar/05.jpg',
+        image: avatar05,
         name: 'Allen Smith',
         username: '@smith4u',
         message:
@@ -195,7 +199,7 @@ export const testimonialsData: TestimonialColumnType[] = [
         date: 'Jan 21, 2024',
       },
       {
-        image: 'assets/images/avatar/08.jpg',
+        image: avatar08,
         name: 'Michael Davis',
         username: '@Davischhotu',
         message:
