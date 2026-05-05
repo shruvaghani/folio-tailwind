@@ -1,0 +1,56 @@
+<section class="lg:pb-36 pb-20">
+  <div class="container">
+    <div class="grid lg:grid-cols-12 grid-cols-1 gap-12">
+      <div class="lg:col-span-5">
+        <h2 class="mb-4 lg:text-4.5xl md:text-4xl text-3xl">Our lifetime achievements</h2>
+        <p class="text-default-700">
+          Join our team Creative Agency Specializing in: Video Production, Web Design, Branding,
+          Brand Strategy.
+        </p>
+        <div class="grid md:grid-cols-12 grid-cols-1 gap-7.5 mt-7.5 lg:mt-18">
+          @for (item of counterData; track $index; let isLast = $last) {
+            <div class="md:col-span-5" [class]="!isLast ? 'mb-4 md:mb-0' : ''"> 
+              <div class="border-s-2 border-purple/50 ps-4">
+                <div class="flex mb-1 items-center">
+                  <h3
+                    class="counter lg:text-4xl md:text-3.5xl text-2.5xl"
+                    [countUp]="item.value"
+                  ></h3>
+
+                  <span
+                    class="lg:text-4xl md:text-3.5xl text-2.5xl font-semibold text-primary mb-0"
+                  >
+                    {{ item.suffix }}
+                  </span>
+                </div>
+
+                <p class="text-default-700">
+                  {{ item.label }}
+                </p>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 lg:w-153 ms-auto">
+        <div class="relative overflow-hidden">
+          <img src="assets/images/team/video-bg.jpg" class="rounded-md" alt="about-img" />
+          <div class="absolute inset-0 block z-10 bg-dark/20 rounded-md"></div>
+          <!-- Card img overlay -->
+          <div class="absolute end-0 bottom-0 m-4 z-20">
+            <a
+              href="https://www.youtube.com/embed/tXHviS-4ygo"
+              class="py-2.5 px-5 inline-flex items-center text-xs gap-1 rounded bg-white text-dark"
+              data-glightbox=""
+              data-gallery="course-video"
+              appGlightbox
+              ><lucide-icon name="youtube" class="text-danger me-1 size-4"></lucide-icon> Watch our
+              story</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

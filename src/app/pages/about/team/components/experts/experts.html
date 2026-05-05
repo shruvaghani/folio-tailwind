@@ -1,0 +1,48 @@
+<section class="lg:pb-36 pb-20">
+  <div class="container">
+    <div class="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-12">
+      @for (member of teamData; track $index) {
+        <div class="group relative overflow-hidden rounded-t-full shadow">
+          <!-- Image wrapper -->
+          <div class="relative overflow-hidden transform:[translateZ(0)]">
+            <!-- Hover social content -->
+            <div
+              class="absolute inset-0 opacity-0 group-hover:opacity-100 z-20 transition-opacity duration-500"
+            >
+              <ul class="absolute bottom-0 end-0 me-4 mb-4 space-y-2">
+                @for (social of member.socials; track $index) {
+                  <li>
+                    <a
+                      [routerLink]="[]"
+                      class="inline-flex items-center justify-center size-8 rounded-full text-white transition-transform duration-300 hover:scale-110"
+                      [ngClass]="social.bgClass"
+                    >
+                      @if (social.type === 'lucide') {
+                        <lucide-icon [name]="social.icon" class="size-4"></lucide-icon>
+                      } @else {
+                        <iconify-icon [icon]="social.icon" class="size-4"></iconify-icon>
+                      }
+                    </a>
+                  </li>
+                }
+              </ul>
+            </div>
+
+            <!-- Image -->
+            <img
+              [src]="member.image"
+              alt="card image"
+              class="w-full transition-transform duration-500 group-hover:scale-104"
+            />
+          </div>
+
+          <!-- Card body -->
+          <div class="text-center py-5">
+            <h6 class="md:text-2.2xl text-xl">{{ member.name }}</h6>
+            <small class="text-sm">{{ member.role }}</small>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
