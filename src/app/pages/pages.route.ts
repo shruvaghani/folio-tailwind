@@ -9,6 +9,8 @@ import { Career } from './about/career/career';
 import { CareerSingle } from './about/career-single/career-single';
 import { ContactUs1 } from './contact/contact-us1/contact-us1';
 import { ContactUs2 } from './contact/contact-us2/contact-us2';
+import { Pricing1 } from './pricing/pricing1/pricing1';
+import { Pricing2 } from './pricing/pricing2/pricing2';
 
 export const PAGES_ROUTES: Route[] = [
   {
@@ -58,8 +60,18 @@ export const PAGES_ROUTES: Route[] = [
     data: { title: 'Contact V1' },
   },
   {
-    path: 'contact-v2',
+    path: 'contact/v2',
     component: ContactUs2,
     data: { title: 'Contact v2' },
+  },
+  {
+    path: 'pricing/v1',
+    component: Pricing1,
+    data: { title: 'Pricing V1' },
+  },
+  {
+    path: 'pricing/v2',
+    component: Pricing2,
+    data: { title: 'Pricing V2' },
   },
 ];
