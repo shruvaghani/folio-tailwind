@@ -1,0 +1,89 @@
+<section>
+    <div class="container">
+        <!-- Title -->
+        <div class="grid md:grid-cols-12 grid-cols-1 items-center mb-7.5 md:mb-12">
+            <div class="lg:col-span-5 col-span-7">
+                <h2 class="lg:text-4.5xl md:text-4xl text-3xl">Hear from our happy customers</h2>
+            </div>
+
+            <div class="lg:col-span-7 col-span-5 md:ms-auto md:text-end mt-7.5 md:mt-0">
+                <!-- Add pagination and navigation elements here -->
+                <div class="flex gap-2 md:justify-end">
+                    <a [routerLink]="[]" class="size-12 rounded-full flex justify-center items-center bg-primary-grad" id="swiper-button-prev"><lucide-icon name="arrow-left" class="size-5 text-white"></lucide-icon></a>
+                    <a [routerLink]="[]" class="size-12 rounded-full flex justify-center items-center bg-primary-grad" id="swiper-button-next"><lucide-icon name="arrow-right" class="size-5 text-white"></lucide-icon></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper">
+            <swiper-container class="swiper-wrapper" space-between="30" 
+            navigation="true"
+            loop="true"
+            navigation-next-el="#swiper-button-next" navigation-prev-el="#swiper-button-prev" 
+            [breakpoints]='{
+            "576": { "slidesPerView": 1 },
+            "768": { "slidesPerView": 2 },
+            "992": { "slidesPerView": 3 },
+          }'>
+                @for (item of testimonialsData; track $index) {
+                <swiper-slide>
+                    <div class="bg-secondary/50 rounded-2xl p-7.5 h-full">
+
+                        <!-- Card body -->
+                        <div class="mb-7.5">
+
+                            <!-- Rating star -->
+                            <ul class="flex gap-1 mb-4">
+
+                                @for (star of getStars(item.rating).full; track $index) {
+                                <li>
+                                    <lucide-icon name="star" class="size-4 text-warning fill-warning"></lucide-icon>
+                                </li>
+                                }
+
+                                @if (getStars(item.rating).half) {
+                                <li>
+                                    <lucide-icon name="star-half" class="size-4 text-warning fill-warning"></lucide-icon>
+                                </li>
+                                }
+
+                            </ul>
+
+                            <!-- Testimonials text -->
+                            <blockquote>
+                                <p class="text-default-700">
+                                    {{ item.message }}
+                                </p>
+                            </blockquote>
+
+                        </div>
+
+                        <!-- Card footer -->
+                        <div>
+                            <div class="flex items-center">
+
+                                <div class="size-12 shrink-0">
+                                    <img class="rounded-full" [src]="item.avatar" alt="avatar">
+                                </div>
+
+                                <div class="ms-4">
+                                    <p class="text-xl font-semibold text-default-900">
+                                        {{ item.name }}
+                                    </p>
+                                    <small class="text-sm">
+                                        {{ item.role }}
+                                    </small>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </swiper-slide>
+                }
+
+            </swiper-container>
+        </div>
+        <!-- Testimonials END -->
+    </div>
+</section>

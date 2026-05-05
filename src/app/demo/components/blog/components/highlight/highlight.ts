@@ -1,7 +1,7 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { LucideAngularModule } from 'lucide-angular';
-import { register } from 'swiper/element';
+import { register } from 'swiper/element/bundle';
 import { blogHighlightData } from '../../data';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 

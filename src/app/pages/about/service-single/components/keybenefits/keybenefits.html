@@ -1,0 +1,58 @@
+<section class="lg:pb-36 pb-20 bg-[linear-gradient(90deg,rgba(240,150,255,0.15)_0%,rgba(191,200,252,0.15)_51%,rgba(187,148,255,0.15)_100%)]">
+    <div class="container">
+        <h5 class="mb-7.5 lg:text-2.5xl md:text-2xl text-2xl">Key benefits</h5>
+
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-7.5">
+            @for (item of featuresData; track $index) {
+            <div class="p-7.5 bg-body-bg rounded-xl">
+                <h6 class="mb-4 md:text-2.2xl text-xl">{{ item.title }}</h6>
+                <p>{{ item.description }}</p>
+            </div>
+            }
+        </div>
+
+        <div class="mt-24">
+            <div class="grid lg:grid-cols-2 grid-cols-1 gap-7.5">
+                <div class="lg:pe-18">
+                    <img src="assets/images/services/01.jpg" class="rounded-2xl" alt="service image">
+                </div>
+
+                <div>
+                    <h2 class="lg:text-4.5xl md:text-4xl text-3xl mb-2">What's included in web development?</h2>
+                    <!-- Accordion Group -->
+                    <div class="hs-accordion-group">
+                        @for (item of accordionData; track item.id) {
+                        <div class="hs-accordion" [class.active]="item.isActive" [attr.id]="'heading-' + item.id">
+                            <!-- Button -->
+                            <button class="hs-accordion-toggle hs-accordion-active:text-primary-active py-3 text-xl inline-flex items-center gap-x-3 w-full font-bold text-start text-default-900 focus:outline-hidden disabled:opacity-50 disabled:pointer-events-none" [attr.aria-expanded]="item.isActive" [attr.aria-controls]="'collapse-' + item.id">
+                                <lucide-icon name="minus" class="hs-accordion-active:block hidden text-primary"></lucide-icon>
+                                <lucide-icon name="plus" class="hs-accordion-active:hidden block text-primary"></lucide-icon>
+
+                                {{ item.title }}
+                            </button>
+
+                            <!-- Content -->
+                            <div [attr.id]="'collapse-' + item.id" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" [class.hidden]="!item.isActive" role="region" [attr.aria-labelledby]="'heading-' + item.id">
+                                <p class="text-default-700 ps-9">
+                                    {{ item.content }}
+                                </p>
+                            </div>
+                        </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-225 mx-auto mt-24 mb-32 text-center">
+            <h4 class="mb-2 lg:text-3.5xl md:text-2.5xl text-2xl">Technologies used</h4>
+            <div class="flex gap-7.5 flex-wrap justify-center mt-7.5">
+                @for (item of clientIconsData; track $index) {
+                <a [routerLink]="[]" class="size-18 bg-body-bg flex justify-center items-center rounded-md hover:-translate-y-1 transition-all duration-300">
+                    <img [src]="item" class="h-10" alt="icon">
+                </a>
+                }
+            </div>
+        </div>
+    </div>
+</section>

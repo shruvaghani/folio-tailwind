@@ -1,0 +1,56 @@
+<section class="lg:pt-44 py-20 relative">
+    <div class="bg-[linear-gradient(90deg,rgba(240,150,255,0.15)_0%,rgba(191,200,252,0.15)_51%,rgba(187,148,255,0.15)_100%)] h-125 w-full absolute bottom-0 start-0">
+        <!-- Curve decoration -->
+        <span>
+            <svg class="-mt-2" viewBox="0 0 1950 135" style="enable-background:new 0 0 1950 135;" xml:space="preserve">
+                <path class="fill-body-bg" d="M1480.3,110.5c238.7,18.9,359.6-42.2,469.7-80.7V1.7L0,0v129.4c57.3-41.7,287.7-15.9,446.4,0 c170.6,17.1,342.3-15.8,440.8-35.8C1104,49.6,1274.8,94.2,1480.3,110.5z"></path>
+            </svg>
+        </span>
+    </div>
+
+    <div class="container">
+        <div class="grid md:grid-cols-2 grid-cols-1 gap-7.5">
+            <div>
+                <nav class="mb-4 pb-2 flex" aria-label="breadcrumb">
+                    <ol class="flex items-center space-x-1 text-2xs text-default-600">
+                        <li>
+                            <a routerLink="/" class="hover:text-primary font-medium">
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <span class="px-2 text-default-400">/</span>
+                            <a [routerLink]="[]" class="hover:text-primary font-medium">
+                                services
+                            </a>
+                        </li>
+
+                        <li class="flex items-center">
+                            <span class="px-2 text-default-400">/</span>
+                            <span class="font-medium text-primary" aria-current="page">
+                                service detail
+                            </span>
+                        </li>
+                    </ol>
+                </nav>
+
+                <h1 class="lg:text-7xl md:text-5.5xl text-[40px] mb-12 font-bold">Web design and development</h1>
+                <a class="bg-dark text-white py-3.5 px-7.5 font-medium rounded-md gap-1.5 inline-flex items-center group" [routerLink]="[]">Explore our work<lucide-icon name="arrow-right" class="size-4 group-hover:translate-x-1 transition-all duration-300"></lucide-icon> </a>
+
+                <div class="mt-12 md:mt-44">
+                    <h5 class="mb-2 lg:text-2.5xl md:text-2xl text-2xl">Overview</h5>
+                    <p class="mb-4">A brief introduction to your web development services. This can be a few sentences summarizing what you do and the unique value you bring to clients.</p>
+                    <p class="mb-4">At Folio, we specialize in creating custom web solutions that drive business growth. Our expert team delivers cutting-edge websites tailored to meet your unique needs. Highlight the main benefits of your web development services. This helps visitors quickly understand why they should choose you over competitors.</p>
+                    <p class="mb-4">Highlight the main benefits of your web development services. This helps visitors quickly understand why they should choose you over competitors.</p>
+                </div>
+            </div>
+
+            <div class="lg:w-lg w-full lg:ms-auto md:ms-15 relative z-20">
+                <div class="sticky top-20">
+                    <div class="rounded-2xl h-100 lg:h-125 bg-[url('assets/images/services/4by3/03.jpg')] bg-no-repeat bg-cover bg-center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,17 @@
+<section class="-mt-44 lg:pb-36 pb-20">
+    <div class="max-w-387.5 mx-auto relative bg-dark rounded-2xl overflow-hidden py-12 md:py-18 lg:py-32">
+        <div class="container">
+            <h2 class="mb-7.5 lg:mb-18 lg:text-4.5xl md:text-4xl text-3xl text-white">Step-by-Step Process</h2>
+
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-7.5">
+                @for (step of stepsData; track $index) {
+                <div>
+                    <h4 class="text-primary-grad lg:text-3.5xl md:text-2.5xl text-xl mb-2">{{ step.number }}</h4>
+                    <h6 class="md:text-2.2xl text-xl text-white mb-2">{{ step.title }}</h6>
+                    <p class="text-white/80">{{ step.description }}</p>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>

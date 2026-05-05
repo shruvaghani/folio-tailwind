@@ -1,0 +1,62 @@
+<section class="lg:pb-36 pb-20">
+    <div class="container">
+        <div class="grid lg:grid-cols-3 grid-cols-1 gap-7.5">
+            <div class="col-span-1">
+                <h2 class="lg:mb-7.5 lg:text-4.5xl md:text-4xl text-3xl lg:text-start text-center">Showcase of previous projects</h2>
+                <p class="text-default-700 mb-4 lg:text-start text-center">Explore our diverse portfolio showcasing the range and quality of our web development projects.</p>
+                <!-- Slider button -->
+                <div class="flex justify-center lg:justify-start gap-4 relative lg:mt-7.5">
+                    <a [routerLink]="[]" class="size-12 flex justify-center items-center bg-secondary hover:bg-primary/20 transition-all duration-300 rounded-full swiper-button-prev-team"><lucide-icon name="arrow-left" class="size-5"></lucide-icon></a>
+                    <a [routerLink]="[]" class="size-12 flex justify-center items-center bg-secondary hover:bg-primary/20 transition-all duration-300 rounded-full swiper-button-next-team"><lucide-icon name="arrow-right" class="size-5"></lucide-icon></a>
+                </div>
+            </div>
+
+            <div class="col-span-2">
+                <div class="swiper">
+                    <swiper-container space-between="30" loop="true" autoplay="false" navigation-next-el=".swiper-button-next-team" navigation-prev-el=".swiper-button-prev-team">
+                        <!-- Case study item -->
+                        @for (item of caseStudiesData; track $index) {
+                        <swiper-slide>
+                            <div class="bg-secondary/50 rounded-2xl overflow-hidden mb-4">
+                                <div class="grid md:grid-cols-12 grid-cols-1">
+                                    <div class="md:col-span-5">
+                                        <img [src]="item.image" class="rounded-s-2xl h-full" alt="...">
+                                    </div>
+                                    <div class="md:col-span-7">
+                                        <div class="rounded-e-2xl flex flex-col items-start h-full p-7.5">
+                                            <!-- Client logo -->
+                                            <img [src]="item.clientLogoLight" class="hidden dark:block h-7.5 mb-4" alt="client logo">
+
+                                            <img [src]="item.clientLogoDark" class="block dark:hidden h-7.5 mb-4" alt="client logo">
+
+                                            <h6 class="md:text-2.2xl text-xl mb-2">
+                                                {{ item.title }}
+                                            </h6>
+
+                                            <p class="mb-4 text-default-700">
+                                                {{ item.description }}
+                                            </p>
+
+                                            <div class="md:flex justify-between items-center mt-auto w-full">
+                                                <!-- Progress -->
+                                                <div class="mb-4 md:mb-0">
+                                                    <h4 class="text-primary-grad mb-0 lg:text-3.5xl md:text-2.5xl text-2xl">{{ item.progress }}</h4>
+                                                    <small class="text-sm">{{ item.progressText }}</small>
+                                                </div>
+
+                                                <!-- Button -->
+                                                <a [routerLink]="[]" class="bg-dark text-white rounded-md text-sm py-3 px-5">View detail</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </swiper-slide>
+                        }
+                    </swiper-container>
+                </div>
+                <!-- Slider END -->
+            </div>
+        </div>
+    </div>
+</section>
