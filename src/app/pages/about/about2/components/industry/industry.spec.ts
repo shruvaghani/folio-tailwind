@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { Industry } from './industry';
 
 describe('Industry', () => {

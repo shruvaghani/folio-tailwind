@@ -36,20 +36,12 @@
                         <h2 class="mb-7.5 md:mb-18 lg:text-4.5xl md:text-4xl text-3xl text-white">Our awards and achievements</h2>
 
                         <div class="grid md:grid-cols-3 grid-cols-1 gap-7.5">
-                            <div>
-                                <img src="assets/images/elements/fwa-light.svg" class="h-7.5 mb-4" alt="award logo">
-                                <p class="text-white/80">Digital vanguard award</p>
-                            </div>
-
-                            <div>
-                                <img src="assets/images/elements/clutch-light.svg" class="h-7.5 mb-4" alt="award logo">
-                                <p class="text-white/80">Best website of the week</p>
-                            </div>
-
-                            <div>
-                                <img src="assets/images/elements/webby.svg" class="h-7.5 mb-4" alt="award logo">
-                                <p class="text-white/80">5X developer awards</p>
-                            </div>
+                            @for (item of awardsData; track $index) {
+                                <div>
+                                  <img [src]="item.image" class="h-7.5 mb-4" alt="award logo" />
+                                  <p class="text-white/80">{{ item.title }}</p>
+                                </div>
+                            }
                         </div>
                     </div>
 

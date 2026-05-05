@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { LucideAngularModule } from "lucide-angular";
+import { awardsData } from '../../data';
 
 @Component({
   selector: 'about2-about',
@@ -9,4 +10,6 @@ import { LucideAngularModule } from "lucide-angular";
   styles: ``,
 })
   
-export class About {}
+export class About {
+  awardsData = awardsData;
+}

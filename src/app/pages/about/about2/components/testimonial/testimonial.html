@@ -1,92 +1,62 @@
- <section class="overflow-hidden lg:pt-44 pt-20 lg:pb-36 pb-20">
-        <div class="container">
-            <div class="pt-32">
-                <div class="grid md:grid-cols-12 grid-cols-1 md:mb-12">
-                    <div class="lg:col-span-5 md:col-span-7">
-                        <h2 class="lg:text-4.5xl md:text-4xl text-3xl">A legacy of creativity and growth</h2>
-                    </div>
-
-                    <div class="lg:col-span-7 md:col-span-5">
-                        <div class="flex justify-end gap-2 relative">
-                            <a [routerLink]="[]" id="swiper-button-prev" class="bg-secondary hover:bg-primary/20 size-12 flex justify-center items-center rounded-full"><i data-lucide="arrow-left" class="size-5"></i></a>
-                            <a [routerLink]="[]" id="swiper-button-next" class="bg-secondary hover:bg-primary/20 size-12 flex justify-center items-center rounded-full"><i data-lucide="arrow-right" class="size-5"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- History start -->
-                <div class="swiper swiper-step swiper-outside-end-n20" data-swiper-options='{
-                    "spaceBetween": 0,
-                    "loop": true,
-                    "autoplay": false,
-                    "navigation":{
-                        "nextEl":"#swiper-button-next",
-                        "prevEl":"#swiper-button-prev"
-                    },
-                    "breakpoints": { 
-                        "576": {"slidesPerView": 1},
-                        "768": {"slidesPerView": 3},
-                        "992": {"slidesPerView": 3},
-                        "1200": {"slidesPerView": 4}
-                    }}'>
-
-                    <div class="swiper-wrapper">
-                        <!-- History item -->
-                        <div class="swiper-slide">
-                            <!-- Swiper divider -->
-                            <div class="relative w-[calc(100%+2rem)] h-0.5 border border-default-200 dark:border-white/14 mt-8 mb-12 before:content-[''] before:absolute before:top-1/2 before:start-0 before:w-6 before:h-6 before:rounded-full before:bg-default-900 before:-translate-y-1/2 after:content-[''] after:absolute after:top-1/2 after:start-2 after:w-2 after:h-2 after:rounded-full after:bg-default-100 after:-translate-y-1/2"></div>
-                            <!-- History card -->
-                            <div class="bg-secondary/50 p-7.5 me-2 md:me-12 rounded-2xl">
-                                <h6 class="text-primary md:text-2.2xl text-xl mb-2">Present - 2024</h6>
-                                <p>With a vision for the future, we are excited to explore new opportunities, expand our services, and continue delivering exceptional visual solutions that inspire and engage.</p>
-                            </div>
-                        </div>
-
-                        <!-- History item -->
-                        <div class="swiper-slide">
-                            <!-- Swiper divider -->
-                            <div class="relative w-[calc(100%+2rem)] h-0.5 border border-default-200 dark:border-white/14 mt-8 mb-12 before:content-[''] before:absolute before:top-1/2 before:start-0 before:w-6 before:h-6 before:rounded-full before:bg-default-900 before:-translate-y-1/2 after:content-[''] after:absolute after:top-1/2 after:start-2 after:w-2 after:h-2 after:rounded-full after:bg-default-100 after:-translate-y-1/2"></div>
-                            <!-- History card -->
-                            <div class="bg-secondary/50 p-7.5 me-2 md:me-12 rounded-2xl">
-                                <h6 class="text-primary md:text-2.2xl text-xl mb-2">2022 - Reaching new heights</h6>
-                                <p>Our commitment to quality and innovation continued to drive our growth and solidify our position as industry leaders.</p>
-                            </div>
-                        </div>
-
-                        <!-- History item -->
-                        <div class="swiper-slide">
-                            <!-- Swiper divider -->
-                            <div class="relative w-[calc(100%+2rem)] h-0.5 border border-default-200 dark:border-white/14 mt-8 mb-12 before:content-[''] before:absolute before:top-1/2 before:start-0 before:w-6 before:h-6 before:rounded-full before:bg-default-900 before:-translate-y-1/2 after:content-[''] after:absolute after:top-1/2 after:start-2 after:w-2 after:h-2 after:rounded-full after:bg-default-100 after:-translate-y-1/2"></div>
-                            <!-- History card -->
-                            <div class="bg-secondary/50 p-7.5 me-2 md:me-12 rounded-2xl">
-                                <h6 class="text-primary md:text-2.2xl text-xl mb-2">2020 - Adapting and innovating</h6>
-                                <p>This year marked a significant pivot towards digital solutions, ensuring we stayed at the forefront of industry trends embracing new collaboration tools.</p>
-                            </div>
-                        </div>
-
-                        <!-- History item -->
-                        <div class="swiper-slide">
-                            <!-- Swiper divider -->
-                            <div class="relative w-[calc(100%+2rem)] h-0.5 border border-default-200 dark:border-white/14 mt-8 mb-12 before:content-[''] before:absolute before:top-1/2 before:start-0 before:w-6 before:h-6 before:rounded-full before:bg-default-900 before:-translate-y-1/2 after:content-[''] after:absolute after:top-1/2 after:start-2 after:w-2 after:h-2 after:rounded-full after:bg-default-100 after:-translate-y-1/2"></div>
-                            <!-- History card -->
-                            <div class="bg-secondary/50 p-7.5 me-2 md:me-12 rounded-2xl">
-                                <h6 class="text-primary md:text-2.2xl text-xl mb-2">2014 - Industry recognition</h6>
-                                <p>These accolades not only highlighted our capabilities but also motivated us to continue pushing the boundaries of design.</p>
-                            </div>
-                        </div>
-
-                        <!-- History item -->
-                        <div class="swiper-slide">
-                            <!-- Swiper divider -->
-                            <div class="relative w-[calc(100%+2rem)] h-0.5 border border-default-200 dark:border-white/14 mt-8 mb-12 before:content-[''] before:absolute before:top-1/2 before:start-0 before:w-6 before:h-6 before:rounded-full before:bg-default-900 before:-translate-y-1/2 after:content-[''] after:absolute after:top-1/2 after:start-2 after:w-2 after:h-2 after:rounded-full after:bg-default-100 after:-translate-y-1/2"></div>
-                            <!-- History card -->
-                            <div class="bg-secondary/50 p-7.5 me-2 md:me-12 rounded-2xl">
-                                <h6 class="text-primary md:text-2.2xl text-xl mb-2">2008 - The Beginning</h6>
-                                <p>It was founded with a vision to revolutionize the visual design industry. Starting as a small team of passionate designers, we set out to deliver creative solutions that make a difference.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<section class="overflow-hidden lg:pt-44 pt-20 lg:pb-36 pb-20">
+  <div class="container">
+    <div class="pt-32">
+      <div class="grid md:grid-cols-12 grid-cols-1 md:mb-12">
+        <div class="lg:col-span-5 md:col-span-7">
+          <h2 class="lg:text-4.5xl md:text-4xl text-3xl">A legacy of creativity and growth</h2>
         </div>
-    </section>
+
+        <div class="lg:col-span-7 md:col-span-5">
+          <div class="flex justify-end gap-2 relative">
+            <a
+              [routerLink]="[]"
+              id="swiper-button-prev"
+              class="bg-secondary hover:bg-primary/20 size-12 flex justify-center items-center rounded-full"
+              ><lucide-icon name="arrow-left" class="size-5"></lucide-icon></a>
+            <a
+              [routerLink]="[]"
+              id="swiper-button-next"
+              class="bg-secondary hover:bg-primary/20 size-12 flex justify-center items-center rounded-full"><lucide-icon name="arrow-right" class="size-5">
+            </lucide-icon></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- History start -->
+      <div class="swiper swiper-step swiper-outside-end-n20 swiper-initialized swiper-horizontal swiper-backface-hidden">
+        <swiper-container
+          space-between="0"
+          loop="true"
+          autoplay="false"
+          navigation-next-el="#swiper-button-next"
+          navigation-prev-el="#swiper-button-prev"
+          breakpoints='{
+            "576": { "slidesPerView": 1 },
+            "768": { "slidesPerView": 3 },
+            "992": { "slidesPerView": 3 },
+            "1200": { "slidesPerView": 4 }
+          }'
+          class="swiper-wrapper"
+        >
+          @for (item of historyData; track $index; let i = $index) {
+            <swiper-slide>
+              <!-- Swiper divider -->
+              <div
+                class="relative w-[calc(100%+2rem)] h-0.5 border border-default-200 dark:border-white/14 mt-8 mb-12 before:content-[''] before:absolute before:top-1/2 before:start-0 before:w-6 before:h-6 before:rounded-full before:bg-default-900 before:-translate-y-1/2 after:content-[''] after:absolute after:top-1/2 after:start-2 after:w-2 after:h-2 after:rounded-full after:bg-default-100 after:-translate-y-1/2"></div>
+
+              <!-- History card -->
+              <div class="bg-secondary/50 p-7.5 me-2 md:me-12 rounded-2xl">
+                <h6 class="text-primary md:text-2.2xl text-xl mb-2">
+                  {{ item.title }}
+                </h6>
+                <p>
+                  {{ item.description }}
+                </p>
+              </div>
+            </swiper-slide>
+          }
+        </swiper-container>
+      </div>
+    </div>
+  </div>
+</section>
