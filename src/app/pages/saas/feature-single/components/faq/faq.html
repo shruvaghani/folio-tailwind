@@ -1,0 +1,86 @@
+ <section class="lg:pb-36 pb-20">
+        <div class="container">
+            <div class="grid md:grid-cols-3 grid-cols-1 gap-7.5">
+                <div class="col-span-1">
+                    <h2 class="mb-4 lg:text-4.5xl md:text-4xl text-3xl">Frequently Asked Questions</h2>
+                    <p>Our team is ready to assist you! Start a chat for quick support. <a [routerLink]="[]" class="font-semibold hover-underline text-primary">Talk to Us</a></p>
+                </div>
+
+                <div class="md:col-span-2 ms-auto lg:w-180 md:w-100">
+                    <!-- Accordion Group -->
+                    <div class="hs-accordion-group">
+                        <div class="hs-accordion mb-4 pb-4 border-b border-default-200 dark:border-white/14 active" id="heading-1">
+                            <button class="hs-accordion-toggle w-full font-semibold text-start text-xl text-default-700 focus:outline-hidden focus:text-muted-foreground-1 rounded-lg flex items-center disabled:opacity-50 disabled:pointer-events-none" aria-expanded="true" aria-controls="collapse-1">
+                                What payment methods do you accept?
+                                <lucide-icon name="minus" class="hs-accordion-active:block hidden size-4 ms-auto"></lucide-icon>
+                                <lucide-icon name="plus" class="hs-accordion-active:hidden block size-4 ms-auto"></lucide-icon>
+                            </button>
+
+                            <div id="collapse-1" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="heading-1">
+                                <p class="pt-2 font-medium">
+                                    We accept all major credit cards, PayPal, and bank transfers for custom plans. Our expert team will turn your concept into a working prototype within 24 hours, ensuring rapid progress and immediate feedback.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="hs-accordion mb-4 border-b border-default-200 dark:border-white/14 pb-4" id="heading-2">
+                            <button class="hs-accordion-toggle w-full font-semibold text-start text-xl text-default-700 focus:outline-hidden focus:text-muted-foreground-1 rounded-lg flex items-center disabled:opacity-50 disabled:pointer-events-none" aria-expanded="false" aria-controls="collapse-2">
+                                Can I change my plan later?
+                                <lucide-icon name="minus" class="hs-accordion-active:block hidden size-4 ms-auto"></lucide-icon>
+                                <lucide-icon name="plus" class="hs-accordion-active:hidden block size-4 ms-auto"></lucide-icon>
+                            </button>
+
+                            <div id="collapse-2" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="heading-2">
+                                <p class="pt-2 font-medium">
+                                    Yes, you can upgrade or downgrade your plan at any time from your account settings. We provide a range of tools, guides, and best practices to help you create designs, websites.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="hs-accordion mb-4 border-b border-default-200 dark:border-white/14 pb-4" id="heading-3">
+                            <button class="hs-accordion-toggle w-full font-semibold text-start text-xl text-default-700 focus:outline-hidden focus:text-muted-foreground-1 rounded-lg flex items-center disabled:opacity-50 disabled:pointer-events-none" aria-expanded="false" aria-controls="collapse-3">
+                                Is there a free trial available?
+                                <lucide-icon name="minus" class="hs-accordion-active:block hidden size-4 ms-auto"></lucide-icon>
+                                <lucide-icon name="plus" class="hs-accordion-active:hidden block size-4 ms-auto"></lucide-icon>
+                            </button>
+
+                            <div id="collapse-3" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="heading-3">
+                                <p class="pt-2 font-medium">
+                                    Yes, we offer a 14-day free trial for our Basic and Standard plans. No credit card required.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="hs-accordion mb-4 border-b border-default-200 dark:border-white/14 pb-4" id="heading-4">
+                            <button class="hs-accordion-toggle w-full font-semibold text-start text-xl text-default-700 focus:outline-hidden focus:text-muted-foreground-1 rounded-lg flex items-center disabled:opacity-50 disabled:pointer-events-none" aria-expanded="false" aria-controls="collapse-4">
+                                How does customer support work?
+                                <lucide-icon name="minus" class="hs-accordion-active:block hidden size-4 ms-auto"></lucide-icon>
+                                <lucide-icon name="plus" class="hs-accordion-active:hidden block size-4 ms-auto"></lucide-icon>
+                            </button>
+
+                            <div id="collapse-4" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="heading-4">
+                                <p class="pt-2 font-medium">
+                                    Our Basic plan includes email support, while the Standard and Custom plans offer priority email and dedicated account manager support, respectively.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="hs-accordion mb-4 border-b border-default-200 dark:border-white/14 pb-4" id="heading-5">
+                            <button class="hs-accordion-toggle w-full font-semibold text-start text-xl text-default-700 focus:outline-hidden focus:text-muted-foreground-1 rounded-lg flex items-center disabled:opacity-50 disabled:pointer-events-none" aria-expanded="false" aria-controls="collapse-5">
+                                Are there any setup fees?
+                                <lucide-icon name="minus" class="hs-accordion-active:block hidden size-4 ms-auto"></lucide-icon>
+                                <lucide-icon name="plus" class="hs-accordion-active:hidden block size-4 ms-auto"></lucide-icon>
+                            </button>
+
+                            <div id="collapse-5" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="heading-5">
+                                <p class="pt-2 font-medium">
+                                    No, there are no setup fees for any of our plans. You only pay the monthly subscription fee. We provide a range of tools, guides, and best practices to help you create designs, websites.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Accordion Group -->
+                </div>
+            </div>
+        </div>
+    </section>
