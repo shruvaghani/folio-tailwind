@@ -1,0 +1,74 @@
+ <section class="lg:pb-36 pb-20">
+        <div class="container">
+            <div class="bg-[linear-gradient(90deg,rgba(240,150,255,0.15)_0%,rgba(191,200,252,0.15)_51%,rgba(187,148,255,0.15)_100%)] lg:p-32 md:p-18 p-7.5 rounded-2xl">
+                <h1 class="font-bold mb-2 lg:text-6xl md:text-4.5xl text-4xl text-center flex justify-center items-center"><lucide-icon name="smile" class="me-2 lg:size-14.5 md:size-11.25 size-8.5"></lucide-icon>Say 
+                    <span class="cd-headline clip big-clip is-full-width text-primary-grad mb-0">
+                       
+                        <ngx-typed-js [strings]="['Hello', 'Hola', 'Ciao', 'Bonjour']" [typeSpeed]="50" [backSpeed]="30" [loop]="true">
+                        <span class="typing"></span>
+                    </ngx-typed-js>
+                    </span>
+                </h1>
+                <p class="text-center mb-4">Have an idea, need advice, or just want to say hello? We’re all ears.</p>
+
+                <div class="lg:w-154 mx-auto">
+                    <div class="grid md:grid-cols-2 gap-4 mt-12">
+                        <div>
+                            <label class="block text-base font-medium mb-2">
+                                Your name
+                            </label>
+                            <input type="text" class="w-full rounded-md border-0! px-7.5 py-3.5 placeholder:text-default-400 focus:border-primary! focus:ring-1 focus:ring-primary outline-none transition" />
+                        </div>
+
+                        <div>
+                            <label class="block text-base font-medium mb-2">
+                                Email address 
+                            </label>
+                            <input type="email" class="w-full rounded-md border-0! px-7.5 py-3.5 placeholder:text-default-400 focus:border-primary! focus:ring-1 focus:ring-primary outline-none transition" />
+                        </div>
+
+                        <div>
+                            <label class="block text-base font-medium mb-2">
+                                Mobile number
+                            </label>
+                            <input type="text" class="w-full rounded-md border-0! px-7.5 py-3.5 placeholder:text-default-400 focus:border-primary! focus:ring-1 focus:ring-primary outline-none transition" />
+                        </div>
+
+                        <div>
+                            <label class="block text-base font-medium mb-2">
+                                Subject
+                            </label>
+                            <input type="text" class="w-full rounded-md border-0! px-7.5 py-3.5 placeholder:text-default-400 focus:border-primary! focus:ring-1 focus:ring-primary outline-none transition" />
+                        </div>
+
+                        <div class="md:col-span-2 col-span-1">
+                            <label class="block text-base font-medium mb-2">
+                                Message
+                            </label>
+                            <input type="text" class="w-full h-25 rounded-md border-0! px-7.5 py-3.5 placeholder:text-default-400 focus:border-primary! focus:ring-1 focus:ring-primary outline-none transition" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex items-center gap-2 md:justify-start justify-center mt-3">
+                            <input type="checkbox" id="rememberCheck" class="h-4 w-4 border-default-300 rounded! bg-white checked:bg-primary! checked:border-primary accent-primary" />
+                            <label for="rememberCheck" class="text-base text-default-700">I agree that my data is<a [routerLink]="[]" class="hover-underline hover:text-primary">collected and stored</a></label>
+                        </div>
+                    </div>
+
+                    <div class="md:flex items-center gap-4 mt-7.5">
+                        <!-- Button -->
+                        <button class="text-white py-3.5 px-7.5 rounded-md bg-primary mb-2 md:mb-0 hover:bg-primary-hover">Send a message</button>
+                        <!-- Social links -->
+                        <ul class="flex items-center ms-auto gap-2">
+                            <li class="list-inline-item text-sm text-default-900">Connect with:</li>
+                            <li class="list-inline-item"> <a [routerLink]="[]" class="text-default-900 hover:text-primary"><lucide-icon name="facebook" class="size-4"></lucide-icon></a> </li>
+                            <li class="list-inline-item"> <a [routerLink]="[]" class="text-default-900 hover:text-primary"><lucide-icon name="instagram" class="size-4"></lucide-icon></a> </li>
+                            <li class="list-inline-item"> <a [routerLink]="[]" class="text-default-900 hover:text-primary"><iconify-icon icon="tabler:brand-x" class="size-4"></iconify-icon></a> </li>
+                            <li class="list-inline-item"> <a [routerLink]="[]" class="text-default-900 hover:text-primary"><lucide-icon name="linkedin" class="size-4"></lucide-icon></a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
