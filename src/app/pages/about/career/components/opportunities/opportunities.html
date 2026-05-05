@@ -1,0 +1,76 @@
+<section class="-mb-32">
+  <div
+    class="lg:max-w-387.5 mx-auto bg-dark relative rounded-2xl overflow-hidden py-12 sm:py-18 lg:py-32"
+  >
+    <div class="absolute top-0 start-0 -mt-18 -ms-12">
+      <img
+        src="assets/images/elements/grad-shape/blur-decoration.svg"
+        class="blur-[32px] opacity-10"
+        alt="Grad shape"
+      />
+    </div>
+
+    <div class="absolute top-full start-1/2 -translate-x-1/2">
+      <img
+        src="assets/images/elements/grad-shape/blur-decoration-2.svg"
+        class="opacity-20 blur-[144px]"
+        alt="Grad shape"
+      />
+    </div>
+
+    <div class="container">
+      <h2 class="text-center mb-7.5 lg:text-4.5xl md:text-4xl text-3xl text-white">
+        New job openings
+      </h2>
+      <p class="text-center text-xl mx-auto mb-12 text-white/80">
+        Explore our exciting career opportunities and find the perfect fit for your skills and
+        aspirations.
+      </p>
+
+      <div class="lg:w-5/6 mx-auto">
+        @for (job of jobsData; track $index; let isLast = $last) {
+          <div
+            class="border border-white/10 hover:shadow-[0_10px_20px_rgba(127,57,248,0.15)] hover:-translate-y-1 group transition-all duration-300"
+            [class]="!isLast ? 'mb-7.5' : ''"
+          >
+            <div class="p-7.5">
+              <div class="grid md:grid-cols-12 grid-cols-1 gap-4 sm:gap-7.5 items-center">
+                <div class="md:col-span-5">
+                  <h6 class="text-white md:text-2.2xl text-xl">
+                    {{ job.title }}
+                  </h6>
+                </div>
+
+                <div class="md:col-span-2">
+                  <span class="text-white/80">
+                    {{ job.location }}
+                  </span>
+                </div>
+
+                <div class="md:col-span-3">
+                  <span class="text-white/80">
+                    {{ job.department }}
+                  </span>
+                </div>
+
+                <div class="md:col-span-2 md:text-end">
+                  <a
+                    [routerLink]="job.link"
+                    class="font-semibold text-success flex md:justify-end items-center gap-1"
+                  >
+                    Apply
+                    <lucide-icon
+                      name="arrow-right"
+                      class="size-4 group-hover:translate-x-1 transition-all duration-300"
+                    >
+                    </lucide-icon>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

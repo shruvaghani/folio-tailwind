@@ -1,0 +1,80 @@
+<section class="lg:pb-36 pb-20">
+  <div class="container">
+    <div class="lg:w-5/6 mx-auto">
+      <div class="grid md:grid-cols-2 grid-cols-1 gap-7.5">
+        <div class="md:order-1 order-2">
+          @for (tab of processTabsData; track $index) {
+            <div
+              [id]="tab.id"
+              role="tabpanel"
+              [attr.aria-labelledby]="tab.ariaLabel"
+              [class]="tab.isHidden ? 'hidden' : ''"
+            >
+              <div
+                class="border border-default-200 dark:border-white/14 rounded-2xl overflow-hidden"
+              >
+                <img [src]="tab.image" class="rounded-t-2xl" alt="Blog-img" />
+
+                <div class="p-7.5">
+                  <h6 class="md:text-2xl text-xl mb-2">
+                    {{ tab.title }}
+                  </h6>
+
+                  <p class="text-default-700">
+                    {{ tab.description }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+
+        <div class="ms-auto lg:w-105 md:order-2 order-1">
+          <h2 class="mb-7.5 lg:text-4.5xl md:text-4xl text-3xl">Our Recruitment Process</h2>
+          <div>
+            <nav
+              id="v-pills-tab"
+              class="flex flex-col gap-4"
+              aria-label="Tabs"
+              role="tablist"
+              aria-orientation="horizontal"
+            >
+              @for (tab of tabNavData; track $index) {
+                <button
+                  type="button"
+                  class="hs-tab-active:bg-default-900 hs-tab-active:text-body-bg relative pe-4 py-4 ps-7.5 text-start font-medium hover:bg-default-900 hover:text-body-bg transition-all duration-500 rounded-full whitespace-nowrap bg-secondary text-default-900 inline-block focus:outline-hidden focus:text-primary-focus disabled:opacity-50 disabled:pointer-events-none"
+                  [class.active]="tab.isActive"
+                  [attr.id]="tab.id"
+                  [attr.data-hs-tab]="tab.tabTarget"
+                  [attr.aria-controls]="tab.tabTarget.replace('#', '')"
+                  role="tab"
+                  [attr.aria-selected]="tab.isActive ? 'true' : 'false'"
+                  [disabled]="tab.isDisabled"
+                >
+                  {{ tab.label }}
+                </button>
+              }
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div
+        class="md:max-w-150 mx-auto bg-primary-grad rounded-xl text-center py-4 mt-12 flex items-center justify-center gap-1 flex-wrap"
+      >
+        <lucide-icon name="info" class="size-4"></lucide-icon>
+        <p class="text-white px-2 sm:px-7.5 md:px-0">Contact our team for more information</p>
+        <a
+          [routerLink]="[]"
+          class="font-semibold hover-underline text-white group flex items-center gap-1"
+          >Let’s chat
+          <lucide-icon
+            name="arrow-right"
+            class="size-4 group-hover:translate-x-1 transition-all duration-300"
+          ></lucide-icon
+        ></a>
+      </div>
+    </div>
+  </div>
+</section>
