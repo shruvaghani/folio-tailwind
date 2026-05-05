@@ -1,1 +1,56 @@
-<p>contact works!</p>
+    <section class="lg:py-36 py-20 bg-linear-to-r from-[rgba(240,150,255,0.15)] via-[rgba(191,200,252,0.15)] to-[rgba(187,148,255,0.15)] relative overflow-hidden">
+        <div class="absolute bottom-0 start-0 -mb-44 hidden md:block">
+            <img src="assets/images/elements/grad-shape/10.png" class="rotate-270 h-125 lg:h-175" alt="decoration shape">
+        </div>
+
+        <div class="container">
+            <div class="grid lg:grid-cols-12 grid-cols-1 gap-7.5">
+                <div class="lg:col-span-5">
+                    <h2 class="mb-4 lg:text-4.5xl md:text-4xl text-3xl">Let's level up your brand, together</h2>
+                    <p>Reach us anytime at <a [routerLink]="[]" class="text-primary">example@gmail.com</a></p>
+                </div>
+
+                <div class="lg:col-span-7 lg:w-159 lg:ms-auto">
+                    <div class="grid md:grid-cols-2 grid-cols-1 gap-4">
+                        <div>
+                            <label class="block text-base font-medium mb-2">
+                                Your name
+                            </label>
+                            <input type="text" class="w-full rounded-md border-0! px-7.5 py-3.5 placeholder:text-default-400 focus:border-primary! focus:ring-1 focus:ring-primary outline-none transition" placeholder="Full name" />
+                        </div>
+
+                        <div>
+                            <label class="block text-base font-medium mb-2">
+                                Email address
+                            </label>
+                            <input type="text" class="w-full rounded-md border-0! px-7.5 py-3.5 placeholder:text-default-400 focus:border-primary! focus:ring-1 focus:ring-primary outline-none transition" placeholder="name@example.com" />
+                        </div>
+
+                        <div class="md:col-span-2">
+                            <label class="block text-base font-medium mb-2">
+                                Subject
+                            </label>
+                            <input type="text" class="w-full rounded-md border-0! px-7.5 py-3.5 placeholder:text-default-400 focus:border-primary! focus:ring-1 focus:ring-primary outline-none transition" placeholder="Subject name" />
+                        </div>
+
+                        <div class="md:col-span-2">
+                            <label class="block text-base font-medium mb-2">
+                                Message
+                            </label>
+                            <textarea class="w-full rounded-md border-0! h-37.5 px-7.5 py-3.5 placeholder:text-default-400 focus:border-primary! focus:ring-1 focus:ring-primary outline-none transition" placeholder="Write your message here...."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="mt-7.5 gap-4 xl:flex items-center">
+                        <button class="text-white bg-primary py-3.5 px-7.5 rounded-md text-nowrap mb-2 xl:mb-0 hover:bg-primary-hover">Send a message</button>
+                        <div>
+                            <div class="flex items-center gap-2 md:justify-start justify-center mt-3">
+                                <input type="checkbox" id="rememberCheck" class="h-4 w-4 border-default-300 rounded! bg-white checked:bg-primary! checked:border-primary accent-primary" />
+                                <label for="rememberCheck" class="text-base text-default-700">I agree that my data is<a [routerLink]="[]" class="hover-underline hover:text-primary">collected and stored</a></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

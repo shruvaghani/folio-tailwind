@@ -39,49 +39,22 @@
 
                 <!-- Accordion Group -->
                 <div class="hs-accordion-group mt-12">
-                    <div class="hs-accordion mb-4 pb-4 border-b border-default-200 dark:border-white/14 active" id="heading-1">
-                        <button class="hs-accordion-toggle w-full font-semibold text-start text-xl text-default-700 focus:outline-hidden focus:text-muted-foreground-1 rounded-lg flex items-center disabled:opacity-50 disabled:pointer-events-none" aria-expanded="true" aria-controls="collapse-1">
-                            Rapid prototype development
+
+                    @for (item of faqData; track item.id) {
+                    <div class="hs-accordion mb-4 pb-4 border-b border-default-200 dark:border-white/14" [class.active]="item.active" [attr.id]="'heading-' + item.id">
+                        <button class="hs-accordion-toggle w-full font-semibold text-start text-xl text-default-700 flex items-center" [attr.aria-expanded]="item.active" [attr.aria-controls]="'collapse-' + item.id">
+                            {{ item.question }}
                             <lucide-icon name="minus" class="hs-accordion-active:block hidden size-4 ms-auto"></lucide-icon>
                             <lucide-icon name="plus" class="hs-accordion-active:hidden block size-4 ms-auto"></lucide-icon>
                         </button>
-
-                        <div id="collapse-1" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="heading-1">
+                        <div [id]="'collapse-' + item.id" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" [class.hidden]="!item.active" role="region" [attr.aria-labelledby]="'heading-' + item.id">
                             <p class="pt-2 font-medium">
-                                Our expert team delivers a functional prototype within 24 hours, ensuring rapid progress and immediate feedback.
+                                {{ item.answer }}
                             </p>
                         </div>
                     </div>
-
-                    <div class="hs-accordion mb-4 border-b border-default-200 dark:border-white/14 pb-4" id="heading-2">
-                        <button class="hs-accordion-toggle w-full font-semibold text-start text-xl text-default-700 focus:outline-hidden focus:text-muted-foreground-1 rounded-lg flex items-center disabled:opacity-50 disabled:pointer-events-none" aria-expanded="false" aria-controls="collapse-2">
-                            Client-Centric approach
-                            <lucide-icon name="minus" class="hs-accordion-active:block hidden size-4 ms-auto"></lucide-icon>
-                            <lucide-icon name="plus" class="hs-accordion-active:hidden block size-4 ms-auto"></lucide-icon>
-                        </button>
-
-                        <div id="collapse-2" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="heading-2">
-                            <p class="pt-2 font-medium">
-                                We provide a range of tools, guides, and best practices to help you create designs, websites.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="hs-accordion mb-4 border-b border-default-200 dark:border-white/14 pb-4" id="heading-3">
-                        <button class="hs-accordion-toggle w-full font-semibold text-start text-xl text-default-700 focus:outline-hidden focus:text-muted-foreground-1 rounded-lg flex items-center disabled:opacity-50 disabled:pointer-events-none" aria-expanded="false" aria-controls="collapse-3">
-                            24/7 tech & business support
-                            <lucide-icon name="minus" class="hs-accordion-active:block hidden size-4 ms-auto"></lucide-icon>
-                            <lucide-icon name="plus" class="hs-accordion-active:hidden block size-4 ms-auto"></lucide-icon>
-                        </button>
-
-                        <div id="collapse-3" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="heading-3">
-                            <p class="pt-2 font-medium">
-                                We provide a range of tools, guides, and best practices to help you create designs, websites.
-                            </p>
-                        </div>
-                    </div>
+                    }
                 </div>
-                <!-- End Accordion Group -->
             </div>
         </div>
     </div>

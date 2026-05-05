@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LucideAngularModule } from "lucide-angular";
+import { faqData } from '../../data';
 
 @Component({
   selector: 'service-grid-faq',
@@ -8,5 +9,5 @@ import { LucideAngularModule } from "lucide-angular";
   styles: ``,
 })
 export class Faq {
-
+  faqData = faqData;
 }
