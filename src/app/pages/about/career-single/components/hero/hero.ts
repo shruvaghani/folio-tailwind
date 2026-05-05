@@ -3,11 +3,11 @@ import { RouterLink } from "@angular/router";
 import { LucideAngularModule } from "lucide-angular";
 
 @Component({
-  selector: 'service-single-pricing',
+  selector: 'career-single-hero',
   imports: [RouterLink, LucideAngularModule],
-  templateUrl: './pricing.html',
+  templateUrl: './hero.html',
   styles: ``,
 })
-export class Pricing {
+export class Hero {
 
 }

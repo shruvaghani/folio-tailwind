@@ -3,7 +3,7 @@ import { RouterLink } from "@angular/router";
 import { LucideAngularModule } from "lucide-angular";
 
 @Component({
-  selector: 'career-single-hero',
+  selector: 'service-single-hero',
   imports: [RouterLink, LucideAngularModule],
   templateUrl: './hero.html',
   styles: ``,

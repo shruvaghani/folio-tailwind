@@ -4,7 +4,7 @@ import { LucideAngularModule } from 'lucide-angular';
 import { accordionData, clientIconsData, featuresData } from '../../data';
 
 @Component({
-  selector: 'career-single-keybenefits',
+  selector: 'service-single-keybenefits',
   imports: [RouterLink, LucideAngularModule],
   templateUrl: './keybenefits.html',
   styles: ``,

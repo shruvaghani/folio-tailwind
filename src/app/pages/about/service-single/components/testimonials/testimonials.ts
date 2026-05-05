@@ -7,7 +7,7 @@ import { register } from 'swiper/element/bundle';
 register()
 
 @Component({
-  selector: 'career-single-testimonials',
+  selector: 'service-single-testimonials',
   imports: [RouterLink, LucideAngularModule],
   templateUrl: './testimonials.html',
   styles: ``,

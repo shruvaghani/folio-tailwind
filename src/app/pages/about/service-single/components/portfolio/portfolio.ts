@@ -6,7 +6,7 @@ import { caseStudiesData } from '../../data';
 register();
 
 @Component({
-  selector: 'career-single-portfolio',
+  selector: 'service-single-portfolio',
   imports: [RouterLink, LucideAngularModule],
   templateUrl: './portfolio.html',
   styles: ``,
