@@ -15,4 +15,8 @@ export const routes: Routes = [
     path: '',
     loadChildren: () => import('./pages/pages.route').then((mod) => mod.PAGES_ROUTES),
   },
+  {
+    path: 'auth',
+    loadChildren: () => import('./pages/auth/auth.route').then((mod) => mod.AUTH_ROUTES),
+  },
 ];
