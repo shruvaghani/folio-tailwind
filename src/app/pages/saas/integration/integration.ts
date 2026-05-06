@@ -10,6 +10,7 @@ import { Footer4 } from "@app/components/footer/footer4/footer4";
   templateUrl: './integration.html',
   styles: ``,
 })
+  
 export class Integration {
 
 }

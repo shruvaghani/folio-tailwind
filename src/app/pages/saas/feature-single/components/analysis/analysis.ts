@@ -6,4 +6,5 @@ import { Component } from '@angular/core';
   templateUrl: './analysis.html',
   styles: ``,
 })
+  
 export class Analysis {}

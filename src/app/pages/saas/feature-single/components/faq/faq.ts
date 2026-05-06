@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { LucideAngularModule } from "lucide-angular";
+import { faqData } from '../../data';
 
 @Component({
   selector: 'feature-single-faq',
@@ -9,4 +10,6 @@ import { LucideAngularModule } from "lucide-angular";
   styles: ``,
 })
   
-export class Faq {}
+export class Faq {
+  faqData = faqData;
+}

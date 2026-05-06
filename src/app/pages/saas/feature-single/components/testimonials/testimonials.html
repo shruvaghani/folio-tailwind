@@ -1,111 +1,87 @@
 <section class="lg:pb-36 pb-20">
-        <div class="container">
-            <div class="bg-dark relative rounded-2xl overflow-hidden md:p-18 p-7.5">
-                <div class="flex justify-between mb-7.5 md:mb-12">
-                    <h2 class="mb-2 lg:text-4.5xl md:text-4xl text-3xl text-white">Client testimonials</h2>
-                    <div class="flex justify-center md:justify-end gap-4 relative mt-4">
-                        <a [routerLink]="[]" class="text-white hover:text-primary swiper-button-prev-testimonials" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-cad5a61010daf6b214"><lucide-icon name="arrow-left" class="size-6"></lucide-icon></a>
-                        <a [routerLink]="[]" class="text-white hover:text-primary swiper-button-next-testimonials" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-cad5a61010daf6b214"><lucide-icon name="arrow-right" class="size-6"></lucide-icon></a>
-                    </div>
-                </div>
-
-                <div class="swiper mt-2 mt-md-4" data-swiper-options='{
-                    "spaceBetween": 30,
-                    "autoplay":{
-                        "delay": 4000, 
-                        "disableOnInteraction": false,
-                        "pauseOnMouseEnter": true
-                    },
-                    "navigation":{
-                        "nextEl":".swiper-button-next-testimonials",
-                        "prevEl":".swiper-button-prev-testimonials"
-                    }}'>
-                    <div class="swiper-wrapper">
-                        <!-- Testimonial item -->
-                        <div class="swiper-slide">
-                            <div class="grid lg:grid-cols-4 grid-cols-1 lg:gap-7.5 items-center">
-                                <!-- Author info -->
-                                <div class="col-span-1 lg:text-center mb-4 lg:mb-0">
-                                    <!-- Avatar -->
-                                    <div class="md:size-32 size-20.5 lg:mx-auto shrink-0 mb-4">
-                                        <img class="rounded-full" src="assets/images/avatar/01.jpg" alt="avatar">
-                                    </div>
-                                    <h6 class="text-xl text-white">Jacqueline Miller</h6>
-                                    <p class="text-sm text-white/80">Product designer</p>
-                                </div>
-
-                                <!-- Testimonial content -->
-                                <blockquote class="md:col-span-3">
-                                    <!-- Rating star -->
-                                    <ul class="flex mb-2 gap-1.5">
-                                        <li><lucide-icon name="star" class="size-5 fill-warning text-warning"></lucide-icon></li>
-                                        <li><lucide-icon name="star" class="size-5 fill-warning text-warning"></lucide-icon></li>
-                                        <li><lucide-icon name="star" class="size-5 fill-warning text-warning"></lucide-icon></li>
-                                        <li><lucide-icon name="star" class="size-5 fill-warning text-warning"></lucide-icon></li>
-                                        <li><lucide-icon name="star-half" class="size-5 fill-warning text-warning"></lucide-icon></li>
-                                    </ul>
-                                    <p class="text-white font-medium md:text-2.5xl text-2xl">Our passion for customer excellence is just one reason why we are the market leader. We've always worked very hard to give our customers the best experience. Was out laughter raptures returned outweigh.</p>
-                                </blockquote>
-                            </div>
-                        </div>
-
-                        <!-- Testimonial item -->
-                        <div class="swiper-slide">
-                            <div class="grid lg:grid-cols-4 grid-cols-1 lg:gap-7.5 items-center">
-                                <!-- Author info -->
-                                <div class="col-span-1 lg:text-center mb-4 lg:mb-0">
-                                    <!-- Avatar -->
-                                    <div class="md:size-32 size-20.5 lg:mx-auto shrink-0 mb-4">
-                                        <img class="rounded-full" src="assets/images/avatar/02.jpg" alt="avatar">
-                                    </div>
-                                    <h6 class="text-xl text-white">Louis Ferguson</h6>
-                                    <p class="text-sm text-white/80">Web Developer</p>
-                                </div>
-
-                                <!-- Testimonial content -->
-                                <blockquote class="lg:col-span-3">
-                                    <!-- Rating star -->
-                                    <ul class="flex mb-2 gap-1.5">
-                                        <li><lucide-icon name="star" class="size-5 fill-warning text-warning"></lucide-icon></li>
-                                        <li><lucide-icon name="star" class="size-5 fill-warning text-warning"></lucide-icon></li>
-                                        <li><lucide-icon name="star" class="size-5 fill-warning text-warning"></lucide-icon></li>
-                                        <li><lucide-icon name="star" class="size-5 fill-warning text-warning"></lucide-icon></li>
-                                        <li><lucide-icon name="star-half" class="size-5 fill-warning text-warning"></lucide-icon></li>
-                                    </ul>
-                                    <p class="text-white font-medium md:text-2.5xl text-2xl">Their team went above and beyond to understand our needs and deliver a solution that exceeded our expectations. They demonstrated throughout the process was truly impressive.</p>
-                                </blockquote>
-                            </div>
-                        </div>
-
-                        <!-- Testimonial item -->
-                        <div class="swiper-slide">
-                            <div class="grid lg:grid-cols-4 grid-cols-1 lg:gap-7.5 items-center">
-                                <!-- Author info -->
-                                <div class="col-span-1 lg:text-center mb-4 lg:mb-0">
-                                    <!-- Avatar -->
-                                    <div class="md:size-32 size-20.5 lg:mx-auto shrink-0 mb-4">
-                                        <img class="rounded-full" src="assets/images/avatar/06.jpg" alt="avatar">
-                                    </div>
-                                    <h6 class="text-xl text-white">Samuel Bishop</h6>
-                                    <p class="text-sm text-white/80">UI/UX designer</p>
-                                </div>
-
-                                <!-- Testimonial content -->
-                                <blockquote class="lg:col-span-3">
-                                    <!-- Rating star -->
-                                    <ul class="flex mb-2 gap-1.5">
-                                        <li><lucide-icon name="star" class="size-5 fill-warning text-warning"></lucide-icon></li>
-                                        <li><lucide-icon name="star" class="size-5 fill-warning text-warning"></lucide-icon></li>
-                                        <li><lucide-icon name="star" class="size-5 fill-warning text-warning"></lucide-icon></li>
-                                        <li><lucide-icon name="star" class="size-5 fill-warning text-warning"></lucide-icon></li>
-                                        <li><lucide-icon name="star-half" class="size-5 fill-warning text-warning"></lucide-icon></li>
-                                    </ul>
-                                    <p class="text-white font-medium md:text-2.5xl text-2xl">Was out laughter raptures returned outweigh. Luckily cheered colonel I do we attack highest enabled. Tried law yet style child. The bore of true of no be deal.</p>
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <div class="container">
+    <div class="bg-dark relative rounded-2xl overflow-hidden md:p-18 p-7.5">
+      <div class="flex justify-between mb-7.5 md:mb-12">
+        <h2 class="mb-2 lg:text-4.5xl md:text-4xl text-3xl text-white">Client testimonials</h2>
+        <div class="flex justify-center md:justify-end gap-4 relative mt-4">
+          <a
+            [routerLink]="[]"
+            class="text-white hover:text-primary swiper-button-prev-testimonials"
+            tabindex="0"
+            role="button"
+            aria-label="Previous slide"
+            aria-controls="swiper-wrapper-cad5a61010daf6b214"
+            ><lucide-icon name="arrow-left" class="size-6"></lucide-icon
+          ></a>
+          <a
+            [routerLink]="[]"
+            class="text-white hover:text-primary swiper-button-next-testimonials"
+            tabindex="0"
+            role="button"
+            aria-label="Next slide"
+            aria-controls="swiper-wrapper-cad5a61010daf6b214"
+            ><lucide-icon name="arrow-right" class="size-6"></lucide-icon
+          ></a>
         </div>
-    </section>
+      </div>
+
+      <div class="swiper mt-2 mt-md-4">
+        <swiper-container
+          loop="true"
+          space-between="30"
+          autoplay="true"
+          autoplay-delay="4000"
+          autoplay-disable-on-interaction="false"
+          autoplay-pause-on-mouse-enter="true"
+          navigation="true"
+          navigation-next-el=".swiper-button-next-testimonials"
+          navigation-prev-el=".swiper-button-prev-testimonials"
+          class="swiper-wrapper"
+        >
+          @for (item of testimonialsData; track $index) {
+            <swiper-slide>
+              <div class="grid lg:grid-cols-4 grid-cols-1 lg:gap-7.5 items-center">
+                <!-- Author info -->
+                <div class="col-span-1 lg:text-center mb-4 lg:mb-0">
+                  <!-- Avatar -->
+                  <div class="md:size-32 size-20.5 lg:mx-auto shrink-0 mb-4">
+                    <img class="rounded-full" [src]="item.image" alt="avatar" />
+                  </div>
+
+                  <h6 class="text-xl text-white">{{ item.name }}</h6>
+                  <p class="text-sm text-white/80">{{ item.role }}</p>
+                </div>
+
+                <!-- Testimonial content -->
+                <blockquote class="md:col-span-3">
+                  <!-- Rating star -->
+                  <ul class="flex mb-2 gap-1.5">
+                    @for (star of [1, 2, 3, 4, 5]; track $index; let i = $index) {
+                      <li>
+                        <lucide-icon
+                          [name]="
+                            i + 1 <= Math.floor(item.rating)
+                              ? 'star'
+                              : i < item.rating
+                                ? 'star-half'
+                                : 'star'
+                          "
+                          class="size-5 fill-warning text-warning"
+                        >
+                        </lucide-icon>
+                      </li>
+                    }
+                  </ul>
+
+                  <p class="text-white font-medium md:text-2.5xl text-2xl">
+                    {{ item.content }}
+                  </p>
+                </blockquote>
+              </div>
+            </swiper-slide>
+          }
+        </swiper-container>
+      </div>
+    </div>
+  </div>
+</section>

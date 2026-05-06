@@ -10,6 +10,7 @@ import { Footer3 } from "@app/components/footer/footer3/footer3";
   templateUrl: './pricing1.html',
   styles: ``,
 })
+  
 export class Pricing1 {
 
 }
