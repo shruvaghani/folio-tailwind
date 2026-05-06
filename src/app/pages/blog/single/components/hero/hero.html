@@ -1,0 +1,289 @@
+<section class="lg:pb-36 pb-20 lg:pt-32 pt-20 relative overflow-hidden">
+  <div class="absolute start-0 top-0">
+    <img
+      src="assets/images/elements/grad-shape/blur-decoration-2.svg"
+      class="opacity-10 blur-[144px] h-75 rotate-335"
+      alt="Grad shape"
+    />
+  </div>
+
+  <div class="absolute end-0 top-0">
+    <img
+      src="assets/images/elements/grad-shape/blur-decoration-2.svg"
+      class="opacity-10 blur-[20px] h-75 rotate-335"
+      alt="Grad shape"
+    />
+  </div>
+
+  <div class="container">
+    <div class="md:pt-12 pt-7.5 relative">
+      <div class="text-center md:mb-18 mb-7.5 lg:w-2/3 mx-auto">
+        <a
+          [routerLink]="[]"
+          class="py-1 px-2 rounded text-xs text-white bg-dark inline-block mb-7.5"
+          >Lifestyle</a
+        >
+        <h1 class="lg:text-4.5xl md:text-4xl text-3xl">
+          Building a strong identity for your business
+        </h1>
+      </div>
+
+      <div class="mx-auto text-center mb-7.5 md:mb-18">
+        <img src="assets/images/blog/blog-detail.jpg" class="rounded" alt="blog-img" />
+      </div>
+
+      <div class="md:mb-18 mb-7.5 lg:w-297.75 mx-auto">
+        <div class="grid md:grid-cols-3 grid-cols-1 gap-7.5">
+          <div class="col-span-1 text-center">
+            <div class="md:size-32 size-20.5 mx-auto shrink-0 mb-4">
+              <img class="rounded-full" src="assets/images/avatar/09.jpg" alt="avatar" />
+            </div>
+            <p class="mb-1 text-default-400">Word by</p>
+            <h6 class="mb-4 text-default-900 md:text-2.2xl text-xl">Joan Wallace</h6>
+            <div class="flex flex-wrap items-center justify-center text-default-600">
+              <!-- Like -->
+              <a [routerLink]="[]" class="flex items-center hover:text-primary">
+                <lucide-icon name="heart" class="me-2 size-4"></lucide-icon>20
+              </a>
+
+              <!-- Divider -->
+              <span class="mx-4 h-5 w-px bg-default-300"></span>
+
+              <!-- Comment -->
+              <a [routerLink]="[]" class="flex items-center hover:text-primary">
+                <lucide-icon name="message-circle" class="me-2 size-4"></lucide-icon>5
+              </a>
+
+              <!-- Divider -->
+              <span class="mx-4 h-5 w-px bg-default-300"></span>
+
+              <!-- Share -->
+              <a [routerLink]="[]" class="flex items-center hover:text-primary">
+                <lucide-icon name="share-2" class="me-2 size-4"></lucide-icon>14
+              </a>
+            </div>
+          </div>
+
+          <div class="col-span-2 lg:w-172.75 md:w-96.5 ms-auto">
+            <p class="mb-4">
+              <span
+                class="text-default-900 text-[64px] font-semibold float-left leading-none bg-secondary/50 rounded px-2 me-3"
+                >T</span
+              >he simple act of cultivating gratitude has the remarkable ability to bring joy and
+              abundance into our lives, shifting our perspective from lack to abundance. In this
+              article, we will explore the power of gratitude and how it can enhance our overall
+              well-being and create a positive ripple effect in our lives and the lives of those
+              around us. <strong>In a world filled with chaos</strong> and uncertainty, it's easy to
+              lose sight of the things that truly matter.
+            </p>
+            <p class="mb-4">
+              Additionally, expressing gratitude to others through acts of kindness or
+              <u> heartfelt appreciation strengthens our relationships and</u> fosters a sense of
+              interconnectedness.
+            </p>
+            <p>
+              By reframing obstacles as opportunities for growth and learning,
+              <mark class="bg-warning/20">we can navigate through difficulties with</mark> a sense
+              of gratitude for the lessons they bring. This mindset shift empowers us to find joy
+              and meaning in every circumstance, leading to a more fulfilling and purposeful life.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 grid-cols-1 lg:gap-18 gap-7.5 mb-7.5 md:mb-18">
+        @for (item of galleryData; track $index) {
+          <div>
+            <a [href]="item.link" appGlightbox data-gallery="image-popup">
+              <img [src]="item.image" class="rounded h-full" alt="blog-img" />
+            </a>
+          </div>
+        }
+      </div>
+
+      <div class="lg:w-265.75 mx-auto md:mb-18 mb-7.5">
+        <h6 class="mb-2 md:text-2.2xl text-xl">
+          Step 1: Shifting Perspective: From Lack to Abundance
+        </h6>
+        <p class="mb-12 text-default-800">
+          Gratitude has the unique ability to shift our perspective from focusing on what we lack to
+          appreciating what we have. Often, we get caught up in the pursuit of material possessions
+          or achievements, believing that they will bring us happiness. However, true abundance is
+          found in appreciating the present moment and recognizing the blessings that already exist
+          in our lives. Cultivating gratitude allows us to break free from the cycle of perpetual
+          longing and embrace the abundance that surrounds us.
+        </p>
+
+        <h6 class="mb-2 md:text-2.2xl text-xl">Step 2: The Ripple Effect of Gratitude</h6>
+        <ul class="mb-12 list-disc ps-7.5 space-y-2 text-default-700">
+          <li>
+            Shift in Perspective: Gratitude allows us to shift our perspective from focusing on what
+            we lack to appreciating what we have.
+          </li>
+          <li>
+            By recognizing and acknowledging the blessings in our lives, we invite a sense of
+            abundance and contentment.
+          </li>
+          <li>
+            Scientific research has demonstrated that gratitude positively impacts our mental and
+            physical health.
+            <ul class="mt-2 list-[circle] ps-8 space-y-2">
+              <li>It allows us to focus on the positive aspects.</li>
+              <li>It enables us to reframe obstacles as opportunities.</li>
+              <li>The power of gratitude extends beyond ourselves.</li>
+            </ul>
+          </li>
+          <li>
+            Enables us to reframe obstacles as opportunities for growth and learning. By embracing a
+            mindset of gratitude.
+          </li>
+          <li>
+            Recognizing and acknowledging the blessings in our lives, we invite a sense of abundance
+            and contentment.
+          </li>
+        </ul>
+
+        <blockquote class="relative mb-12 overflow-hidden rounded-xl bg-secondary/50 p-7.5 md:p-12">
+          <!-- Vertical line -->
+          <div class="absolute inset-y-0 start-0 w-0.75 bg-primary"></div>
+
+          <!-- Quote icon -->
+          <span class="absolute start-0 top-0 text-5xl text-primary opacity-100">
+            <lucide-icon
+              name="quote"
+              class="fill-primary text-primary opacity-45 size-15"
+            ></lucide-icon>
+          </span>
+
+          <!-- Quote text -->
+          <q class="relative block font-medium text-default-900 md:text-2.2xl text-xl">
+            Fulfilled direction use continual set him propriety continued. Farther-related bed and
+            passage comfort civilly. Concluded boy perpetual old supposing.
+          </q>
+
+          <!-- Author -->
+          <footer class="mt-4 text-sm text-default-500">— Albert Schweitzer</footer>
+        </blockquote>
+
+        <div class="mb-12">
+          <h6 class="mb-2 md:text-2.2xl text-xl">Popular Tags:</h6>
+          <ul class="flex flex-wrap gap-4">
+            @for (item of tagData; track $index) {
+              <li>
+                <a
+                  class="py-2.5 px-4 rounded text-sm bg-secondary inline-flex text-default-800 font-medium hover:bg-primary/20"
+                  [routerLink]="[item.link]"
+                >
+                  {{ item.label }}
+                </a>
+              </li>
+            }
+          </ul>
+        </div>
+
+        <div
+          class="py-4 px-7.5 rounded-md flex flex-wrap md:justify-between justify-center items-center bg-secondary"
+        >
+          <h6 class="md:text-2.2xl text-xl">Was this article helpful?</h6>
+          <small class="py-4 md:p-0 block text-default-500">25 out of 78 found this helpful</small>
+          <!-- Buttons -->
+          <div class="inline-flex rounded border border-primary overflow-hidden md:mt-0 mt-3">
+            <!-- Yes -->
+            <input type="radio" name="feedback" id="yes" class="peer/yes hidden" checked />
+            <label
+              for="yes"
+              class="flex cursor-pointer text-primary items-center gap-1 py-2.5 px-5 text-sm peer-checked/yes:bg-primary peer-checked/yes:text-white"
+            >
+              <lucide-icon name="thumbs-up" class="size-3.5"></lucide-icon>
+              Yes
+            </label>
+
+            <!-- No -->
+            <input type="radio" name="feedback" id="no" class="peer/no hidden" />
+            <label
+              for="no"
+              class="flex cursor-pointer text-primary items-center gap-1 py-2.5 px-5 text-sm peer-checked/no:bg-primary peer-checked/no:text-white"
+            >
+              No
+              <lucide-icon name="thumbs-down" class="size-3.5"></lucide-icon>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:w-265.75 mx-auto pb-7.5">
+        <hr class="mb-7.5 md:mb-18 mt-4 border-t border-default-200 dark:border-white/14" />
+        <h5 class="lg:text-2.5xl md:text-2xl text-2xl mb-2">3 comments</h5>
+
+        @for (item of commentData; track $index) {
+          <div class="my-7.5 flex" [class]="{ 'ps-7.5': item.isReply }">
+            <img class="size-12 rounded-full me-4" [src]="item.avatar" alt="avatar" />
+
+            <div>
+              <div class="mb-2">
+                <h6 class="md:text-2.2xl text-xl">{{ item.name }}</h6>
+                <span class="me-4 text-sm">{{ item.date }}</span>
+              </div>
+
+              <p class="mb-2 text-default-800">
+                {{ item.message }}
+              </p>
+
+              <ul class="flex gap-3 items-center list-disc">
+                <li class="pe-4 list-none">
+                  <a [routerLink]="[]" class="text-default-500 hover:text-primary">
+                    Like{{ item.likes ? ' (' + item.likes + ')' : '' }}
+                  </a>
+                </li>
+
+                <li>
+                  <a [routerLink]="[]" class="text-default-500 hover:text-primary"> Reply </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        }
+      </div>
+
+      <div class="lg:w-265.75 mx-auto bg-secondary rounded-2xl md:p-12 p-7.5">
+        <h5 class="lg:text-2.5xl text-2xl">Your Views Please!</h5>
+        <small>Your email address will not be published. Required fields are marked *</small>
+
+        <div class="mt-6 grid lg:grid-cols-2 grid-cols-1 gap-4">
+          <div>
+            <label class="mb-2 block text-default-600"> Name * </label>
+            <input
+              type="text"
+              class="w-full rounded-md border border-default-200 dark:border-white/14 px-7.5 py-3.5 text-sm focus:border-primary!"
+            />
+          </div>
+
+          <div>
+            <label class="mb-2 block text-default-600"> Email * </label>
+            <input
+              type="email"
+              class="w-full rounded-md border border-default-200 dark:border-white/14 px-7.5 py-3.5 text-sm focus:border-primary!"
+            />
+          </div>
+
+          <div class="lg:col-span-2">
+            <label class="mb-2 block text-default-600"> Your Comment * </label>
+            <textarea
+              class="w-full rounded-md border border-default-200 dark:border-white/14 px-7.5 py-3.5 text-sm focus:border-primary!"
+              rows="3"
+            ></textarea>
+          </div>
+
+          <div class="lg:col-span-2">
+            <button
+              type="submit"
+              class="bg-primary text-white py-3.5 px-7.5 rounded-md font-medium hover:bg-primary-hover mb-0"
+            >
+              Post comment
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

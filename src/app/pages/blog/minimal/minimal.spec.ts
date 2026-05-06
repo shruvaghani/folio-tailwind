@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { Minimal } from './minimal';
 
 describe('Minimal', () => {

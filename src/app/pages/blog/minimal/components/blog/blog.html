@@ -1,0 +1,229 @@
+<section class="lg:pb-36 pb-20 bg-secondary">
+  <div class="container">
+    <div class="lg:w-225 mx-auto">
+      <div class="grid md:grid-cols-2 grid-cols-1 lg:gap-18 gap-7.5">
+        @for (item of blogData; track $index) {
+          <div class="group relative bg-transparent overflow-hidden h-full">
+            <!-- Badge -->
+            <div class="flex gap-2 absolute top-0 start-0 z-20 m-7.5">
+              <span class="py-1 px-2 text-xs rounded bg-dark text-white">{{ item.category }}</span>
+              <span class="py-1 px-2 text-xs rounded bg-white text-dark">{{ item.date }}</span>
+            </div>
+
+            <!-- Card image -->
+            <div class="overflow-hidden rounded-2xl">
+              <img
+                [src]="item.image"
+                class="rounded-2xl group-hover:scale-104 transition-all duration-300"
+                alt="Blog-img"
+              />
+            </div>
+
+            <!-- Card Body -->
+            <div class="py-5 px-2">
+              <!-- Title -->
+              <h6 class="md:text-2.2xl text-xl mb-2">
+                <a [routerLink]="[]">{{ item.title }}</a>
+              </h6>
+
+              <a [routerLink]="item.link" class="group flex items-center gap-1.5">
+                <span class="text-primary-grad">Read more</span>
+                <lucide-icon
+                  name="arrow-right"
+                  class="group-hover:translate-x-0.5 size-4 text-primary transition-all duration-300"
+                ></lucide-icon>
+              </a>
+            </div>
+          </div>
+        }
+
+        <div class="lg:col-span-2">
+          <div class="group relative bg-transparent overflow-hidden h-full">
+            <!-- Card image -->
+            <div class="overflow-hidden rounded-2xl">
+              <div class="relative w-full pt-[56.25%]">
+                <iframe
+                  src="https://www.youtube.com/embed/9No-FiEInLA"
+                  allow="autoplay; encrypted-media"
+                  allowfullscreen
+                  class="absolute inset-0 h-full w-full"
+                ></iframe>
+              </div>
+            </div>
+
+            <!-- Card Body -->
+            <div class="py-5 px-2">
+              <!-- Badge -->
+              <div class="flex gap-2 mb-2">
+                <span class="py-1 px-2 text-xs rounded bg-dark text-white">Technology</span>
+                <span class="py-1 px-2 text-xs rounded bg-white text-dark">June 28, 2024</span>
+              </div>
+              <!-- Title -->
+              <h6 class="md:text-2.2xl text-xl mb-2">
+                <a [routerLink]="[]">10 things you need to know about Folio</a>
+              </h6>
+
+              <a routerLink="/blog/single" class="group flex items-center gap-1.5">
+                <span class="text-primary-grad">Read more</span>
+                <lucide-icon
+                  name="arrow-right"
+                  class="group-hover:translate-x-0.5 size-4 text-primary transition-all duration-300"
+                ></lucide-icon>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        @for (item of blog2Data; track $index) {
+          <div class="group relative bg-transparent overflow-hidden h-full">
+            <!-- Badge -->
+            <div class="flex gap-2 absolute top-0 start-0 z-20 m-7.5">
+              <span class="py-1 px-2 text-xs rounded bg-dark text-white">{{ item.category }}</span>
+              <span class="py-1 px-2 text-xs rounded bg-white text-dark">{{ item.date }}</span>
+            </div>
+
+            <!-- Card image -->
+            <div class="overflow-hidden rounded-2xl">
+              <img
+                [src]="item.image"
+                class="rounded-2xl group-hover:scale-104 transition-all duration-300"
+                alt="Blog-img"
+              />
+            </div>
+
+            <!-- Card Body -->
+            <div class="py-5 px-2">
+              <!-- Title -->
+              <h6 class="md:text-2.2xl text-xl mb-2">
+                <a [routerLink]="[]">{{ item.title }}</a>
+              </h6>
+
+              <a [routerLink]="item.link" class="group flex items-center gap-1.5">
+                <span class="text-primary-grad">Read more</span>
+                <lucide-icon
+                  name="arrow-right"
+                  class="group-hover:translate-x-0.5 size-4 text-primary transition-all duration-300"
+                ></lucide-icon>
+              </a>
+            </div>
+          </div>
+        }
+      </div>
+
+      <div class="lg:mt-18 mt-7.5">
+        <nav aria-label="Page navigation">
+          <ul class="flex items-center justify-center gap-1">
+            <!-- Prev -->
+            <li>
+              <span
+                class="flex size-10 items-center justify-center rounded-md hover:bg-linear-to-b from-[#543DE7] to-[#7F39F8] hover:text-white transition-all duration-300"
+                aria-disabled="true"
+              >
+                <lucide-icon name="chevron-left" class="size-5"></lucide-icon>
+              </span>
+            </li>
+
+            <!-- Active -->
+            <li>
+              <span
+                class="flex size-10 items-center justify-center rounded-md bg-linear-to-b from-[#543DE7] to-[#7F39F8] text-white transition-all duration-300"
+                aria-current="page"
+              >
+                1
+                <span class="sr-only">(current)</span>
+              </span>
+            </li>
+
+            <!-- Pages -->
+            <li>
+              <a
+                [routerLink]="[]"
+                class="flex size-10 items-center justify-center rounded-md hover:bg-linear-to-b from-[#543DE7] to-[#7F39F8] hover:text-white transition-all duration-300"
+              >
+                2
+              </a>
+            </li>
+
+            <li>
+              <a
+                [routerLink]="[]"
+                class="flex size-10 items-center justify-center rounded-md hover:bg-linear-to-b from-[#543DE7] to-[#7F39F8] hover:text-white transition-all duration-300"
+              >
+                3
+              </a>
+            </li>
+
+            <li>
+              <a
+                [routerLink]="[]"
+                class="flex size-10 items-center justify-center rounded-md hover:bg-linear-to-b from-[#543DE7] to-[#7F39F8] hover:text-white transition-all duration-300"
+              >
+                4
+              </a>
+            </li>
+
+            <!-- Next -->
+            <li>
+              <a
+                [routerLink]="[]"
+                aria-label="Next page"
+                class="flex size-10 items-center justify-center rounded-md hover:bg-linear-to-b from-[#543DE7] to-[#7F39F8] hover:text-white transition-all duration-300"
+              >
+                <lucide-icon name="chevron-right" class="size-5"></lucide-icon>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="lg:mt-18 mt-7.5">
+        <div class="bg-body-bg relative rounded-2xl overflow-hidden md:p-18 p-7.5">
+          <div class="absolute end-0 top-0 rotate-343 -mt-12 -me-32">
+            <img
+              src="assets/images/elements/grad-shape/05.png"
+              class="h-50 md:h-75"
+              alt="bg pattern"
+            />
+          </div>
+
+          <div class="absolute start-0 top-0 rotate-343 -mt-12 -ms-18">
+            <img
+              src="assets/images/elements/grad-shape/11.png"
+              class="h-50 blur-xs"
+              alt="bg pattern"
+            />
+          </div>
+
+          <div class="relative z-50">
+            <h3 class="font-bold mb-7.5 text-center lg:text-4xl md:text-3.5xl text-2.5xl">
+              Subscribe to new<span class="text-primary-grad"> updates</span>
+            </h3>
+
+            <form class="flex flex-wrap items-center gap-2 md:w-139 mx-auto justify-center">
+              <div class="w-auto lg:w-2/3">
+                <input
+                  type="email"
+                  placeholder="Enter your email address"
+                  class="w-full px-8.75 py-4.75 text-base rounded-md bg-secondary! focus:outline-none border-0"
+                />
+              </div>
+
+              <div class="w-auto lg:w-1/4">
+                <button
+                  type="submit"
+                  class="px-8.75 py-4.75 text-base font-semibold text-white bg-dark rounded-lg"
+                >
+                  Subscribe!
+                </button>
+              </div>
+
+              <p class="w-full mt-2 text-sm text-default-800 text-center">
+                ✌️ No Spam — We Promise!
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,60 @@
+<section class="lg:py-36 py-20 bg-secondary overflow-hidden">
+  <div class="container">
+    <h3 class="mb-12 lg:text-4.5xl md:text-4xl text-3xl text-center">Related blogs</h3>
+    <div class="swiper">
+      <swiper-container
+        space-between="50"
+        loop="true"
+        autoplay="false"
+        pagination="true"
+        pagination-el=".swiper-pagination"
+        breakpoints='{
+        "576": { "slidesPerView": 1 },
+        "768": { "slidesPerView": 2 },
+        "992": { "slidesPerView": 3 }
+        }'
+        class="swiper-wrapper"
+      >
+        @for (item of blogSliderData; track $index) {
+          <swiper-slide>
+            <article class="group relative bg-transparent overflow-hidden h-full">
+              <!-- Badge -->
+              <div class="flex gap-2 absolute top-0 start-0 z-20 m-7.5">
+                <span class="py-1 px-2 text-xs rounded bg-dark text-white">{{
+                  item.category
+                }}</span>
+                <span class="py-1 px-2 text-xs rounded bg-white text-dark">{{ item.date }}</span>
+              </div>
+
+              <!-- Card image -->
+              <div class="overflow-hidden rounded-2xl">
+                <img
+                  [src]="item.image"
+                  class="rounded-2xl group-hover:scale-104 transition-all duration-300"
+                  alt="Blog-img"
+                />
+              </div>
+
+              <!-- Card Body -->
+              <div class="py-5 px-2">
+                <!-- Title -->
+                <h6 class="md:text-2.2xl text-xl mb-2">
+                  <a [routerLink]="[]">{{ item.title }}</a>
+                </h6>
+
+                <a [routerLink]="item.link" class="group flex items-center gap-1.5">
+                  <span class="text-primary-grad">Read more</span>
+                  <lucide-icon
+                    name="arrow-right"
+                    class="group-hover:translate-x-0.5 size-4 text-primary transition-all duration-300"
+                  ></lucide-icon>
+                </a>
+              </div>
+            </article>
+          </swiper-slide>
+        }
+      </swiper-container>
+      <div class="swiper-pagination swiper-pagination-primary swiper-pagination-horizontal relative mt-4"></div>
+    </div>
+  </div>
+</section>
