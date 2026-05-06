@@ -193,7 +193,7 @@
             @for (item of statsData; track $index) {
               <div>
                 <h2 class="lg:text-4.5xl md:text-4xl text-3xl">
-                  {{ item.value 
+                  {{item.prefix || ''}}{{ item.value 
                 }}<span class="text-primary">{{ item.suffix || '' }}</span>
                 </h2>
 

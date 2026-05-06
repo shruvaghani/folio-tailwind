@@ -32,6 +32,7 @@ export const featureListData: string[] = [
 
 export type StatsType = {
   value: string;
+  prefix?: string;
   suffix: string;
   description: string;
 };
@@ -48,7 +49,8 @@ export const statsData: StatsType[] = [
     description: 'View this project got across our social media network',
   },
   {
-    value: '$12.8',
+    value: '12.8',
+    prefix: '$',
     suffix: 'M',
     description: 'Total raised in funding so far',
   },
