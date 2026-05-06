@@ -3,9 +3,9 @@ const portfolio06 = 'assets/images/portfolio/3by4/06.jpg';
 const portfolio01 = 'assets/images/portfolio/3by4/01.jpg';
 const portfolio04 = 'assets/images/portfolio/04.jpg';
 
-const img1 = 'assets/images/portfolio/4by4/01.jpg';
-const img2 = 'assets/images/portfolio/4by4/02.jpg';
-const img3 = 'assets/images/portfolio/4by4/05.jpg';
+const portfolio401 = 'assets/images/portfolio/4by4/01.jpg';
+const portfolio402 = 'assets/images/portfolio/4by4/02.jpg';
+const portfolio405 = 'assets/images/portfolio/4by4/05.jpg';
 
 export type ProjectInfoType = {
   label: string;
@@ -72,19 +72,19 @@ export type PortfolioSlideType = {
 
 export const portfolioSlidesData: PortfolioSlideType[] = [
   {
-    image: img1,
+    image: portfolio401,
     title: 'Mobile app development',
     category: 'UI/UX design',
     link: '/portfolio/case-studies'
   },
   {
-    image: img2,
+    image: portfolio402,
     title: 'Digital marketing overhaul',
     category: 'Marketing',
     link: '/portfolio/case-studies'
   },
   {
-    image: img3,
+    image: portfolio405,
     title: 'TechWave',
     category: 'Animation',
     link: '/portfolio/case-studies'

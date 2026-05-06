@@ -12,6 +12,7 @@ register();
   styles: ``,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
+
 export class ReletedWork {
   portfolioSlidesData = portfolioSlidesData;
 }
