@@ -36,58 +36,77 @@
         />
       </div>
 
-      <div class="container relative">
-        <h2 class="text-center mb-7.5 md:mb-18 lg:text-4.5xl md|:text-4xl text-3xl text-white">
-          Meet our creative team
-        </h2>
-        <div class="grid lg:grid-cols-5 md:grid-cols-3 items-center gap-7.5">
-          @for (member of teamMembersData; track member.name; let i = $index) {
-            <div class="text-center">
-              <div class="md:size-32 size-20.5 mx-auto shrink-0 mb-4">
-                <img class="rounded-full" [src]="member.image" alt="avatar" />
-              </div>
+     <div class="container relative">
+                    <h2 class="text-center mb-7.5 md:mb-18 lg:text-4.5xl md|:text-4xl text-3xl text-white">Meet our creative team</h2>
+                    <div class="grid lg:grid-cols-5 md:grid-cols-3 items-center gap-7.5">
+                        <div class="text-center">
+                            <div class="md:size-32 size-20.5 mx-auto shrink-0 mb-4">
+                                <img class="rounded-full" src="assets/images/team/01.jpg" alt="avatar">
+                            </div>
+                            <h6 class="mb-1 md:text-2.2xl text-xl text-white hover:text-primary"><a [routerLink]="[]">Emma Watson</a></h6>
+                            <small class="text-sm text-white/80">Co-Founder / CEO</small>
+                            <div class="mt-4 flex justify-center gap-3">
+                                <a class="text-white" [routerLink]="[]"><lucide-icon name="facebook" class="fill-white size-4"></lucide-icon></a>
+                                <a class="text-white" [routerLink]="[]"><iconify-icon icon="tabler:brand-x" class="size-4"></iconify-icon></a>
+                                <a class="text-white" [routerLink]="[]"><lucide-icon name="instagram" class="size-4"></lucide-icon></a>
+                            </div>
+                        </div>
 
-              <h6 class="mb-1 md:text-2.2xl text-xl text-white hover:text-primary">
-                <a [routerLink]="[]">{{ member.name }}</a>
-              </h6>
+                        <div class="text-center">
+                            <div class="md:size-32 size-20.5 mx-auto shrink-0 mb-4">
+                                <img class="rounded-full" src="assets/images/team/02.jpg" alt="avatar">
+                            </div>
+                            <h6 class="mb-1 md:text-2.2xl text-xl text-white hover:text-primary"><a [routerLink]="[]">Allen Smith</a></h6>
+                            <small class="text-sm text-white/80">Finance</small>
+                            <div class="mt-4 flex justify-center gap-3">
+                                <a class="text-white" [routerLink]="[]"><lucide-icon name="facebook" class="fill-white size-4"></lucide-icon></a>
+                                <a class="text-white" [routerLink]="[]"><iconify-icon icon="tabler:brand-x" class="size-4"></iconify-icon></a>
+                                <a class="text-white" [routerLink]="[]"><lucide-icon name="instagram" class="size-4"></lucide-icon></a>
+                            </div>
+                        </div>
 
-              <small class="text-sm text-white/80">
-                {{ member.role }}
-              </small>
+                        <div class="text-center">
+                            <div class="md:size-32 size-20.5 mx-auto shrink-0 mb-4">
+                                <img class="rounded-full" src="assets/images/team/04.jpg" alt="avatar">
+                            </div>
+                            <h6 class="mb-1 md:text-2.2xl text-xl text-white hover:text-primary"><a [routerLink]="[]">Louis Ferguson</a></h6>
+                            <small class="text-sm text-white/80">Recruiting</small>
+                            <div class="mt-4 flex justify-center gap-3">
+                                <a class="text-white" [routerLink]="[]"><lucide-icon name="facebook" class="fill-white size-4"></lucide-icon></a>
+                                <a class="text-white" [routerLink]="[]"><iconify-icon icon="tabler:brand-x" class="size-4"></iconify-icon></a>
+                            </div>
+                        </div>
 
-              <div class="mt-4 flex justify-center gap-3">
-                @for (social of member.socials; track social.icon) {
-                  <a class="text-white" [routerLink]="[]">
-                    
-                    @if (social.type === 'lucide') {
-                      <lucide-icon [name]="social.icon" class="size-4" [ngClass]="social.class">
-                      </lucide-icon>
-                    }
+                        <div class="text-center">
+                            <div class="md:size-32 size-20.5 mx-auto shrink-0 mb-4">
+                                <img class="rounded-full" src="assets/images/team/03.jpg" alt="avatar">
+                            </div>
+                            <h6 class="mb-1 md:text-2.2xl text-xl text-white hover:text-primary"><a [routerLink]="[]">Frances Guerrero</a></h6>
+                            <small class="text-sm text-white/80">Product Manager</small>
+                            <div class="mt-4 flex justify-center gap-3">
+                                <a class="text-white" [routerLink]="[]"><lucide-icon name="facebook" class="fill-white size-4"></lucide-icon></a>
+                                <a class="text-white" [routerLink]="[]"><lucide-icon name="instagram" class="size-4"></lucide-icon></a>
+                            </div>
+                        </div>
 
-                    @if (social.type === 'iconify') {
-                      <iconify-icon [icon]="social.icon" class="size-4"> </iconify-icon>
-                    }
-                  </a>
-                }
-              </div>
-            </div>
-          }
-        </div>
+                        <div class="text-center">
+                            <div class="md:size-32 size-20.5 mx-auto shrink-0 mb-4">
+                                <img class="rounded-full" src="assets/images/team/05.jpg" alt="avatar">
+                            </div>
+                            <h6 class="mb-1 md:text-2.2xl text-xl text-white hover:text-primary"><a [routerLink]="[]">Amanda Reed</a></h6>
+                            <small class="text-sm text-white/80">Solution Engineer</small>
+                            <div class="mt-4 flex justify-center gap-3">
+                                <a class="text-white" [routerLink]="[]"><iconify-icon icon="tabler:brand-x" class="size-4"></iconify-icon></a>
+                                <a class="text-white" [routerLink]="[]"><lucide-icon name="instagram" class="size-4"></lucide-icon></a>
+                            </div>
+                        </div>
+                    </div>
 
-        <div class="text-center inline-flex flex-col items-center gap-2 w-full mt-12">
-          <a
-            routerLink="/contact/v1"
-            class="py-3.5 px-7.5 text-white rounded-md font-medium bg-primary-grad"
-            >Connect with our team</a
-          >
-          <a class="text-white inline-flex items-center gap-1.5 group" routerLink="/career"
-            >Explore career options<lucide-icon
-              name="arrow-right"
-              class="size-4 group-hover:translate-x-1 transition-all duration-300"
-            ></lucide-icon>
-          </a>
-        </div>
-      </div>
+                    <div class="text-center inline-flex flex-col items-center gap-2 w-full mt-12">
+                        <a routerLink="/contact/v1" class="py-3.5 px-7.5 text-white rounded-md font-medium bg-primary-grad">Connect with our team</a>
+                        <a class="text-white inline-flex items-center gap-1.5 group" routerLink="/career">Explore career options<lucide-icon name="arrow-right" class="size-4 group-hover:translate-x-1 transition-all duration-300"></lucide-icon> </a>
+                    </div>
+                </div>
     </div>
   </div>
 </section>

@@ -207,6 +207,6 @@ export const testimonialsData: TestimonialType[] = [
     role: 'UI/UX designer',
     image: avatar6,
     rating: 4.5,
-    text: `Was out laughter raptures returned outweigh. Luckily cheered colonel I do we attack highest enabled. Tried law yet style child.`,
+    text: `Was out laughter raptures returned outweigh. Luckily cheered colonel I do we attack highest enabled. Tried law yet style child. The bore of true of no be deal.`,
   },
 ];

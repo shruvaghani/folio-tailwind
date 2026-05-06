@@ -1,7 +1,6 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { LucideAngularModule } from "lucide-angular";
-import { teamMembersData } from '../../data';
 
 @Component({
   selector: 'about1-testimonial',
@@ -12,5 +11,5 @@ import { teamMembersData } from '../../data';
 })
   
 export class Testimonial {
-  teamMembersData = teamMembersData;
+
 }

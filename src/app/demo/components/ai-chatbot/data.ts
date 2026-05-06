@@ -109,7 +109,7 @@ export const featureListData: FeatureListType[] = [
 ];
 
 export type StatsType = {
-  value: string;
+  value: number;
   suffix: string;
   suffixClass: string;
   label: string;
@@ -117,19 +117,19 @@ export type StatsType = {
 
 export const statsData: StatsType[] = [
   {
-    value: '5',
+    value: 5,
     suffix: 'x',
     suffixClass: 'text-primary',
     label: 'Boost content production',
   },
   {
-    value: '85',
+    value: 85,
     suffix: '%',
     suffixClass: 'text-purple',
     label: 'Save time on prospecting efforts',
   },
   {
-    value: '68',
+    value: 68,
     suffix: '%',
     suffixClass: 'text-pink',
     label: 'Reduce editing time',

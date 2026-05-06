@@ -25,10 +25,7 @@
           @for (item of statsData; track item.label) {
             <div>
               <h2 class="lg:text-4.5xl md:text-4xl text-3xl">
-                {{ item.value }}
-                <span [ngClass]="item.suffixClass">
-                  {{ item.suffix }}
-                </span>
+                {{ item.value }}<span [ngClass]="item.suffixClass">{{ item.suffix || '' }}</span>
               </h2>
 
               <p class="text-default-700">

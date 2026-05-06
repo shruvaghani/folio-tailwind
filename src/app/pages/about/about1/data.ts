@@ -24,67 +24,6 @@ export const countersData: CounterType[] = [
   },
 ];
 
-export type TeamMemberType = {
-  name: string;
-  role: string;
-  image: string;
-  socials: {
-    type: 'lucide' | 'iconify';
-    icon: string;
-    class?: string;
-  }[];
-};
-
-export const teamMembersData: TeamMemberType[] = [
-  {
-    name: 'Emma Watson',
-    role: 'Co-Founder / CEO',
-    image: 'assets/images/team/01.jpg',
-    socials: [
-      { type: 'lucide', icon: 'facebook', class: 'fill-white' },
-      { type: 'iconify', icon: 'tabler:brand-x' },
-      { type: 'lucide', icon: 'instagram' },
-    ],
-  },
-  {
-    name: 'Allen Smith',
-    role: 'Finance',
-    image: 'assets/images/team/02.jpg',
-    socials: [
-      { type: 'lucide', icon: 'facebook', class: 'fill-white' },
-      { type: 'iconify', icon: 'tabler:brand-x' },
-      { type: 'lucide', icon: 'instagram' },
-    ],
-  },
-  {
-    name: 'Louis Ferguson',
-    role: 'Recruiting',
-    image: 'assets/images/team/04.jpg',
-    socials: [
-      { type: 'lucide', icon: 'facebook', class: 'fill-white' },
-      { type: 'iconify', icon: 'tabler:brand-x' },
-    ],
-  },
-  {
-    name: 'Frances Guerrero',
-    role: 'Product Manager',
-    image: 'assets/images/team/03.jpg',
-    socials: [
-      { type: 'lucide', icon: 'facebook', class: 'fill-white' },
-      { type: 'lucide', icon: 'instagram' },
-    ],
-  },
-  {
-    name: 'Amanda Reed',
-    role: 'Solution Engineer',
-    image: 'assets/images/team/05.jpg',
-    socials: [
-      { type: 'iconify', icon: 'tabler:brand-x' },
-      { type: 'lucide', icon: 'instagram' },
-    ],
-  },
-];
-
 export type ClientLogoType = {
   image: string;
   alt?: string;

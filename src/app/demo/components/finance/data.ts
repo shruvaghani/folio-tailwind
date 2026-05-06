@@ -77,40 +77,6 @@ export const serviceLinksData: ServiceColumnType[] = [
   },
 ];
 
-export type ValueCardType = {
-  icon: string;
-  iconColor: string;
-  title: string;
-  description: string;
-};
-
-export const valuesData: ValueCardType[] = [
-  {
-    icon: 'rocket',
-    iconColor: 'text-success fill-success',
-    title: 'Integrity',
-    description: 'We uphold the highest standards of integrity in all our actions.',
-  },
-  {
-    icon: 'user',
-    iconColor: 'text-pink fill-pink',
-    title: 'Client approach',
-    description: 'Your needs and goals are at the heart of everything we do.',
-  },
-  {
-    icon: 'award',
-    iconColor: 'text-info fill-info',
-    title: 'Excellence',
-    description: 'Our experts are dedicated to delivering the highest quality services.',
-  },
-  {
-    icon: 'flame',
-    iconColor: 'text-primary fill-primary',
-    title: 'Innovation',
-    description: 'Embracing innovation to lead in the dynamic financial landscape.',
-  },
-];
-
 export type FinanceServiceType = {
   image: string;
   title: string;

@@ -1,29 +1,44 @@
 <section class="lg:pb-36 pb-20">
-  <div class="container">
-    <h2 class="text-center mb-7.5 lg:mb-12 lg:text-4.5xl md:text-4xl text-3xl">
-      Principles for your finance
-    </h2>
+        <div class="container">
+            <h2 class="text-center mb-7.5 lg:mb-12 lg:text-4.5xl md:text-4xl text-3xl">Principles for your finance</h2>
 
-    <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-12 gap-7.5">
-      @for (item of valuesData; track item.title) {
-        <div
-          class="p-7.5 rounded-2xl bg-[linear-gradient(90deg,rgba(240,150,255,0.15)_0%,rgba(191,200,252,0.15)_51%,rgba(187,148,255,0.15)_100%)]"
-        >
-          <div
-            class="mb-7.5 flex justify-center items-center size-14 bg-body-bg rounded-full shadow-[0_0.18rem_0.25rem_rgba(127,57,248,0.2)]"
-          >
-            <lucide-icon [name]="item.icon" class="size-5" [ngClass]="item.iconColor"></lucide-icon>
-          </div>
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-12 gap-7.5">
 
-          <h6 class="mb-2 md:text-2.2xl text-xl">
-            {{ item.title }}
-          </h6>
+                <!-- Integrity -->
+                <div class="p-7.5 rounded-2xl bg-[linear-gradient(90deg,rgba(240,150,255,0.15)_0%,rgba(191,200,252,0.15)_51%,rgba(187,148,255,0.15)_100%)]">
+                    <div class="mb-7.5 flex justify-center items-center size-14 bg-body-bg rounded-full shadow-[0_0.18rem_0.25rem_rgba(127,57,248,0.2)]">
+                        <lucide-icon name="rocket" class="fill-success size-5 text-success"></lucide-icon>
+                    </div>
+                    <h6 class="mb-2 md:text-2.2xl text-xl">Integrity</h6>
+                    <p class="text-default-800">We uphold the highest standards of integrity in all our actions.</p>
+                </div>
 
-          <p class="text-default-800">
-            {{ item.description }}
-          </p>
+                <!-- Client approach -->
+                <div class="p-7.5 rounded-2xl bg-[linear-gradient(90deg,rgba(240,150,255,0.15)_0%,rgba(191,200,252,0.15)_51%,rgba(187,148,255,0.15)_100%)]">
+                    <div class="mb-7.5 flex justify-center items-center size-14 bg-body-bg rounded-full shadow-[0_0.18rem_0.25rem_rgba(127,57,248,0.2)]">
+                        <lucide-icon name="user" class="fill-pink size-5 text-pink"></lucide-icon>
+                    </div>
+                    <h6 class="mb-2 md:text-2.2xl text-xl">Client approach</h6>
+                    <p class="text-default-800">Your needs and goals are at the heart of everything we do.</p>
+                </div>
+
+                <!-- Excellence -->
+                <div class="p-7.5 rounded-2xl bg-[linear-gradient(90deg,rgba(240,150,255,0.15)_0%,rgba(191,200,252,0.15)_51%,rgba(187,148,255,0.15)_100%)]">
+                    <div class="mb-7.5 flex justify-center items-center size-14 bg-body-bg rounded-full shadow-[0_0.18rem_0.25rem_rgba(127,57,248,0.2)]">
+                        <lucide-icon name="award" class="fill-info size-5 text-info"></lucide-icon>
+                    </div>
+                    <h6 class="mb-2 md:text-2.2xl text-xl">Excellence</h6>
+                    <p class="text-default-800">Our experts are dedicated to delivering the highest quality services.</p>
+                </div>
+
+                <!-- Innovation -->
+                <div class="p-7.5 rounded-2xl bg-[linear-gradient(90deg,rgba(240,150,255,0.15)_0%,rgba(191,200,252,0.15)_51%,rgba(187,148,255,0.15)_100%)]">
+                    <div class="mb-7.5 flex justify-center items-center size-14 bg-body-bg rounded-full shadow-[0_0.18rem_0.25rem_rgba(127,57,248,0.2)]">
+                        <lucide-icon name="flame" class="fill-primary size-5 text-primary"></lucide-icon>
+                    </div>
+                    <h6 class="mb-2 md:text-2.2xl text-xl">Innovation</h6>
+                    <p class="text-default-800">Embracing innovation to lead in the dynamic financial landscape.</p>
+                </div>
+            </div>
         </div>
-      }
-    </div>
-  </div>
-</section>
+    </section>
