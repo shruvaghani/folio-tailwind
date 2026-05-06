@@ -3,10 +3,11 @@ import { Navbar } from "../navbar/navbar";
 import { ThemeDropdown } from "../theme-dropdown/theme-dropdown";
 import { LucideAngularModule } from "lucide-angular";
 import { MobileMenu } from "../mobile-menu/mobile-menu";
+import { ScheduleModal } from './components/schedule-modal/schedule-modal';
 
 @Component({
   selector: 'app-navbar4',
-  imports: [Navbar, ThemeDropdown, LucideAngularModule, MobileMenu],
+  imports: [Navbar, ThemeDropdown, LucideAngularModule, MobileMenu, ScheduleModal],
   templateUrl: './navbar4.html',
   styles: ``,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
