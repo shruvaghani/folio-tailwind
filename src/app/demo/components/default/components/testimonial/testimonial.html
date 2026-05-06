@@ -31,12 +31,11 @@
         <!-- Slider START -->
         <div class="swiper mt-2 md:mt-7.5">
           <swiper-container 
+          loop="true"
           space-between="30" 
           autoplay-delay="4000"
           autoplay-disable-on-interaction="false" 
-          [autoplay]="{
-            pauseOnMouseEnter: true,
-          }"
+          autoplay-pause-on-mouse-enter="true"
           pagination="true"
           pagination-el=".swiper-pagination"
           pagination-clickable="true"

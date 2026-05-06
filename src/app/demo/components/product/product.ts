@@ -8,10 +8,11 @@ import { ProductFeature2 } from "./components/product-feature2/product-feature2"
 import { Testimonial } from "./components/testimonial/testimonial";
 import { Newsletter } from "./components/newsletter/newsletter";
 import { Footer6 } from "@app/components/footer/footer6/footer6";
+import { Navbar7 } from "@app/components/header/navbar7/navbar7";
 
 @Component({
   selector: 'app-product',
-  imports: [Hero, Grid, CTA, ProductFeature, Features, ProductFeature2, Testimonial, Newsletter, Footer6],
+  imports: [Hero, Grid, CTA, ProductFeature, Features, ProductFeature2, Testimonial, Newsletter, Footer6, Navbar7],
   templateUrl: './product.html',
   styles: ``, 
 })

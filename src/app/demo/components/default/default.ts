@@ -8,10 +8,11 @@ import { Testimonial } from "./components/testimonial/testimonial";
 import { Subscribe } from "./components/subscribe/subscribe";
 import { Blog } from "./components/blog/blog";
 import { Footer1 } from '@app/components/footer/footer1/footer1';
+import { Navbar1 } from "@app/components/header/navbar1/navbar1";
 
 @Component({
   selector: 'app-default',
-  imports: [Hero, Leader, Offer, Process, Project, Testimonial, Subscribe, Blog, Footer1],
+  imports: [Hero, Leader, Offer, Process, Project, Testimonial, Subscribe, Blog, Footer1, Navbar1],
   templateUrl: './default.html',
   styles: ``,
 })

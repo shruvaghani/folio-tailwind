@@ -258,21 +258,29 @@ export type TestimonialType = {
 export const testimonialsData: TestimonialType[] = [
   {
     img: avatar09,
-    text: `Our passion for customer excellence is just one reason why we are the market leader...`,
+    text: `Our passion for customer excellence is just one reason why we
+                are the market leader. We've always worked very hard to give our
+                customers the best experience. Was out laughter raptures
+                returned outweigh. Luckily cheered colonel I do we attack
+                highest enabled.`,
     rating: 4.5,
     name: 'Jacqueline Miller',
     role: 'Product designer',
   },
   {
     img: avatar10,
-    text: `Their team went above and beyond to understand our needs...`,
+    text: `Their team went above and beyond to understand our needs and
+                deliver a solution that exceeded our expectations. They
+                demonstrated throughout the process was truly impressive.`,
     rating: 5,
     name: 'Louis Ferguson',
     role: 'Web Developer',
   },
   {
     img: avatar01,
-    text: `Was out laughter raptures returned outweigh...`,
+    text: `Was out laughter raptures returned outweigh. Luckily cheered
+                colonel I do we attack highest enabled. Tried law yet style
+                child. The bore of true of no be deal.`,
     rating: 4.5,
     name: 'Emma Watson',
     role: 'UI/UX designer',

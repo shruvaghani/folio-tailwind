@@ -5,10 +5,11 @@ import { Office } from "./components/office/office";
 import { Opportunities } from "./components/opportunities/opportunities";
 import { Testimonials } from "./components/testimonials/testimonials";
 import { Footer3 } from "@app/components/footer/footer3/footer3";
+import { Navbar5 } from "@app/components/header/navbar5/navbar5";
 
 @Component({
   selector: 'app-career',
-  imports: [Hero, Process, Office, Opportunities, Testimonials, Footer3],
+  imports: [Hero, Process, Office, Opportunities, Testimonials, Footer3, Navbar5],
   templateUrl: './career.html',
   styles: ``,
 })

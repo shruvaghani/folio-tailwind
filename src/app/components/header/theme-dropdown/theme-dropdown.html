@@ -1,0 +1,34 @@
+<div
+  class="hs-dropdown relative [--auto-close:inside] [--placement:bottom-right]"
+  data-hs-dropdown-close-on-click="false"
+>
+  <button
+    type="button"
+    class="hs-dropdown-toggle flex justify-center items-center text-sm font-semibold rounded-full text-default-700 py-3.5 px-2"
+    aria-haspopup="menu"
+    aria-expanded="false"
+    aria-label="Dropdown"
+  >
+    <iconify-icon icon="tabler:contrast-filled" width="24" height="24"></iconify-icon>
+  </button>
+
+  <div
+    class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden bg-body-bg border border-default-200 w-36 shadow-md rounded-lg shadow-custom p-3 z-20"
+    role="menu"
+    aria-orientation="vertical"
+  >
+    <ul class="flex flex-col">
+      @for (item of themeData; track $index) {
+        <li>
+          <div
+            (click)="setTheme(item.mode)"
+            class="flex items-center gap-2 py-2 px-3 hover:bg-default-200 text-sm text-default-700 rounded-md cursor-pointer"
+          >
+            <lucide-icon [name]="item.icon" class="size-4"></lucide-icon>
+            {{ item.label }}
+          </div>
+        </li>
+      }
+    </ul>
+  </div>
+</div>

@@ -9,10 +9,11 @@ import { Testimonials } from "./components/testimonials/testimonials";
 import { Clients } from "./components/clients/clients";
 import { CTA } from "./components/cta/cta";
 import { Footer2 } from "@app/components/footer/footer2/footer2";
+import { Navbar4 } from "@app/components/header/navbar4/navbar4";
 
 @Component({
   selector: 'app-agency',
-  imports: [Hero, Features, About, Services, Projects, Skills, Testimonials, Clients, CTA, Footer2],
+  imports: [Hero, Features, About, Services, Projects, Skills, Testimonials, Clients, CTA, Footer2, Navbar4],
   templateUrl: './agency.html',
   styles: ``,
 })

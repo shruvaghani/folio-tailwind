@@ -4,10 +4,11 @@ import { Category } from './components/category/category';
 import { Highlight } from './components/highlight/highlight';
 import { Testimonial } from './components/testimonial/testimonial';
 import { Footer5 } from '@app/components/footer/footer5/footer5';
+import { Navbar1 } from "@app/components/header/navbar1/navbar1";
 
 @Component({
   selector: 'app-blog',
-  imports: [Hero, Category, Testimonial, Highlight, Footer5],
+  imports: [Hero, Category, Testimonial, Highlight, Footer5, Navbar1],
   templateUrl: './blog.html',
   styles: ``,
 })

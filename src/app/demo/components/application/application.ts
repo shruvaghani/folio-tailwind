@@ -8,10 +8,11 @@ import { BlogSlider } from "./components/blog-slider/blog-slider";
 import { Cta } from "./components/cta/cta";
 import { Footer2 } from "@app/components/footer/footer2/footer2";
 import { ClientSlider } from "./components/client-slider/client-slider";
+import { Navbar6 } from "@app/components/header/navbar6/navbar6";
 
 @Component({
   selector: 'app-application',
-  imports: [Hero, BankDetail, Experience, Features, Testimonial, BlogSlider, Cta, Footer2, ClientSlider],
+  imports: [Hero, BankDetail, Experience, Features, Testimonial, BlogSlider, Cta, Footer2, ClientSlider, Navbar6],
   templateUrl: './application.html',
   styles: ``,
 })

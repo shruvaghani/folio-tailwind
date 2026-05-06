@@ -1,0 +1,413 @@
+<header>
+    <div class="header-sticky navbar bg-transparent absolute transition-all top-0 inset-x-0 w-full z-60 duration-300 [.header-sticky-on]:bg-body-bg [.header-sticky-on]:dark:bg-[#121519] [.header-sticky-on]:border-b border-default-200 dark:border-white/14" [class.header-sticky-on]="isSticky">
+        <div class="bg-dark py-2 px-4 lg:block hidden">
+            <div class="container">
+                <div class="container">
+                    <div class="flex items-center justify-between">
+                        <p class="text-sm text-white flex items-center">
+                            <lucide-icon name="headset" class="size-4 me-2"></lucide-icon>Call us: <a [routerLink]="[]" class="link-white">+123 555 66 </a></p>
+
+                        <p class="text-sm text-white mb-0">🔥 Hurry, limited time 40% discount!</p>
+
+                        <div class="flex items-center gap-7.5">
+                            <div class="hs-dropdown relative [--auto-close:inside] [--placement:bottom-right]" data-hs-dropdown-close-on-click="false">
+                                <button type="button" class="hs-dropdown-toggle flex justify-center items-center text-sm font-semibold rounded-full text-white" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                                    <iconify-icon icon="tabler:contrast-filled" width="20" height="20"></iconify-icon>
+                                </button>
+
+                                <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden bg-body-bg w-36 shadow-md rounded-lg shadow-custom p-3 z-20" role="menu" aria-orientation="vertical">
+                                    <ul class="flex flex-col">
+                                        @for (item of themeData; track $index) {
+                                        <li>
+                                            <div class="flex items-center gap-2 py-2 px-3 hover:bg-default-200 text-sm text-default-700 rounded-md" id="lightBtn" aria-label="Light mode" (click)="setTheme(item.mode)">
+                                                <lucide-icon [name]="item.icon" class="size-4"></lucide-icon>
+                                                {{ item.label }}
+                                            </div>
+                                        </li>
+                                    }
+
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <li class="flex items-center gap-1">
+                                <a [routerLink]="[]" class="text-white hover:text-white font-medium text-sm">Login</a>
+                                <span class="text-white mx-1">/</span>
+                                <a [routerLink]="[]" class="text-white hover:text-white font-medium text-sm">Register</a>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="flex items-center justify-between">
+                <a routerLink="/" class="flex items-center lg:py-7.5 py-5">
+                    <img src="assets/images/logo.svg" class="lg:h-10 h-7.5 block dark:hidden" />
+                    <img src="assets/images/logo-light.svg" class="lg:h-10 h-7.5 hidden dark:block" />
+                </a>
+
+                <app-navbar />
+
+                <div class="flex gap-2 items-center">
+                    <div class="hs-dropdown [--trigger:hover] [--auto-close:inside] [--placement:bottom-right] relative inline-flex text-default-700">
+                        <button id="navSearch" type="button" class="hs-dropdown-toggle size-10 bg-secondary flex justify-center items-center rounded-full focus:outline-hidden disabled:opacity-50 hover:bg-primary/10    disabled:pointer-events-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                            <lucide-icon name="search" class="size-4"></lucide-icon>
+                        </button>
+
+                        <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden bg-dropdown shadow-custom rounded mt-2 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute bg-body-bg shadow before:-top-4 before:start-0 before:w-full" role="menu" aria-orientation="vertical" aria-labelledby="navSearch">
+                            <div class="p-2">
+                                <form class="flex w-full max-w-lg items-stretch overflow-hidden rounded border border-primary">
+                                    <input type="search" placeholder="Search..." aria-label="Search" class="flex-1 bg-transparent px-4 py-2 text-sm
+                                    outline-none border-0" />
+
+                                    <button type="submit" class="bg-primary hover:bg-primary-hover px-4 py-2 text-sm font-medium text-white transition">
+                                        Search
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="flex relative items-center justify-center rounded-full size-10 bg-secondary hover:bg-primary/10 disabled:opacity-50 disabled:pointer-events-none text-default-700" aria-haspopup="dialog" aria-expanded="false" aria-controls="scheduleCall" data-hs-overlay="#scheduleCall">
+                        <lucide-icon name="calendar" class="size-3.5"></lucide-icon>
+                        <span class="absolute -top-1 -end-1 inline-flex items-center py-0.5 px-1.5 rounded-full text-md font-medium transform bg-success text-white">2</span>
+                    </button>
+
+                    <div class="border-s-2 border-primary/10 h-10 ms-4 hidden md:block"> </div>
+                    <div class="ms-4 hidden lg:block">
+                        <a [routerLink]="[]" class="block">
+                            <span class="flex flex-col w-7.5 cursor-pointer group">
+                                <span class="bg-default-900 rounded-[10px] h-0.5 my-0.75 w-full group-hover:w-5 transition-all duration-500 ease-[cubic-bezier(0.68,-0.6,0.32,1.6)]"> </span>
+                                <span class="bg-default-900 rounded-[10px] h-0.5 my-0.75 w-5 group-hover:w-full transition-all duration-500 ease-[cubic-bezier(0.68,-0.6,0.32,1.6)]"> </span>
+                                <span class="bg-default-900 rounded-[10px] h-0.5 my-0.75 w-full group-hover:w-5 transition-all duration-500 ease-[cubic-bezier(0.68,-0.6,0.32,1.6)]"></span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="flex items-center lg:hidden">
+                        <button type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="mobileMenuOffcanvas" data-hs-overlay="#mobileMenuOffcanvas" class="size-10 border border-default-200 dark:border-white/14 rounded flex justify-center items-center md:ms-2">
+                            <i class="iconify tabler--align-right text-default-800 size-7"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobileMenuOffcanvas" class="lg:hidden hs-overlay hs-overlay-open:translate-y-0 -translate-y-full fixed top-0 inset-x-0 overflow-hidden transition-all duration-300 transform h-60 z-80 bg-body-bg shadow-xl" role="dialog" tabindex="-1" aria-labelledby="mobileMenuOffcanvas-label">
+        <div class="h-16 flex items-center justify-between px-4 border-b border-default-200 dark:border-white/14 sticky top-0">
+            <div class="text-lg font-bold">
+                <a href="index.html" class="flex items-center gap-2">
+                    <img src="assets/images/logo.svg" class="h-9 block dark:hidden" />
+                    <img src="assets/images/logo-light.svg" class="h-9 hidden dark:block" />
+                </a>
+            </div>
+
+            <button type="button" class="bg-default-600/15 text-default-600 size-8 flex justify-center items-center rounded-full" aria-label="Close" data-hs-overlay="#mobileMenuOffcanvas">
+                <span class="sr-only">Close</span>
+                <i class="iconify tabler--x size-4"></i>
+            </button>
+        </div>
+
+        <div class="flex flex-col gap-1 overflow-y-auto max-h-72">
+            <div class="hs-accordion-group divide-y divide-default-200">
+                <div class="hs-accordion">
+                    <button class="hs-accordion-toggle text-default-800 w-full flex items-center justify-between gap-2 py-2.5 px-5 font-medium">
+                        <span>Demos</span>
+                        <lucide-icon name="chevron-down" class="size-4"></lucide-icon>
+                    </button>
+
+                    <div class="hs-accordion-content hidden w-full overflow-hidden transition-[height] px-5 py-2">
+                        <div class="border border-default-200 dark:border-white/14 origin-center bg-body-bg rounded-md p-3 w-full">
+                            <div class="grid md:grid-cols-2 grid-cols-1">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700" href="index.html">Classic Default</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700" href="index-software-company.html">Software Company</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700" href="index-finance-consulting.html">Finance Consulting</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700" href="index-ai-agency.html">AI Agency</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700" href="index-product-landing.html">Product Landing</a>
+                                    </li>
+                                </ul>
+
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700" href="index-saas.html">SaaS</a>
+                                    </li>
+                                    <li>
+                                        <a class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700" href="index-ai-chatbot.html">SaaS AI Chatbot</a>
+                                    </li>
+                                    <li>
+                                        <a class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700" href="index-application-showcase.html">Application Showcase</a>
+                                    </li>
+                                    <li>
+                                        <a class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700" href="index-personal-portfolio.html">Personal Portfolio</a>
+                                    </li>
+                                    <li>
+                                        <a class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700" href="index-blog.html">Blog home</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hs-accordion" id="accordion-pages">
+                    <button type="button" class="hs-accordion-toggle text-default-800 w-full flex items-center justify-between gap-2 py-2.5 px-5 font-medium">
+                        Pages
+                        <lucide-icon name="chevron-down" class="size-4"></lucide-icon>
+                    </button>
+
+                    <div class="hs-accordion-content hidden w-full overflow-hidden transition-[height] px-5 py-2">
+                        <div class="hs-accordion-group border border-default-200 dark:border-white/14 origin-center bg-body-bg rounded-md p-3 w-full flex flex-col gap-1">
+                            <div class="hs-accordion" id="accordion-about">
+                                <button type="button" class="hs-accordion-toggle text-sm font-semibold rounded-sm hover:text-primary hover:bg-primary/6 px-3 py-2.5 text-default-800 w-full flex items-center justify-between gap-2">
+                                    About
+                                    <lucide-icon name="chevron-down" class="size-4"></lucide-icon>
+                                </button>
+
+                                <div class="hs-accordion-content hidden w-full overflow-hidden transition-[height] border border-default-200 dark:border-white/14 origin-center bg-body-bg rounded-md p-3">
+                                    <div class="flex flex-col gap-1">
+                                        <a href="about-v1.html" class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700">
+                                            About v.1
+                                        </a>
+
+                                        <a href="about-v2.html" class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700">
+                                            About v.2
+                                        </a>
+
+                                        <a href="services-grid.html" class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700">
+                                            Services Grid
+                                        </a>
+
+                                        <a href="services-list.html" class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700">
+                                            Services List
+                                        </a>
+
+                                        <a href="service-single.html" class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700">
+                                            Service Single
+                                        </a>
+
+                                        <a href="team.html" class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700">
+                                            Team
+                                        </a>
+
+                                        <a href="career.html" class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700">
+                                            Career
+                                        </a>
+
+                                        <a href="career-single.html" class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700">
+                                            Career Single
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <a href="contact-us-v1.html" class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700">
+                                    Contact Us v1
+                                </a>
+                            </div>
+
+                            <div>
+                                <a href="contact-us-v2.html" class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700">
+                                    Contact Us v2
+                                </a>
+                            </div>
+
+                            <div>
+                                <a href="pricing-v1.html" class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700">
+                                    Contact Us v1
+                                </a>
+                            </div>
+
+                            <div>
+                                <a href="pricing-v2.html" class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700">
+                                    Contact Us v2
+                                </a>
+                            </div>
+
+                            <div class="hs-accordion" id="accordion-sass">
+                                <button type="button" class="hs-accordion-toggle text-sm font-semibold rounded-sm hover:text-primary hover:bg-primary/6 px-3 py-2.5 text-default-800 w-full flex items-center justify-between gap-2">
+                                    Saas pages
+                                    <lucide-icon name="chevron-down" class="size-4"></lucide-icon>
+                                </button>
+
+                                <div class="hs-accordion-content hidden w-full overflow-hidden transition-[height] border border-default-200 dark:border-white/14 origin-center bg-body-bg rounded-md p-3">
+                                    <div class="flex flex-col gap-1">
+                                        <a href="feature-single.html" class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700">
+                                            Feature Single
+                                        </a>
+
+                                        <a href="integrations.html" class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700">
+                                            Integrations
+                                        </a>
+
+                                        <a href="integration-single.html" class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700">
+                                            Integrations Single
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="hs-accordion" id="accordion-shop">
+                                <button type="button" class="hs-accordion-toggle text-sm font-semibold rounded-sm hover:text-primary hover:bg-primary/6 px-3 py-2.5 text-default-800 w-full flex items-center justify-between gap-2">
+                                    Portfolio
+                                    <lucide-icon name="chevron-down" class="size-4"></lucide-icon>
+                                </button>
+
+                                <div class="hs-accordion-content hidden w-full overflow-hidden transition-[height] border border-default-200 dark:border-white/14 origin-center bg-body-bg rounded-md p-3">
+                                    <div class="flex flex-col gap-1">
+                                        <a href="portfolio-grid.html" class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700">
+                                            Portfolio Grid
+                                        </a>
+
+                                        <a href="portfolio-list.html" class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700">
+                                            Portfolio List
+                                        </a>
+
+                                        <a href="portfolio-modern.html" class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700">
+                                            Portfolio Modern
+                                        </a>
+
+                                        <a href="portfolio-case-study-v1.html" class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700">
+                                            Portfolio case study v1
+                                        </a>
+
+                                        <a href="portfolio-case-study-v2.html" class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700">
+                                            Portfolio case study v2
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="hs-accordion" id="accordion-blog">
+                                <button type="button" class="hs-accordion-toggle text-sm font-semibold rounded-sm hover:text-primary hover:bg-primary/6 px-3 py-2.5 text-default-800 w-full flex items-center justify-between gap-2">
+                                    Blog
+                                    <lucide-icon name="chevron-down" class="size-4"></lucide-icon>
+                                </button>
+
+                                <div class="hs-accordion-content hidden w-full overflow-hidden transition-[height] border border-default-200 dark:border-white/14 origin-center bg-body-bg rounded-md p-3">
+                                    <div class="flex flex-col gap-1">
+                                        <a href="blog-minimal.html" class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700">
+                                            Blog Minimal
+                                        </a>
+
+                                        <a href="blog-single.html" class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700">
+                                            Blog Single
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <a href="error-404.html" class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700">
+                                    Error 404
+                                </a>
+                            </div>
+
+                            <div>
+                                <a href="coming-soon.html" class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700">
+                                    Coming soon
+                                </a>
+                            </div>
+
+                            <div class="hs-accordion" id="accordion-Specialty">
+                                <button type="button" class="hs-accordion-toggle text-sm font-semibold rounded-sm hover:text-primary hover:bg-primary/6 px-3 py-2.5 text-default-800 w-full flex items-center justify-between gap-2">
+                                    Authentication
+                                    <lucide-icon name="chevron-down" class="size-4"></lucide-icon>
+                                </button>
+
+                                <div class="hs-accordion-content hidden w-full overflow-hidden transition-[height] border border-default-200 dark:border-white/14 origin-center bg-body-bg rounded-md p-3">
+                                    <div class="flex flex-col gap-1">
+                                        <a href="sign-in.html" class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700">
+                                            Sign in
+                                        </a>
+
+                                        <a href="sign-up.html" class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700">
+                                            Sign up
+                                        </a>
+
+                                        <a href="forgot-password.html" class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700">
+                                            Forgot Password
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <a [routerLink]="[]" class="flex items-center py-2.5 px-5 text-default-800 hover:text-primary font-medium">
+                        Docs
+                    </a>
+                </div>
+
+                <div>
+                    <a href="contact-us-v1.html" class="flex items-center py-2.5 px-5 text-default-800 hover:text-primary font-medium">
+                        Contact us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="scheduleCall" class="hs-overlay hs-overlay-open:translate-x-0 hidden translate-x-full fixed top-0 end-0 transition-all duration-300 transform h-full max-w-90 w-full z-80 bg-body-bg border-e shadow-xl border-default-200 dark:bg-neutral-800 dark:border-neutral-700" role="dialog" tabindex="-1" aria-labelledby="scheduleCall-label">
+        <div class="flex justify-between items-center py-4 px-7.5 border-b border-default-300 dark:border-white/14">
+            <h3 id="scheduleCall-label" class="font-bold text-default-800 text-2.2xl">
+                My Cart
+            </h3>
+
+            <button type="button" aria-label="Close" data-hs-overlay="#scheduleCall">
+                <span class="sr-only">Close</span>
+                <lucide-icon name="x" class="size-5"></lucide-icon>
+            </button>
+        </div>
+
+        <div class="p-4 overflow-y-hidden h-full">
+            <div class="flex items-center gap-2">
+                <!-- Image -->
+                <img src="assets/images/product/watches/01.png" class="rounded-xl bg-light p-2 h-17.5" alt="product image">
+
+                <div class="ms-2">
+                    <p class="text-default-900 font-semibold mb-1">Apex Pro</p>
+                    <!-- Select item -->
+                    <select class="text-sm py-1 ps-2 pe-9 border border-default-300 dark:border-white/14 rounded" aria-label="Default select example">
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                    </select>
+                </div>
+                <a [routerLink]="[]" class="text-2xs text-primary ms-auto">Remove</a>
+            </div>
+
+            <div class="w-full fixed bottom-0 end-0 p-4">
+                <div class="flex justify-between mb-2">
+                    <span class="text-default-800 font-semibold">Subtotal</span>
+                    <h6 class="text-success md:text-2.2xl text-xl mb-0">$358</h6>
+                </div>
+
+                <!-- Button -->
+                <div>
+                    <a href="checkout.html" class="bg-dark text-white text-lg py-4.75 px-8.75 w-full inline-flex rounded-lg font-semibold justify-center">Continue to Checkout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

@@ -6,10 +6,11 @@ import { Keybenefits } from "./components/keybenefits/keybenefits";
 import { Portfolio } from "./components/portfolio/portfolio";
 import { Pricing } from "./components/pricing/pricing";
 import { Testimonials } from "./components/testimonials/testimonials";
+import { Navbar1 } from "@app/components/header/navbar1/navbar1";
 
 @Component({
   selector: 'app-service-single',
-  imports: [Footer3, Hero, Process, Keybenefits, Portfolio, Pricing, Testimonials],
+  imports: [Footer3, Hero, Process, Keybenefits, Portfolio, Pricing, Testimonials, Navbar1],
   templateUrl: './service-single.html',
   styles: ``,
 })

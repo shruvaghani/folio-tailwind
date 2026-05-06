@@ -8,10 +8,11 @@ import { Pricing } from "./components/pricing/pricing";
 import { Blog } from "./components/blog/blog";
 import { Integrations } from "./components/integrations/integrations";
 import { Footer7 } from "@app/components/footer/footer7/footer7";
+import { Navbar5 } from "@app/components/header/navbar5/navbar5";
 
 @Component({
   selector: 'app-saas',
-  imports: [Hero, Features, About, Work, Performance, Pricing, Blog, Integrations, Footer7],
+  imports: [Hero, Features, About, Work, Performance, Pricing, Blog, Integrations, Footer7, Navbar5],
   templateUrl: './saas.html',
   styles: ``,
 })
