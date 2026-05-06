@@ -1,0 +1,226 @@
+<section class="lg:pt-24 pt-18 lg:pb-36 pb-20 relative">
+  <div class="pt-2 lg:px-12 px-3.75">
+    <img
+      src="assets/images/portfolio/05.jpg"
+      alt=""
+      class="lg:h-125 md:h-100 h-75 rounded-2xl overflow-hidden w-full object-cover"
+    />
+  </div>
+
+  <div class="container">
+    <div class="grid lg:grid-cols-3 md:grid-cols-12 grid-cols-1 gap-7.5 lg:pt-24 pt-18">
+      <div class="lg:col-span-2 md:col-span-7 col-span-1">
+        <nav class="mb-4 pb-2 flex" aria-label="breadcrumb">
+          <ol class="flex items-center space-x-1 text-2xs text-default-600">
+            <li>
+              <a routerLink="/" class="hover:text-primary font-medium"> Home </a>
+            </li>
+
+            <li>
+              <span class="px-2 text-default-400">/</span>
+              <a [routerLink]="[]" class="hover:text-primary font-medium"> Portfolio </a>
+            </li>
+
+            <li class="flex items-center">
+              <span class="px-2 text-default-400">/</span>
+              <span class="font-medium text-primary" aria-current="page">
+                Portfolio case study v2
+              </span>
+            </li>
+          </ol>
+        </nav>
+
+        <h1 class="lg:text-4.5xl md:text-4xl text-3xl mb-4">Mobile app development</h1>
+        <p class="mb-4 text-xl text-default-700">
+          Ideas are the seeds of innovation. They can originate from personal experiences,
+          observations, or the desire to solve a problem.
+        </p>
+        <h6 class="mt-12 mb-4 md:text-2.2xl text-xl">
+          <span class="text-primary me-2">01.</span>Overview
+        </h6>
+        <p class="mb-4">
+          Design a clean, intuitive interface that provides an exceptional user experience. Ensure
+          ease of navigation and accessibility for all users, including those with disabilities.
+          Implement a robust set of features including secure payment gateways, real-time push
+          notifications, and comprehensive user analytics. Incorporate a seamless shopping
+          experience with a well-structured product catalog and efficient checkout process.
+        </p>
+
+        <ul class="flex flex-wrap gap-3">
+          <li>
+            <a
+              class="py-2.5 px-4 rounded text-sm bg-secondary inline-flex text-default-800 font-medium hover:bg-primary/20"
+              [routerLink]="[]"
+              >Branding</a
+            >
+          </li>
+          <li>
+            <a
+              class="py-2.5 px-4 rounded text-sm bg-secondary inline-flex text-default-800 font-medium hover:bg-primary/20"
+              [routerLink]="[]"
+              >Packaging</a
+            >
+          </li>
+          <li>
+            <a
+              class="py-2.5 px-4 rounded text-sm bg-secondary inline-flex text-default-800 font-medium hover:bg-primary/20"
+              [routerLink]="[]"
+              >UI/UX design</a
+            >
+          </li>
+        </ul>
+
+        <h6 class="mt-12 mb-4 md:text-2.2xl text-xl">
+          <span class="text-primary me-2">02.</span>The Challenge
+        </h6>
+        <p class="mb-4">
+          <span
+            class="text-default-900 text-4.5xl font-semibold float-left leading-none bg-secondary/50 rounded px-2 me-3"
+            >I</span
+          >ntegrating multiple third-party services, such as payment gateways, social media logins,
+          and user analytics tools, presented a significant challenge. Ensuring these integrations
+          worked harmoniously without compromising the app's performance was crucial. Additionally,
+          securing user data and privacy, particularly during transactions, required robust
+          encryption and compliance with data protection regulations to build user trust.
+        </p>
+
+        <p class="mb-4">
+          Delivering the project within a stringent timeline necessitated meticulous planning and
+          efficient execution. Coordinating among different teams, managing resources effectively,
+          and adhering to the project schedule were vital to meeting the deadline without
+          compromising on quality.
+        </p>
+
+        <ul class="mb-7.5 space-y-3 text-default-900 font-medium">
+          @for (item of featureListData; track $index) {
+            <li class="flex">
+              <lucide-icon name="check" class="text-success me-2 mt-1 size-4"></lucide-icon>
+
+              {{ item }}
+            </li>
+          }
+        </ul>
+      </div>
+
+      <div class="lg:col-span-1 md:col-span-5 col-span-1">
+        <div class="sticky top-10">
+          <div
+            class="p-7.5 lg:ms-7.5 bg-linear-to-r from-[rgba(240,150,255,0.15)] via-[rgba(191,200,252,0.15)] to-[rgba(187,148,255,0.15)] rounded-2xl"
+          >
+            @for (item of projectInfoData; track $index) {
+              <div class="py-1.5 mb-4">
+                <small class="text-sm">{{ item.label }}</small>
+                <p class="text-default-900 font-semibold mt-1 mb-0">
+                  {{ item.value }}
+                </p>
+              </div>
+            }
+
+            <a
+              [routerLink]="[]"
+              class="text-white bg-dark py-3.5 px-7.5 my-2 rounded-md inline-flex items-center w-full justify-center"
+            >
+              View project
+              <lucide-icon name="square-pen" class="size-3.5 ms-1"></lucide-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="md:mt-18 mt-7.5">
+      <div class="grid md:grid-cols-12 grid-cols-1 items-end gap-7.5">
+        <div class="md:col-span-7">
+          <img src="assets/images/portfolio/01.jpg" class="rounded-2xl" alt="portfolio image" />
+        </div>
+
+        <div class="md:col-span-5 lg:w-100 ms-auto">
+          <img
+            src="assets/images/portfolio/03.jpg"
+            class="rounded-2xl relative"
+            alt="portfolio image"
+          />
+        </div>
+
+        <div class="md:w-1/2 mx-auto md:col-span-12">
+          <img
+            src="assets/images/portfolio/04.jpg"
+            class="rounded-2xl md:-mt-18"
+            alt="portfolio image"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="md:p-12 p-5 md:mt-24 mt-12 bg-secondary rounded-2xl">
+      <q class="text-xl md:text-2.2xl text-default-900"
+        >Too months nay end change relied who beauty wishes matter. Shew of john real park so rest
+        we on. Ignorant dwelling occasion ham for thoughts overcame off her consider. Polite it
+        elinor is depend.</q
+      >
+      <div class="flex items-center mt-7.5">
+        <!-- Avatar -->
+        <div>
+          <img class="size-12 rounded-full" src="assets/images/avatar/09.jpg" alt="avatar" />
+        </div>
+        <!-- Info -->
+        <div class="ms-4">
+          <h6 class="md:text-2.2xl text-xl">Emma Watson</h6>
+          <small class="text-sm">CEO, Co-founder</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-18">
+      <div class="grid lg:grid-cols-12 grid-cols-1 gap-7.5">
+        <div class="col-span-5">
+          <h6 class="mb-4 md:text-2.2xl text-xl">
+            <span class="text-primary me-2">03.</span>Result
+          </h6>
+          <p class="text-xl lg:mb-7.5">
+            Two assure Edward whence the was. Who worthy yet ten boys denote wonder. Weeks views her
+            sight old tears sorry. Additions can suspected its concealed put furnished.
+          </p>
+        </div>
+
+        <div class="col-span-7 lg:w-162.5 ms-auto">
+          <p class="mb-7.5">
+            Partnering with experts, seeking mentorship, and building a network of like-minded
+            individuals can provide valuable insights and support.
+          </p>
+
+          <div class="grid md:grid-cols-3 grid-cols-2 gap-7.5">
+            @for (item of statsData; track $index) {
+              <div>
+                <h2 class="lg:text-4.5xl md:text-4xl text-3xl">
+                  {{ item.value 
+                }}<span class="text-primary">{{ item.suffix || '' }}</span>
+                </h2>
+
+                <p class="text-default-700">
+                  {{ item.description }}
+                </p>
+              </div>
+            }
+          </div>
+        </div>
+      </div>
+
+      <hr class="mt-12 border-t border-default-200 dark:border-white/14 mb-7.5" />
+
+      <div class="flex justify-between items-center">
+        <a class="flex items-center font-medium hover:text-primary" [routerLink]="[]"
+          ><lucide-icon name="arrow-left" class="me-2 size-4.5"></lucide-icon>Prev project</a
+        >
+
+        <a class="text-primary" [routerLink]="[]"
+          ><lucide-icon name="layout-grid" class="me-2 fill-primary size-4"></lucide-icon
+        ></a>
+
+        <a class="flex items-center font-medium hover:text-primary" [routerLink]="[]"
+          >Next project<lucide-icon name="arrow-right" class="me-2 size-4.5"></lucide-icon
+        ></a>
+      </div>
+    </div>
+  </div>
+</section>
