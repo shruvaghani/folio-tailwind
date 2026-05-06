@@ -35,7 +35,7 @@
           <ul class="flex flex-col gap-2.5 text-white/90 text-base">
             @for (item of section.links; track item.label) {
               <li class="hover:text-primary pe-3">
-                <a [href]="item.link" class="flex items-center">
+                <a [routerLink]="item.link" class="flex items-center">
                   {{ item.label }}
 
                   <!-- Badge -->

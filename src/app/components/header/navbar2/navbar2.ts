@@ -3,9 +3,9 @@ import { LucideAngularModule } from "lucide-angular";
 import { RouterLink } from "@angular/router";
 import { Topbar } from "./components/topbar/topbar";
 import { MobileMenu } from "../mobile-menu/mobile-menu";
-import { ScheduleModal } from '../schedule-modal/schedule-modal';
 import { Navbar } from "../navbar/navbar";
 import { ThemeDropdown } from "../theme-dropdown/theme-dropdown";
+import { ScheduleModal } from './components/schedule-modal/schedule-modal';
 
 @Component({
   selector: 'app-navbar2',
