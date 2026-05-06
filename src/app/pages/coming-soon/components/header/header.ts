@@ -2,12 +2,10 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-error',
+  selector: 'coming-soon-header',
   imports: [RouterLink],
-  templateUrl: './error.html',
+  templateUrl: './header.html',
   styles: ``,
 })
   
-export class Error {
-
-}
+export class Header {}
