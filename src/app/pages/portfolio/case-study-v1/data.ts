@@ -3,6 +3,10 @@ const portfolio06 = 'assets/images/portfolio/3by4/06.jpg';
 const portfolio01 = 'assets/images/portfolio/3by4/01.jpg';
 const portfolio04 = 'assets/images/portfolio/04.jpg';
 
+const img1 = 'assets/images/portfolio/4by4/01.jpg';
+const img2 = 'assets/images/portfolio/4by4/02.jpg';
+const img3 = 'assets/images/portfolio/4by4/05.jpg';
+
 export type ProjectInfoType = {
   label: string;
   value: string;
@@ -56,5 +60,33 @@ export const statsData: StatType[] = [
     suffix: 'M',
     className: 'text-pink',
     description: 'Total raised in funding so far'
+  }
+];
+
+export type PortfolioSlideType = {
+  image: string;
+  title: string;
+  category: string;
+  link: string;
+};
+
+export const portfolioSlidesData: PortfolioSlideType[] = [
+  {
+    image: img1,
+    title: 'Mobile app development',
+    category: 'UI/UX design',
+    link: '/portfolio/case-studies'
+  },
+  {
+    image: img2,
+    title: 'Digital marketing overhaul',
+    category: 'Marketing',
+    link: '/portfolio/case-studies'
+  },
+  {
+    image: img3,
+    title: 'TechWave',
+    category: 'Animation',
+    link: '/portfolio/case-studies'
   }
 ];
