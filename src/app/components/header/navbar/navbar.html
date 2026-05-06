@@ -3,7 +3,7 @@
     <!-- SIMPLE LINK -->
     @if (item.type === 'link') {
       <a
-        [href]="item.url"
+        [routerLink]="item.url"
         class="flex items-center text-default-800 hover:text-primary hover:bg-primary/10 py-2 px-4 font-medium rounded-md"
       >
         {{ item.title }}
@@ -88,7 +88,7 @@
                     <div class="flex flex-col gap-1">
                       @for (child of link.children; track $index) {
                         <a
-                          [href]="child.url"
+                          [routerLink]="child.url"
                           class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700"
                         >
                           {{ child.label }}
@@ -102,7 +102,7 @@
               @if (!link.children) {
                 <li>
                   <a
-                    [href]="link.url"
+                    [routerLink]="link.url"
                     class="block text-sm px-4 py-1.5 text-default-700 hover:text-primary"
                   >
                     {{ link.label }}

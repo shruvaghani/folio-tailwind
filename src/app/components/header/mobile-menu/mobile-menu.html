@@ -1,0 +1,106 @@
+<div class="flex flex-col gap-1 overflow-y-auto h-70">
+  <div class="hs-accordion-group divide-y divide-default-200">
+
+    @for (item of mobileMenuData; track $index) {
+
+      @if (item.type === 'accordion' && item.columns) {
+        <div class="hs-accordion">
+          <button class="hs-accordion-toggle text-default-800 w-full flex items-center justify-between gap-2 py-2.5 px-5 font-medium">
+            <span>{{ item.title }}</span>
+            <lucide-icon name="chevron-down" class="size-4"></lucide-icon>
+          </button>
+
+          <div class="hs-accordion-content hidden w-full ooverflow-visible transition-[height] px-5 py-2">
+            <div class="border border-default-200 dark:border-white/14 origin-center bg-body-bg rounded-md p-3 w-full">
+              
+              <div class="grid md:grid-cols-2 grid-cols-1">
+                @for (col of item.columns; track $index) {
+                  <ul class="list-unstyled">
+                    @for (link of col.links; track $index) {
+                      <li>
+                        <a
+                          class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700"
+                          [routerLink]="link.url"
+                        >
+                          {{ link.label }}
+                        </a>
+                      </li>
+                    }
+                  </ul>
+                }
+              </div>
+
+            </div>
+          </div>
+        </div>
+      }
+
+      
+      @if (item.type === 'accordion' && item.children) {
+        <div class="hs-accordion" id="accordion-pages">
+          <button type="button" class="hs-accordion-toggle text-default-800 w-full flex items-center justify-between gap-2 py-2.5 px-5 font-medium">
+            {{ item.title }}
+            <lucide-icon name="chevron-down" class="size-4"></lucide-icon>
+          </button>
+
+          <div class="hs-accordion-content hidden w-full overflow-visible transition-[height] px-5 py-2">
+            <div class="hs-accordion-group border border-default-200 dark:border-white/14 origin-center bg-body-bg rounded-md p-3 w-full flex flex-col gap-1">
+
+              @for (child of item.children; track $index) {
+
+                <!-- NESTED ACCORDION -->
+                @if (child.children) {
+                  <div class="hs-accordion">
+                    <button type="button"
+                      class="hs-accordion-toggle text-sm font-semibold rounded-sm hover:text-primary hover:bg-primary/6 px-3 py-2.5 text-default-800 w-full flex items-center justify-between gap-2">
+                      {{ child.label }}
+                      <lucide-icon name="chevron-down" class="size-4"></lucide-icon>
+                    </button>
+
+                    <div class="hs-accordion-content hidden w-full overflow-visible transition-[height] border border-default-200 dark:border-white/14 origin-center bg-body-bg rounded-md p-3">
+                      <div class="flex flex-col gap-1">
+                        @for (sub of child.children; track $index) {
+                          <a
+                            [routerLink]="sub.url"
+                            class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700"
+                          >
+                            {{ sub.label }}
+                          </a>
+                        }
+                      </div>
+                    </div>
+                  </div>
+                }
+
+                
+                @if (!child.children) {
+                  <div>
+                    <a
+                      [routerLink]="child.url"
+                      class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700"
+                    >
+                      {{ child.label }}
+                    </a>
+                  </div>
+                }
+              }
+            </div>
+          </div>
+        </div>
+      }
+      
+      @if (item.type === 'link') {
+        <div>
+          <a
+            [routerLink]="item.url"
+            class="flex items-center py-2.5 px-5 text-default-800 hover:text-primary font-medium"
+          >
+            {{ item.title }}
+          </a>
+        </div>
+      }
+
+    }
+
+  </div>
+</div>
