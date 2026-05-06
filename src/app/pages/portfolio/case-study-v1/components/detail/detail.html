@@ -1,0 +1,48 @@
+<section class="lg:py-36 py-20">
+    <div class="container">
+        <div class="grid md:grid-cols-3 grid-cols-1 md:gap-7.5 mb-12">
+            <div class="col-span-1">
+                <span class="text-primary-grad font-bold text-xl">01.</span>
+                <h5 class="mb-2 lg:text-2.5xl md:text-2xl text-2xl">Overview</h5>
+            </div>
+
+            <div class="col-span-2">
+                <p class="text-xl mb-4 text-default-800">Ideas are the seeds of innovation. They can originate from personal experiences, observations, or the desire to solve a problem.</p>
+
+                <p class="mb-4">Once an idea takes root, it requires nurturing and refinement. This stage involves research, brainstorming, and gathering feedback. Conducting market analysis, exploring existing solutions, and collaborating with others can help refine the idea further. The goal is to gain a deeper understanding of the idea's feasibility, potential impact, and market viability.</p>
+
+                <ul class="flex flex-wrap gap-3">
+                    <li> <a class="py-2.5 px-4 rounded text-sm bg-secondary inline-flex text-default-800 font-medium hover:bg-primary/20" [routerLink]="[]">Branding</a> </li>
+                    <li> <a class="py-2.5 px-4 rounded text-sm bg-secondary inline-flex text-default-800 font-medium hover:bg-primary/20" [routerLink]="[]">Packaging</a> </li>
+                    <li> <a class="py-2.5 px-4 rounded text-sm bg-secondary inline-flex text-default-800 font-medium hover:bg-primary/20" [routerLink]="[]">UI/UX design</a> </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 grid-cols-1 md:gap-7.5">
+            <div class="col-span-1">
+                <span class="text-primary-grad font-bold text-xl">02.</span>
+                <h5 class="mb-2 lg:text-2.5xl md:text-2xl text-2xl">The Challenge</h5>
+            </div>
+
+            <div class="col-span-2">
+                <p class="mb-4">Turning ideas into reality is a transformative process that drives innovation and progress. It begins with recognizing the power and potential of an idea. Through cultivation, planning, and strategizing, ideas are refined and shaped into actionable plans. Challenges are embraced as opportunities for growth, and perseverance becomes key in overcoming obstacles.</p>
+
+                <div class="grid md:grid-cols-2 grid-cols-1 md:gap-7.5">
+                    @for (column of featuresData; track $index) {
+
+                    <ul class="flex flex-col gap-2 xl:gap-4 lg:mt-7.5" [class]="$index === 0 ? 'mt-4 md:mb-4' : 'md:mt-4 mt-2 mb-4'">
+                        @for (item of column.items; track $index) {
+                        <li class="font-medium text-default-900 flex items-center">
+                            <lucide-icon name="circle-check" class="text-success me-2 size-4.5"></lucide-icon>
+                            {{ item }}
+                        </li>
+                        }
+                    </ul>
+
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

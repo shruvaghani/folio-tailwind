@@ -8,5 +8,6 @@ import { RouterLink } from "@angular/router";
   templateUrl: './hero.html',
   styles: ``,
 })
+
 export class Hero {
 }

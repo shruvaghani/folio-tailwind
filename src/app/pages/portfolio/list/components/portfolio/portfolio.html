@@ -1,0 +1,75 @@
+<section class="lg:pb-36 pb-20">
+    <div class="container">
+        @for (item of portfolioListData; track item.id; let i = $index) {
+
+        <div class="bg-transparent p-0 mb-7.5 lg:mb-0 relative group">
+
+            <!-- CENTER LINE -->
+            <div class="absolute top-1/2 start-1/2 -translate-x-1/2 -translate-y-1/2 border-s border-default-200 dark:border-white/14 h-full hidden lg:block"></div>
+
+            <span class="absolute top-1/2 start-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary p-1 hidden lg:block">
+                <span class="block rounded-full bg-body-bg p-1"></span>
+            </span>
+
+            <div class="grid lg:grid-cols-2 items-center">
+                @if (i % 2 === 0) {
+                <div class="lg:p-12">
+                    <div class="overflow-hidden rounded-2xl">
+                        <a routerLink="/portfolio/case-study/v1">
+                            <img [src]="item.image" class="rounded-2xl group-hover:scale-104 transition-all duration-500">
+                        </a>
+                    </div>
+                </div>
+                }
+                <div class="lg:p-12 py-4 px-2">
+
+                    <div class="mb-4 lg:mb-7.5">
+                        <img [src]="item.logoDark" class="block dark:hidden h-7.5">
+                        <img [src]="item.logoLight" class="hidden dark:block h-7.5">
+                    </div>
+
+                    <h5 class="mb-4 lg:text-2.5xl md:text-2xl text-2xl">
+                        {{ item.title }}
+                    </h5>
+
+                    <p class="mb-4 text-default-700">
+                        {{ item.description }}
+                    </p>
+
+                    <ul class="flex gap-3 flex-wrap items-center list-disc list-inside text-default-900 lg:mb-7.5 mb-4">
+
+                        <li class="list-none">{{ item.year }}</li>
+
+                        @for (tag of item.tags; track $index) {
+                        <li>{{ tag }}</li>
+                        }
+
+                    </ul>
+
+                    <a routerLink="/service/single" class="group flex items-center gap-1.5">
+                        <span class="text-primary-grad">Read more</span>
+                        <lucide-icon name="arrow-right" class="group-hover:translate-x-0.5 size-4 text-primary transition-all duration-300"></lucide-icon>
+                    </a>
+
+                </div>
+                @if (i % 2 !== 0) {
+                <div class="lg:p-12">
+                    <div class="overflow-hidden rounded-2xl">
+                        <a routerLink="/portfolio/case-study/v1">
+                            <img [src]="item.image" class="rounded-2xl group-hover:scale-104 transition-all duration-500">
+                        </a>
+                    </div>
+                </div>
+                }
+
+            </div>
+
+        </div>
+
+        }
+
+        <div class="grid justify-center mt-18">
+            <a [routerLink]="[]" role="button" class="py-3.5 px-7.5 rounded-md font-medium bg-secondary text-default-800 hover:bg-primary/20 transition-all duration-300"> Load more work </a>
+        </div>
+    </div>
+</section>

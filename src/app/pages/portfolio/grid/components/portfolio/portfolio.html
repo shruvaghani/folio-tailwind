@@ -1,0 +1,82 @@
+<section class="lg:pb-36 pb-20 pt-4">
+    <div class="container">
+        <div class="flex flex-wrap md:gap-12 gap-4 justify-center md:mb-18 mb-7.5">
+            @for (filter of filtersData; track $index) {
+            <a [routerLink]="[]" (click)="setFilter(filter.value)" class="py-2 font-semibold border-b-2 transition-all duration-200" [class]="
+            activeFilter === filter.value
+                ? 'text-default-900 border-default-900'
+                : 'text-default-500 hover:text-default-900 hover:border-default-900 border-transparent'
+            ">
+                {{ filter.name }}
+            </a>
+            }
+        </div>
+
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-12 gap-7.5 mb-12">
+
+            @for (item of portfolioData; track $index) {
+            <div class="relative group">
+                <a [routerLink]="item.link">
+                    <img [src]="item.image" class="rounded-2xl" alt="portfolio-img">
+                    <div class="absolute bottom-0 end-0 start-0 rounded-b-2xl bg-dark/10 group-hover:opacity-100 z-90 opacity-0 backdrop-blur-sm p-10 transition-all duration-300">
+                        <div class="mt-auto">
+                            <h6 class="mb-2 lg:text-2.2xl text-xl">
+                                <a [routerLink]="item.link" class="text-white">
+                                    {{ item.title }}
+                                </a>
+                            </h6>
+                            <span class="text-white">
+                                {{ item.category }}
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            }
+        </div>
+        <nav aria-label="Page navigation">
+            <ul class="flex items-center justify-center gap-1">
+                <!-- Prev -->
+                <li>
+                    <span class="flex size-10 items-center justify-center rounded-md hover:bg-linear-to-b from-[#543DE7] to-[#7F39F8] hover:text-white transition-all duration-300" aria-disabled="true">
+                        <lucide-icon name="chevron-left" class="size-5"></lucide-icon>
+                    </span>
+                </li>
+
+                <!-- Active -->
+                <li>
+                    <span class="flex size-10 items-center justify-center rounded-md bg-linear-to-b from-[#543DE7] to-[#7F39F8] text-white transition-all duration-300" aria-current="page">
+                        1
+                        <span class="sr-only">(current)</span>
+                    </span>
+                </li>
+
+                <!-- Pages -->
+                <li>
+                    <a [routerLink]="[]" class="flex size-10 items-center justify-center rounded-md hover:bg-linear-to-b from-[#543DE7] to-[#7F39F8] hover:text-white transition-all duration-300">
+                        2
+                    </a>
+                </li>
+
+                <li>
+                    <a [routerLink]="[]" class="flex size-10 items-center justify-center rounded-md hover:bg-linear-to-b from-[#543DE7] to-[#7F39F8] hover:text-white transition-all duration-300">
+                        3
+                    </a>
+                </li>
+
+                <li>
+                    <a [routerLink]="[]" class="flex size-10 items-center justify-center rounded-md hover:bg-linear-to-b from-[#543DE7] to-[#7F39F8] hover:text-white transition-all duration-300">
+                        4
+                    </a>
+                </li>
+
+                <!-- Next -->
+                <li>
+                    <a [routerLink]="[]" aria-label="Next page" class="flex size-10 items-center justify-center rounded-md hover:bg-linear-to-b from-[#543DE7] to-[#7F39F8] hover:text-white transition-all duration-300">
+                        <lucide-icon name="chevron-right" class="size-5"></lucide-icon>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</section>

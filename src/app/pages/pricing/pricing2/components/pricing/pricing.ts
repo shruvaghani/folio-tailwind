@@ -8,6 +8,7 @@ import { featuresData } from '../../data';
   templateUrl: './pricing.html',
   styles: ``,
 })
+
 export class Pricing {
   featuresData = featuresData;
 }

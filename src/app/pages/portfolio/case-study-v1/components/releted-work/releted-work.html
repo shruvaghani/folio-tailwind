@@ -1,0 +1,61 @@
+<section class="lg:py-36 py-20">
+    <div class="container">
+        <h3 class="mb-7.5 lg:text-4xl md:text-3.5xl text-2.5xl">Related works</h3>
+
+        <div class="swiper">
+            <swiper-container space-between="40" loop="false" pagination="true" pagination-el=".swiper-pagination" breakpoints='{
+            "576": { "slidesPerView": 1 },
+            "768": { "slidesPerView": 2 },
+            "1200": { "slidesPerView": 3 }
+          }' class="swiper-wrapper mb-7.5">
+                <!-- Slider item -->
+                <swiper-slide class="swiper-slide group">
+                    <div class="bg-transparent overflow-hidden">
+                        <div class="overflow-hidden rounded-2xl">
+                            <!-- Card Image -->
+                            <img src="assets/images/portfolio/4by4/01.jpg" class="group-hover:scale-104 transition-all duration-300" alt="portfolio-img">
+                        </div>
+                        <!-- Card body -->
+                        <div class="pt-5">
+                            <h6 class="md:text-2.2xl text-xl"><a routerLink="/portfolio/case-studies">Mobile app development</a></h6>
+                            <small class="text-sm">UI/UX design</small>
+                        </div>
+                    </div>
+                </swiper-slide>
+
+                <!-- Slider item -->
+                <swiper-slide class="swiper-slide group">
+                    <div class="bg-transparent overflow-hidden">
+                        <div class="overflow-hidden rounded-2xl">
+                            <!-- Card Image -->
+                            <img src="assets/images/portfolio/4by4/02.jpg" class="group-hover:scale-104 transition-all duration-300" alt="portfolio-img">
+                        </div>
+                        <!-- Card body -->
+                        <div class="pt-5">
+                            <h6 class="md:text-2.2xl text-xl"><a routerLink="/portfolio/case-studies">Digital marketing overhaul</a></h6>
+                            <small class="text-sm">Marketing</small>
+                        </div>
+                    </div>
+                </swiper-slide>
+
+                <!-- Slider item -->
+                <swiper-slide class="swiper-slide group">
+                    <div class="bg-transparent overflow-hidden">
+                        <div class="overflow-hidden rounded-2xl">
+                            <!-- Card Image -->
+                            <img src="assets/images/portfolio/4by4/05.jpg" class="group-hover:scale-104 transition-all duration-300" alt="portfolio-img">
+                        </div>
+                        <!-- Card body -->
+                        <div class="pt-5">
+                            <h6 class="md:text-2.2xl text-xl"><a routerLink="/portfolio/case-studies">TechWave</a></h6>
+                            <small class="text-sm">Animation</small>
+                        </div>
+                    </div>
+                </swiper-slide>
+
+            </swiper-container>
+            <!-- Slider Pagination -->
+            <div class="swiper-pagination swiper-pagination-primary relative"></div>
+        </div>
+    </div>
+</section>

@@ -9,6 +9,7 @@ import { faqsData } from '../../data';
   templateUrl: './faq.html',
   styles: ``,
 })
+
 export class Faq {
   faqsData = faqsData;
-  }
+}

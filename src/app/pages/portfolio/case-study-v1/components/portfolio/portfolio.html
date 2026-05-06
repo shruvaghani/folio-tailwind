@@ -1,0 +1,29 @@
+<section class="-mb-44">
+  <div class="container">
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-7.5 lg:gap-12">
+
+      @for (item of galleryData; track $index; let isLast = $last) {
+
+      <div [class]="isLast ? 'col-span-2 md:col-span-3 w-full' : ''">
+
+        <a
+          [href]="!isLast ? item : null"
+          [attr.data-glightbox]="!isLast ? '' : null"
+          data-gallery="image-popup"
+        >
+          <img
+            [src]="item"
+            [class]="isLast 
+              ? 'h-100 lg:h-125 w-full rounded object-cover' 
+              : 'rounded'"
+            alt="portfolio-img"
+          >
+        </a>
+
+      </div>
+
+      }
+
+    </div>
+  </div>
+</section>
