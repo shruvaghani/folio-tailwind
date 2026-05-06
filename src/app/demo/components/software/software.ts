@@ -9,10 +9,11 @@ import { Faq } from "./components/faq/faq";
 import { Method } from "./components/method/method";
 import { Subscribe } from "./components/subscribe/subscribe";
 import { Footer2 } from '@app/components/footer/footer2/footer2';
+import { Navbar2 } from "@app/components/header/navbar2/navbar2";
 
 @Component({
   selector: 'app-software',
-  imports: [Hero, Features, Client, Services, Testimonials, Cta, Faq, Method, Subscribe, Footer2],
+  imports: [Hero, Features, Client, Services, Testimonials, Cta, Faq, Method, Subscribe, Footer2, Navbar2],
   templateUrl: './software.html',
   styles: ``,
 })
