@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="container">
+        <div class="flex items-center justify-between">
+            <p class="text-sm text-white flex items-center">
+                <lucide-icon name="headset" class="size-4 me-2"></lucide-icon>Call us: <a [routerLink]="[]" class="link-white">+123 555 66 </a>
+            </p>
+
+            <p class="text-sm text-white mb-0">🔥 Hurry, limited time 40% discount!</p>
+
+            <div class="flex items-center gap-7.5">
+                <div class="hs-dropdown relative [--auto-close:inside] [--placement:bottom-right]" data-hs-dropdown-close-on-click="false">
+                    <button type="button" class="hs-dropdown-toggle flex justify-center items-center text-sm font-semibold rounded-full text-white" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                        <iconify-icon icon="tabler:contrast-filled" width="20" height="20"></iconify-icon>
+                    </button>
+
+                    <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden bg-body-bg w-36 shadow-md rounded-lg shadow-custom p-3 z-20" role="menu" aria-orientation="vertical">
+                        <ul class="flex flex-col">
+                            @for (item of themeData; track $index) {
+                            <li>
+                                <div class="flex items-center gap-2 py-2 px-3 hover:bg-default-200 text-sm text-default-700 rounded-md" id="lightBtn" aria-label="Light mode" (click)="setTheme(item.mode)">
+                                    <lucide-icon [name]="item.icon" class="size-4"></lucide-icon>
+                                    {{ item.label }}
+                                </div>
+                            </li>
+                            }
+
+
+                        </ul>
+                    </div>
+                </div>
+
+                <li class="flex items-center gap-1">
+                    <a [routerLink]="[]" class="text-white hover:text-white font-medium text-sm">Login</a>
+                    <span class="text-white mx-1">/</span>
+                    <a [routerLink]="[]" class="text-white hover:text-white font-medium text-sm">Register</a>
+                </li>
+            </div>
+        </div>
+    </div>
+</div>
