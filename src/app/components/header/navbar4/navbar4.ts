@@ -4,10 +4,11 @@ import { ThemeDropdown } from "../theme-dropdown/theme-dropdown";
 import { LucideAngularModule } from "lucide-angular";
 import { MobileMenu } from "../mobile-menu/mobile-menu";
 import { ScheduleModal } from './components/schedule-modal/schedule-modal';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navbar4',
-  imports: [Navbar, ThemeDropdown, LucideAngularModule, MobileMenu, ScheduleModal],
+  imports: [Navbar, ThemeDropdown, LucideAngularModule, MobileMenu, ScheduleModal, RouterLink],
   templateUrl: './navbar4.html',
   styles: ``,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
