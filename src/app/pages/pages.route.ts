@@ -36,17 +36,17 @@ export const PAGES_ROUTES: Route[] = [
     data: { title: 'About v2' },
   },
   {
-    path: 'service/grid',
+    path: 'services/grid',
     component: ServiceGrid,
     data: { title: 'Service Grid' },
   },
   {
-    path: 'service/list',
+    path: 'services/list',
     component: ServiceList,
     data: { title: 'Service List' },
   },
   {
-    path: 'service/single',
+    path: 'services/single',
     component: ServiceSingle,
     data: { title: 'Service Single' },
   },

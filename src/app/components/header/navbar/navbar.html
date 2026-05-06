@@ -1,118 +1,85 @@
 <div id="navbar" class="lg:flex justify-center mx-auto hidden gap-2">
   @for (item of navbarData; track $index) {
-    <!-- SIMPLE LINK -->
-    @if (item.type === 'link') {
-      <a
-        [routerLink]="item.url"
-        class="flex items-center text-default-800 hover:text-primary hover:bg-primary/10 py-2 px-4 font-medium rounded-md"
-      >
-        {{ item.title }}
-      </a>
-    }
+  <!-- SIMPLE LINK -->
+  @if (item.type === 'link') {
+  <a [routerLink]="item.url" [class.active]="isActive(item)" class="flex items-center text-default-800 hover:text-primary hover:bg-primary/10 py-2 px-4 font-medium rounded-md">
+    {{ item.title }}
+  </a>
+  }
 
-    <!-- MEGA MENU -->
-    @if (item.type === 'mega') {
-      <div
-        class="hs-dropdown [--trigger:click] relative inline-flex transition-all duration-300 rounded-md"
-      >
-        <button
-          type="button"
-          class="hs-dropdown-toggle cursor-pointer flex items-center py-2 px-4 hover:text-primary hover:bg-primary/10 text-default-700 font-medium rounded-md"
-        >
-          {{ item.title }}
-          <lucide-icon name="chevron-down" class="size-4 ms-1"></lucide-icon>
-        </button>
+  <!-- MEGA MENU -->
+  @if (item.type === 'mega') {
+  <div class="hs-dropdown [--trigger:click] relative inline-flex transition-all duration-300 rounded-md">
+    <button type="button" class="hs-dropdown-toggle cursor-pointer flex items-center py-2 px-4 hover:text-primary hover:bg-primary/10 text-default-700 font-medium rounded-md">
+      {{ item.title }}
+      <lucide-icon name="chevron-down" class="size-4 ms-1"></lucide-icon>
+    </button>
 
-        <div
-          class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden"
-        >
-          <div
-            class="hs-dropdown-open:ease-in hs-dropdown-open:opacity-100 hs-dropdown-open:scale-100 transition ease-out opacity-0 scale-90 duration-200 origin-center border border-default-100 bg-body-bg shadow-md rounded-md w-120"
-          >
-            <div class="grid grid-cols-2 py-7.5 px-4 gap-7.5">
-              @for (col of item.megaColumns; track $index) {
-                <ul class="flex flex-col gap-1.5">
-                  @for (link of col.links; track $index) {
-                    <li class="group">
-                      <a
-                        [routerLink]="link.url"
-                        class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700"
-                      >
-                        {{ link.label }}
-                      </a>
-                    </li>
-                  }
-                </ul>
-              }
-            </div>
-
-            <div
-              class="h-50 relative bg-[url('assets/images/elements/nav-cta.jpg')] bg-no-repeat bg-cover bg-center"
-            >
-              <div class="absolute inset-0 bg-black/10"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    }
-
-    <!-- NESTED MENU -->
-    @if (item.type === 'nested') {
-      <div class="hs-dropdown [--trigger:click] relative inline-flex">
-        <button
-          type="button"
-          class="hs-dropdown-toggle cursor-pointer flex items-center py-2 px-4 hover:text-primary hover:bg-primary/10 text-default-700 rounded-md font-medium"
-        >
-          {{ item.title }}
-          <lucide-icon name="chevron-down" class="size-4 ms-1"></lucide-icon>
-        </button>
-
-        <div
-          class="hs-dropdown-menu shadow p-2.5 rounded-lg hidden w-60 bg-body-bg border border-default-100 mt-2"
-        >
-          <ul class="flex flex-col gap-1">
-            @for (link of item.nestedLinks; track $index) {
-              @if (link.children) {
-                <li class="hs-dropdown [--trigger:hover] [--placement:right-start] relative">
-                  <a
-                    [routerLink]="[]"
-                    class="hs-dropdown-toggle flex items-center justify-between text-sm font-medium rounded-sm hover:text-primary px-4 py-1.5 text-default-700 after:absolute after:inset-0 after:-end-10"
-                  >
-                    {{ link.label }}
-                    <lucide-icon name="chevron-right" class="size-4"></lucide-icon>
-                  </a>
-
-                  <ul
-                    class="hs-dropdown-menu ms-3! w-60 z-50 -top-5! transition-[opacity,margin] translate-y-3 duration hs-dropdown-open:translate-y-0 hs-dropdown-open:opacity-100 opacity-0 hidden bg-body-bg border border-default-100 shadow-lg p-3 space-y-1.5 rounded-lg"
-                  >
-                    <div class="flex flex-col gap-1">
-                      @for (child of link.children; track $index) {
-                        <a
-                          [routerLink]="child.url"
-                          class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700"
-                        >
-                          {{ child.label }}
-                        </a>
-                      }
-                    </div>
-                  </ul>
-                </li>
-              }
-
-              @if (!link.children) {
-                <li>
-                  <a
-                    [routerLink]="link.url"
-                    class="block text-sm px-4 py-1.5 text-default-700 hover:text-primary"
-                  >
-                    {{ link.label }}
-                  </a>
-                </li>
-              }
+    <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden">
+      <div class="hs-dropdown-open:ease-in hs-dropdown-open:opacity-100 hs-dropdown-open:scale-100 transition ease-out opacity-0 scale-90 duration-200 origin-center border border-default-100 bg-body-bg shadow-md rounded-md w-120">
+        <div class="grid grid-cols-2 py-7.5 px-4 gap-7.5">
+          @for (col of item.megaColumns; track $index) {
+          <ul class="flex flex-col gap-1.5">
+            @for (link of col.links; track $index) {
+            <li class="group">
+              <a [routerLink]="link.url"  [class.active]="isActive(link)" class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700">
+                {{ link.label }}
+              </a>
+            </li>
             }
           </ul>
+          }
+        </div>
+
+        <div class="h-50 relative bg-[url('assets/images/elements/nav-cta.jpg')] bg-no-repeat bg-cover bg-center">
+          <div class="absolute inset-0 bg-black/10"></div>
         </div>
       </div>
-    }
+    </div>
+  </div>
+  }
+
+  <!-- NESTED MENU -->
+  @if (item.type === 'nested') {
+  <div class="hs-dropdown [--trigger:click] relative inline-flex">
+    <button type="button" class="hs-dropdown-toggle cursor-pointer flex items-center py-2 px-4 hover:text-primary hover:bg-primary/10 text-default-700 rounded-md font-medium">
+      {{ item.title }}
+      <lucide-icon name="chevron-down" class="size-4 ms-1"></lucide-icon>
+    </button>
+
+    <div class="hs-dropdown-menu shadow p-2.5 rounded-lg hidden w-60 bg-body-bg border border-default-100 mt-2">
+      <ul class="flex flex-col gap-1">
+        @for (link of item.nestedLinks; track $index) {
+        @if (link.children) {
+        <li class="hs-dropdown [--trigger:hover] [--placement:right-start] relative">
+          <a [routerLink]="[]"  [class.active]="isChildActive(link)" class="hs-dropdown-toggle flex items-center justify-between text-sm font-medium rounded-sm hover:text-primary px-4 py-1.5 text-default-700 after:absolute after:inset-0 after:-end-10">
+            {{ link.label }}
+            <lucide-icon name="chevron-right" class="size-4"></lucide-icon>
+          </a>
+
+          <ul class="hs-dropdown-menu ms-3! w-60 z-50 -top-5! transition-[opacity,margin] translate-y-3 duration hs-dropdown-open:translate-y-0 hs-dropdown-open:opacity-100 opacity-0 hidden bg-body-bg border border-default-100 shadow-lg p-3 space-y-1.5 rounded-lg">
+            <div class="flex flex-col gap-1">
+              @for (child of link.children; track $index) {
+              <a [routerLink]="child.url" [class.active]="isActive(child)" class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700">
+                {{ child.label }}
+              </a>
+              }
+            </div>
+          </ul>
+        </li>
+        }
+
+        @if (!link.children) {
+        <li>
+          <a [routerLink]="link.url" [class.active]="isActive(link)" class="block text-sm px-4 py-1.5 text-default-700 hover:text-primary">
+            {{ link.label }}
+          </a>
+        </li>
+        }
+        }
+      </ul>
+    </div>
+  </div>
+  }
   }
 </div>

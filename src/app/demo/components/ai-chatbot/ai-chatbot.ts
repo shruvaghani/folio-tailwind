@@ -8,10 +8,11 @@ import { Workflow } from "./components/workflow/workflow";
 import { Experience } from "./components/experience/experience";
 import { Pricing } from "./components/pricing/pricing";
 import { Footer4 } from "@app/components/footer/footer4/footer4";
+import { Navbar5 } from "@app/components/header/navbar5/navbar5";
 
 @Component({
   selector: 'app-ai-chatbot',
-  imports: [Hero, Companies, Productivity, Effort, Insights, Workflow, Experience, Pricing, Footer4],
+  imports: [Hero, Companies, Productivity, Effort, Insights, Workflow, Experience, Pricing, Footer4, Navbar5],
   templateUrl: './ai-chatbot.html',
   styles: ``,
 })
