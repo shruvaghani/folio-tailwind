@@ -1,8 +1,94 @@
+const rocketImg = 'assets/images/elements/rocket.png';
+const fireImg = 'assets/images/elements/fire.png';
+const thunderImg = 'assets/images/elements/thunder.png';
+
+export type Feature = {
+  text: string;
+};
+
+export type PlanType = {
+  title: string;
+  price: string;
+  duration?: string;
+  description: string;
+  image: string;
+  theme?: 'light' | 'dark' | 'gradient';
+  buttonText: string;
+  features: Feature[];
+};
+
+export const plansData: PlanType[] = [
+  {
+    title: 'Basic plan',
+    price: '$59',
+    duration: '/month',
+    description: 'Ideal for small teams, the Basic plan manages up to 10 projects.',
+    image: rocketImg,
+    theme: 'light',
+    buttonText: 'Purchase',
+    features: [
+      { text: 'Customizable features' },
+      { text: '5 user accounts' },
+      { text: 'Customizable features' },
+      { text: '10 GB storage' },
+      { text: 'Email support' }
+    ]
+  },
+  {
+    title: 'Professional plan',
+    price: '$99',
+    duration: '/month',
+    description: 'Get priority email support and access to premium templates for a more comprehensive solution.',
+    image: fireImg,
+    theme: 'light',
+    buttonText: 'Purchase',
+    features: [
+      { text: 'Access to basic features' },
+      { text: '15 user accounts' },
+      { text: 'Customizable features' },
+      { text: '50 GB storage' },
+      { text: 'Dedicated account manager' }
+    ]
+  },
+  {
+    title: 'Basic plan',
+    price: '$59',
+    duration: '/month',
+    description: 'Ideal for small teams, the Basic plan manages up to 10 projects.',
+    image: rocketImg,
+    theme: 'light',
+    buttonText: 'Purchase',
+    features: [
+      { text: 'Customizable features' },
+      { text: '5 user accounts' },
+      { text: 'Customizable features' },
+      { text: '10 GB storage' },
+      { text: 'Email support' }
+    ]
+  },
+  {
+    title: 'Enterprise plan',
+    price: 'Custom',
+    description: 'For businesses with unique requirements, our Custom Plan delivers a fully personalized experience.',
+    image: thunderImg,
+    theme: 'gradient',
+    buttonText: 'Contact us',
+    features: [
+      { text: 'Unlimited projects' },
+      { text: 'Custom reporting and analytics' },
+      { text: 'Dedicated account manager' },
+      { text: 'Tailored support and consulting' },
+      { text: 'Personalized onboarding and training' }
+    ]
+  }
+];
+
 export type FeatureType = {
   text: string;
   icon: string;
   color: string;
 };
+
 export const featuresData: FeatureType[] = [
   {
     text: 'No hidden fees',
