@@ -12,5 +12,9 @@ import { mobileMenuData } from './data';
   
 export class MobileMenu {
   mobileMenuData = mobileMenuData;
+  closeMobileMenu(): void {
+  document.body.style.overflow = '';
+}
+
 }
 

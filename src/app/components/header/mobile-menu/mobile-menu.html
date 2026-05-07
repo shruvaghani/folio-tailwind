@@ -10,7 +10,7 @@
             <lucide-icon name="chevron-down" class="size-4"></lucide-icon>
           </button>
 
-          <div class="hs-accordion-content hidden w-full ooverflow-visible transition-[height] px-5 py-2">
+          <div class="hs-accordion-content hidden w-full overflow-visible transition-[height] px-5 py-2">
             <div class="border border-default-200 dark:border-white/14 origin-center bg-body-bg rounded-md p-3 w-full">
               
               <div class="grid md:grid-cols-2 grid-cols-1">
@@ -20,7 +20,7 @@
                       <li>
                         <a
                           class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700"
-                          [routerLink]="link.url"
+                          [routerLink]="link.url"  (click)="closeMobileMenu()"
                         >
                           {{ link.label }}
                         </a>
@@ -61,7 +61,7 @@
                       <div class="flex flex-col gap-1">
                         @for (sub of child.children; track $index) {
                           <a
-                            [routerLink]="sub.url"
+                            [routerLink]="sub.url"  (click)="closeMobileMenu()"
                             class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700"
                           >
                             {{ sub.label }}
@@ -76,7 +76,7 @@
                 @if (!child.children) {
                   <div>
                     <a
-                      [routerLink]="child.url"
+                      [routerLink]="child.url" (click)="closeMobileMenu()"
                       class="block text-sm font-medium hover:text-primary px-4 py-1.5 text-default-700"
                     >
                       {{ child.label }}
@@ -92,7 +92,7 @@
       @if (item.type === 'link') {
         <div>
           <a
-            [routerLink]="item.url"
+            [routerLink]="item.url"  (click)="closeMobileMenu()"
             class="flex items-center py-2.5 px-5 text-default-800 hover:text-primary font-medium"
           >
             {{ item.title }}
