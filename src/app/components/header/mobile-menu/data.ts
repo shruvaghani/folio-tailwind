@@ -106,6 +106,6 @@ export const mobileMenuData: MobileMenuType[] = [
   {
     title: 'Contact us',
     type: 'link',
-    url: 'contact-us-v1.html',
+    url: '/contact/v1',
   },
 ];
