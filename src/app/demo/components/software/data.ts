@@ -264,37 +264,38 @@ export const pricingPlanData: PricingPlanType[] = [
   },
 ];
 
-export type FaqItemType = {
-  id: number;
+export type FaqType = {
+  id: string;
   question: string;
   answer: string;
-  active: boolean;
+  isActive?: boolean;
 };
 
-export const faqData: FaqItemType[] = [
+export const faqData: FaqType[] = [
   {
-    id: 1,
+    id: 'heading-1',
     question: 'How do I get started with your service?',
-    answer: 'The first step is to sign up for our service. You can do this by visiting our website and locating the sign-up or registration button. Click on it and follow the prompts to create your account.',
-     active: true
+    answer:
+      'The first step is to sign up for our service. You can do this by visiting our website and locating the sign-up or registration button. Click on it and follow the prompts to create your account.',
+    isActive: true,
   },
   {
-     id: 2,
+    id: 'heading-2',
     question: 'What payment methods do you accept?',
-    answer: 'September how men saw tolerably two behavior arranging. She offices for highest and replied one venture pasture. Applauded no discovery in newspaper allowance am northward. Frequently partiality possession resolution at or appearance unaffected me. Engaged its was the evident pleased husband. Ye goodness felicity do disposal dwelling no. First am plate jokes to began to cause a scale.',
-    active: false
+    answer:
+      'September how men saw tolerably two behavior arranging. She offices for highest and replied one venture pasture. Applauded no discovery in newspaper allowance am northward. Frequently partiality possession resolution at or appearance unaffected me. Engaged its was the evident pleased husband. Ye goodness felicity do disposal dwelling no. First am plate jokes to began to cause a scale.',
   },
   {
-     id: 3,
+    id: 'heading-3',
     question: 'How can I contact your customer support team?',
-    answer: 'September how men saw tolerably two behavior arranging. She offices for highest and replied one venture pasture. Applauded no discovery in newspaper allowance am northward. Frequently partiality possession resolution at or appearance unaffected me. Engaged its was the evident pleased husband. Ye goodness felicity do disposal dwelling no. First am plate jokes to began to cause a scale.',
-    active: false
+    answer:
+      'Agencies provide a wide range of services depending on their specialization. Some common services include advertising campaigns, digital marketing, branding, creative design, media planning and buying, public relations, talent management, event planning, and market research.',
   },
   {
-    id: 4,
+    id: 'heading-4',
     question: 'Do you offer custom solutions for businesses?',
-    answer: 'September how men saw tolerably two behavior arranging. She offices for highest and replied one venture pasture. Applauded no discovery in newspaper allowance am northward. Frequently partiality possession resolution at or appearance unaffected me. Engaged its was the evident pleased husband. Ye goodness felicity do disposal dwelling no. First am plate jokes to began to cause a scale.',
-    active: false
+    answer:
+      "When selecting an agency, consider your specific requirements, budget, and the agency's expertise and track record in your industry. Research their portfolio, client testimonials, and case studies to gauge their capabilities. It's also important to meet with the agency to assess their communication style and ensure they align with your goals.",
   },
 ];
 

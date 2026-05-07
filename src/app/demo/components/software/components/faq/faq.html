@@ -1,47 +1,64 @@
-<!-- FAQ -->
 <section class="lg:pb-36 pb-20 bg-secondary relative">
-    <div class="absolute end-0 bottom-0 hidden md:block">
-        <img src="assets/images/elements/grad-shape/12.png" class="blur-xs" alt="Decoration shape">
-    </div>
+  <div class="absolute end-0 bottom-0 hidden md:block">
+    <img src="assets/images/elements/grad-shape/12.png" class="blur-xs" alt="Decoration shape" />
+  </div>
 
-    <div class="container relative z-20">
-        <div class="lg:w-225 mx-auto">
-            <h2 class="md:mb-12 mb-12 lg:text-4.5xl md:text-4xl text-3xl text-center">Got questions? (FAQs)</h2>
+  <div class="container relative z-20">
+    <div class="lg:w-225 mx-auto">
+      <h2 class="md:mb-12 mb-12 lg:text-4.5xl md:text-4xl text-3xl text-center">
+        Got questions? (FAQs)
+      </h2>
 
-            <div class="hs-accordion-group">
+      <div class="hs-accordion-group">
+        @for (item of faqData; track $index) {
+          <div
+            class="hs-accordion bg-body-bg/60 rounded-xl p-3.75 mb-7.5"
+            [class.active]="item.isActive"
+            [id]="item.id"
+          >
+            <button
+              (click)="toggleAccordion($index)"
+              class="hs-accordion-toggle text-default-900 py-4 px-5 inline-flex items-center text-xl w-full font-semibold text-start focus:outline-hidden disabled:opacity-50 disabled:pointer-events-none"
+              [attr.aria-expanded]="item.isActive"
+              [attr.aria-controls]="'collapse-' + $index"
+            >
+              {{ item.question }}
 
-                @for (faq of faqData; track faq.id) {
-
-                <div class="hs-accordion bg-body-bg/60 rounded-xl p-3.75 mb-7.5"  [class.active]="faq.active" [attr.id]="'heading-' + faq.id">
-
-                    <!-- Button -->
-                    <button class="hs-accordion-toggle text-default-900 py-4 px-5 inline-flex items-center text-xl w-full font-semibold text-start focus:outline-hidden disabled:opacity-50 disabled:pointer-events-none" [attr.aria-expanded]="faq.active" [attr.aria-controls]="'collapse-' + faq.id">
-
-                        {{ faq.question }}
-
-                        <div class="ms-auto">
-                            <div class="hs-accordion-active:bg-primary bg-default-900 size-7 flex justify-center items-center rounded-full">
-                                <lucide-icon name="chevron-down" class="text-body-bg size-4 transition-transform duration-300 hs-accordion-active:rotate-180">
-                                </lucide-icon>
-                            </div>
-                        </div>
-                    </button>
-
-                    <!-- Content -->
-                    <div class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" [class]="faq.active ? '' : 'hidden'" role="region" [attr.id]="'collapse-' + faq.id" [attr.aria-labelledby]="'heading-' + faq.id">
-
-                        <p class="px-5 pb-4 text-default-700">
-                            {{ faq.answer }}
-                        </p>
-
-                    </div>
-
+              <div class="ms-auto">
+                <div
+                  class="bg-default-900 size-7 flex justify-center items-center rounded-full transition-colors duration-300"
+                  [class.bg-primary]="item.isActive"
+                >
+                  <lucide-icon
+                    name="chevron-down"
+                    class="text-body-bg size-4 transition-transform duration-300"
+                    [class.rotate-180]="item.isActive"
+                  ></lucide-icon>
                 </div>
-                }
+              </div>
+            </button>
 
+            <div
+              [id]="'collapse-' + $index"
+              role="region"
+              [attr.aria-labelledby]="item.id"
+              class="overflow-hidden transition-all duration-500 ease-in-out"
+              [class.max-h-0]="!item.isActive"
+              [class.max-h-96]="item.isActive"
+              [class.opacity-100]="item.isActive"
+            >
+              <p class="px-5 pb-4 text-default-700">
+                {{ item.answer }}
+              </p>
             </div>
-            <!-- End Accordion Group -->
-            <p class="text-default-700 font-medium text-center">Confused? Our team is ready to assist you! Start a chat for quick support. <a routerLink="[]" class="hover-underline text-primary font-semibold">Talk to Us</a></p>
-        </div>
+          </div>
+        }
+      </div>
+
+      <p class="text-default-700 font-medium text-center">
+        Confused? Our team is ready to assist you! Start a chat for quick support.
+        <a [routerLink]="[]" class="hover-underline text-primary font-semibold"> Talk to Us </a>
+      </p>
     </div>
+  </div>
 </section>

@@ -9,7 +9,13 @@ import { faqsData } from '../../data';
   templateUrl: './faq.html',
   styles: ``,
 })
-
+  
 export class Faq {
   faqsData = faqsData;
+  toggleAccordion(index: number) {
+    this.faqsData = this.faqsData.map((item, i) => ({
+      ...item,
+      active: i === index ? !item.active : false,
+    }));
+  }
 }
